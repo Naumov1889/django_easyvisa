@@ -1,0 +1,56 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.icon_cross {
+  width: 14px;
+  height: 14px;
+  background-image: url("../../img/icon-cross.svg");
+}
+.icon_phone {
+  width: 17px;
+  height: 17px;
+  background-image: url("../../img/icon-phone.svg");
+}
+.icon_placemark {
+  width: 16px;
+  height: 20px;
+  background-image: url("../../img/icon-placemark.svg");
+}
+.icon_whatsapp {
+  width: 18px;
+  height: 18px;
+  background-image: url("../../img/icon-whatsapp.svg");
+}
+.icon_instagram {
+  width: 17px;
+  height: 17px;
+  background-image: url("../../img/icon-instagram.svg");
+}
+.icon_instagram_2 {
+  width: 17px;
+  height: 17px;
+  background-image: url("../../img/icon-instagram-2.svg");
+}
+.icon_vk {
+  width: 18px;
+  height: 18px;
+  background-image: url("../../img/icon-vk.svg");
+}
+.icon_arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../img/icon-arrow-2.svg");
+}
+.icon_arrow_1 {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/icon-arrow.svg");
+}
+.icon_play-arrow {
+  width: 18px;
+  height: 21px;
+  background-image: url("../../img/icon-arrow-3.svg");
+}

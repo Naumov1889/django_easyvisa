@@ -1,0 +1,176 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — Авиабилеты</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div class="airticket-page">
+        <div class="airticket-page__top-title-section bg_img section-padding_medium text_color_white" style="background-image: url({% static 'img/bg-airticket-1.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="crumbs">
+              <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+                <div class="crumbs__icon dash_small"></div>
+              </div>
+              <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Авиабилеты</a></div>
+            </div>
+            <div class="title title_h1">
+              <div class="title__text">Авиабилеты</div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle">Доверьте поиск авиабилетов нашей команде</div>
+            </div>
+            <form class="form form_row airticket-form" data-js="form" data-form-note="Авиабилет">
+              <div class="fl form__elem">
+                <label class="fl__label" for="city_departure">Город вылета</label>
+                <input class="fl__input input" name="city" id="city_departure">
+                <div class="swap-places" data-js="swap-places">
+                  <div class="swap-places__arrow --top"></div>
+                  <div class="swap-places__arrow --bottom"></div>
+                </div>
+              </div>
+              <div class="fl form__elem">
+                <label class="fl__label" for="city_arrival">Город прибытия</label>
+                <input class="fl__input input" name="destination" id="city_arrival">
+              </div>
+              <div class="datepicker-container form__elem" data-js="datepicker-container">
+                <input class="input" readonly="readonly" name="date" data-js="datepicker" placeholder="Дата поездки (с и до)">
+                <div class="datepicker-arrow" data-js="datepicker-arrow"></div>
+              </div>
+              <div class="select_type_4 form__elem">
+                <select name="n_of_passengers" data-js="select-type-4">
+                  <option value="1 пассажир">1 пассажир</option>
+                  <option value="2 пассажира">2 пассажира</option>
+                  <option value="3 пассажира">3 пассажира</option>
+                  <option value="больше">больше 3</option>
+                </select>
+              </div>
+              <input class="input form__elem" placeholder="Ваше Имя" name="name">
+              <input class="input form__elem" placeholder="Ваш Телефон" name="phone">
+              <button class="btn form__elem">Оставить заявку</button>
+            </form>
+          </div>
+        </div>
+        <div class="airticket-text-section-1 text-section section-padding_large">
+          <div class="container">
+            <div class="airticket-text-section-1__grid">
+              <div class="airticket-text-section-1__left" data-aos="fade-up">
+                <div class="title title_h2">
+                  <div class="title__text">Бронирование авиабилетов</div>
+                  <div class="title__divider"></div>
+                </div>
+                <p>Благодаря онлайн-сервисам можно легко найти билет на самолет. Мы стараемся экономить ваше время и бюджет. На нашем сайте вы можете воспользоваться услугой онлайн-бронирования билетов на самолет по одной из самых выгодных цен на рынке. Так же вы можете оставить заявку и менеджер подберет вам подходящие авиабилеты для вашего лучшего путешествия.</p>
+                <p>&nbsp;</p>
+                <p>“EasyVisa Agency“ поможет вам в поиске авиабилетов по всему миру. Мы сравниваем все доступные варианты перелётов по вашему запросу, а потом направляем вас для покупки на официальные сайты авиакомпаний и агентств.<br>Стоимость авиабилета, которую вы видите— финальная. Мы убрали все скрытые услуги и галочки.</p>
+                <p>&nbsp;</p>
+                <h3>Бронь билетов самостоятельно</h3>
+                <p>Для того чтобы сделать бронь на необходимый перелет, зайдите на сайт “EasyVisa Agency”. Здесь необходимо указать следующие данные:</p>
+                <ul>
+                  <li>город вылета;</li>
+                  <li>город прибытия;</li>
+                  <li>дату прилета и вылета обратно;</li>
+                  <li>количество человек;</li>
+                </ul>
+                <p>После ввода этой информации вы получите обширный список предложений. Кроме того, за автоматическим онлайн-сервисом постоянно следят наши менеджеры, которые помогут найти вам недорогой билет в нужный регион.</p>
+                <p>&nbsp;</p>
+              </div>
+              <div class="airticket-text-section-1__right">
+                <div class="box-list box-list_3">
+                  <div class="box-list__item box box_type_1" data-aos="fade-up">
+                    <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:71px;" src="{% static 'img/icon-plane.svg' %}">
+                      <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                    </div>
+                    <div class="box__title">Летите куда хотите</div>
+                    <div class="box__text">Выбирайте из миллионов рейсов</div>
+                  </div>
+                  <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                    <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:71px;" src="{% static 'img/icon-wallet.svg' %}">
+                      <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                    </div>
+                    <div class="box__title">Легко и беззаботно</div>
+                    <div class="box__text">Вы точно знаете, за что платите.</div>
+                  </div>
+                  <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:72px;" src="{% static 'img/icon-thumb-up.svg' %}">
+                      <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                    </div>
+                    <div class="box__title">Как и когда угодно</div>
+                    <div class="box__text">Только выгодные предложения</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="airticket-quote-card box" data-aos="fade-up">
+              <div class="airticket-quote-card__left">
+                <div class="elem-with-yellow-square"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-staff-2.png' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+              </div>
+              <div class="airticket-quote-card__right">
+                <div class="quote airticket-quote-card__quote">Мы поможем вам подобрать перелет при сложных маршрутах с оптимизацией цены, времени перелета и времени пересадок в аэропортах. Доверьте своё путешествие команде профессионалов!</div>
+                <div class="airticket-quote-card__name-n-job quote-name-n-job">
+                  <div class="airticket-quote-section__name quote-name">Максим Горохов</div>
+                  <div class="airticket-quote-section__job quote-job">генеральный директор “EasyVisa Agency”</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="airticket-text-section-2 text-section section-padding_medium bg_grey">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Туризм без хлопот</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="airticket-text-section-2__grid">
+              <div class="airticket-text-section-2__left">
+                <div class="airticket-text-section-2__text" data-aos="fade-up">
+                  <p>Туризм — это всегда свобода выбора. А процесс планирования и бронирования путешествия должен вызывать радость, а не ужас. Мы знаем, что вам нужны лучшие цены и широкий выбор. Только так можно найти подходящий вариант. Поэтому мы постоянно прилагаем максимум усилий, чтобы наши приложение и сайт работали быстро и просто.</p>
+                  <p>&nbsp;</p>
+                  <p>Выбирайте, куда и когда поехать, и получайте лучшие по цене предложения от тысяч туристических агентств — все в нашей системе. Кроме того, мы всегда готовы помочь в поисках путешествия, удовлетворяющего ваши желания, независимо от стиля жизни и финансовых возможностей.</p>
+                </div>
+                <div class="airticket-text-section-2__elem-with-yellow-square-list-1"><a class="elem-with-yellow-square elem-with-yellow-square_borderlike" data-aos="fade-up" href="{% static 'img/picture-airticket-2.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title=""><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-airticket-2.jpg' %}">
+                    <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a><a class="elem-with-yellow-square elem-with-yellow-square_borderlike" data-aos="fade-up" href="{% static 'img/picture-airticket-3.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title=""><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-airticket-3.jpg' %}">
+                    <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a></div>
+              </div>
+              <div class="airticket-text-section-2__right">
+                <div class="airticket-text-section-2__elem-with-yellow-square-list-2" data-aos="fade-up"><a class="elem-with-yellow-square elem-with-yellow-square_borderlike" href="{% static 'img/picture-airticket-1.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title=""><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-airticket-1.jpg' %}">
+                    <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a><a class="elem-with-yellow-square elem-with-yellow-square_borderlike" data-aos="fade-up" href="{% static 'img/picture-airticket-4.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title=""><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-airticket-4.jpg' %}">
+                    <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text_color_white section-padding_medium bg_img bg_center" style="background-image: url({% static 'img/bg-airticket-2.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="title title_h2">
+              <div class="title__text">Нужен авиабилет?</div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle">Вы можете оставить заявку, менеджер свяжется с вами для уточнения деталей!</div>
+            </div>
+            <form class="form form_row form_row_4" data-js="form" data-form-note="Авиабилет">
+              <input class="input form__elem" placeholder="Ваше Имя" name="name">
+              <input class="input form__elem" placeholder="Ваш Телефон" name="phone">
+              <input class="input form__elem" placeholder="Ваш E-mail" type="email" name="email">
+              <button class="btn form__elem">Перезвоните мне</button>
+            </form>
+          </div>
+        </div>
+        <div class="airticket-text-section text-section section-padding_large">
+          <div class="container">
+            <div class="title title_h2" style="max-width: 691px" data-aos="fade-up">
+              <div class="title__text">Лучший сервис для поиска авиабилетов на сайте компании “EasyVisa Agency”</div>
+              <div class="title__divider"></div>
+            </div>
+            <div data-aos="fade-up">
+              <p>Уже более трёх лет наша компания работает в сфере туризма и визового сопровождения путешественников из стран СНГ. Наша задача решить все ваши вопросы и позаботиться о всех нюансах, будь то получение визы, бронирование номера в отеле или билета на самолет.</p>
+              <p>&nbsp;</p>
+              <p>Сервис для поиска рейсов и выгодных предложений от авиаперевозчиков – это лишь один из аспектов сотрудничества с нами, но мы постарались реализовать функционал максимально удобно. А кроме этого, вы всегда можете рассчитывать, что за автоматической системой стоят живые люди – опытные специалисты, которые всегда готовы прийти на помощь.</p>
+              <p>&nbsp;</p>
+            </div><a class="elem-with-yellow-square elem-with-yellow-square_borderlike" href="{% static 'img/picture-airticket-5.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="1" width="1240" height="420" title="" data-aos="fade-up"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-airticket-5.jpg' %}">
+              <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a>
+          </div>
+        </div>
+      </div>
+    
+{% endblock %}

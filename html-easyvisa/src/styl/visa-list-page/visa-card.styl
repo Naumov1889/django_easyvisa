@@ -1,0 +1,202 @@
+.visa-card {
+  position: absolute;
+  z-index -2
+  left 0
+  width: 100%
+  box-shadow: 0 12px 32px rgba(43, 43, 43, 0.07);
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-top: 22px
+  padding 28px 34px 28px 34px
+  max-height: 0
+  opacity 0
+  overflow hidden
+  transition .3s ease
+
+  &__grid {
+    display: flex;
+    flex-wrap wrap
+  }
+
+  &__grid-item {
+    &:nth-child(1) {
+      width: 64%
+      margin-right: 10%;
+    }
+
+    &:nth-child(2) {
+      width: 26%
+    }
+
+    &:nth-child(3) {
+      margin-top: 34px
+    }
+  }
+
+  &__name-n-value-list {
+    display: flex;
+    justify-content space-between
+  }
+
+  &__name-n-value {
+    display: flex;
+    flex-direction column
+    margin-right: 24px
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    color: #494949;
+    font-size: 19px;
+  }
+
+  &__value {
+    font-family: "Proxima Nova Semibold";
+    font-size: 27px;
+    color: #303030;
+
+    .rouble {
+      font-size: 26px
+    }
+  }
+
+  &__btn {
+    max-width 306px
+  }
+
+  &__link {
+    color: #727272;
+    font-size: 18px;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .visa-card {
+    margin-top: 18px
+    padding 18px 20px 22px 20px
+
+    &__grid-item {
+      &:nth-child(1) {
+        width: 67%
+        margin-right: 5%;
+      }
+
+      &:nth-child(2) {
+        width: 28%
+      }
+
+      &:nth-child(3) {
+        margin-top: 20px
+      }
+    }
+
+    &__name {
+      font-size: 17px;
+    }
+
+    &__value {
+      font-size: 22px;
+
+      .rouble {
+        font-size: 21px
+      }
+    }
+
+    &__btn {
+      max-width 306px
+    }
+
+    &__link {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .visa-card {
+
+    &__grid-item {
+      &:nth-child(1) {
+        width: 100%
+        margin: 0 0 20px 0;
+      }
+
+      &:nth-child(2) {
+        width: 100%
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .visa-card {
+    &__name-n-value-list {
+      flex-wrap wrap
+      margin-top: -14px
+    }
+
+    &__name-n-value {
+      margin: 14px 0 0 0;
+      width: 46%
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .visa-card {
+    margin-top: 12px
+    padding 14px 17px 18px 17px
+
+    &__grid-item {
+      &:nth-child(1) {
+        margin-bottom: 16px
+      }
+      &:nth-child(3) {
+        margin-top: 18px
+      }
+    }
+
+    &__name-n-value-list {
+      margin-top: -10px
+    }
+    &__name-n-value {
+      margin-top: 10px
+    }
+
+    &__name {
+      font-size: 15px;
+    }
+
+    &__value {
+      font-size: 19px;
+
+      .rouble {
+        font-size: 18px
+      }
+    }
+
+    &__btn {
+      max-width 306px
+    }
+
+    &__link {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .visa-card {
+    &__name-n-value {
+      width: 100%
+    }
+  }
+}

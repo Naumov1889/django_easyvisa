@@ -1,0 +1,43 @@
+.visa-list-page__visa-list-section {
+  padding: 20px 0 70px 0;
+}
+.visa-list-page__visa-list-section .title_h2 {
+  margin-top: 90px;
+}
+@media (max-width: 1450px) {
+  .visa-list-page__visa-list-section .title_h2 {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 1150px) {
+  .visa-list-page__visa-list-section {
+    padding-bottom: 50px;
+  }
+  .visa-list-page__visa-list-section .title_h2 {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 1050px) {
+  .visa-list-page__visa-list-section {
+    padding: 20px 0 40px 0;
+  }
+  .visa-list-page__visa-list-section .title_h2 {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 750px) {
+  .visa-list-page__visa-list-section .show-more .show-more__content {
+    margin-bottom: 0;
+  }
+  .visa-list-page__visa-list-section .show-more .visa-title-list {
+    position: static;
+  }
+}
+@media (max-width: 600px) {
+  .visa-list-page__visa-list-section {
+    padding: 10px 0 30px 0;
+  }
+  .visa-list-page__visa-list-section .title_h2 {
+    margin-top: 38px;
+  }
+}

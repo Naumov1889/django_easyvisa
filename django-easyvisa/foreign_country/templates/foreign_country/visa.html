@@ -1,0 +1,256 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    <title>EASYVISA AGENCY — {{ visa.title }}</title>
+{% endblock %}
+
+
+{% block content %}
+    {% load static %}
+    <div class="visa-page">
+        <div class="visa-page-top-section bg_img section-padding_medium text_color_white"
+             {% if visa.photo %}style="background-image: url({{ visa.photo.url }})"{% endif %}>
+            <div class="container" data-aos="fade-up">
+                <div class="crumbs">
+                    <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+                        <div class="crumbs__icon dash_small"></div>
+                    </div>
+                    <div class="crumbs__item"><a class="crumbs__link" href="{% url 'visa:visa_list' %}">Визы</a>
+                        <div class="crumbs__icon dash_small"></div>
+                    </div>
+                    <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Виза
+                        в {{ visa.title_2 }}</a>
+                    </div>
+                </div>
+                <div class="title title_h1">
+                    <div class="title__text">Виза в <br>{{ visa.title_2 }}</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="btn" style="max-width: 326px" data-form-note-filler="Виза в {{ visa.title_2 }}" data-popbox-target="popbox-callback">Записаться на
+                    консультацию
+                </div>
+                <div class="visa-page-top-section__anchor-list visa-page-anchor-list text_color_primary"><a
+                        class="visa-page-anchor-list__item text_underline_hoverable" data-scroll-to="article">Процесс
+                    оформления визы</a><a class="visa-page-anchor-list__item text_underline_hoverable"
+                                          data-scroll-to="docs">Список документов</a><a
+                        class="visa-page-anchor-list__item text_underline_hoverable" data-scroll-to="representatives">Адреса
+                    консульств / посольств</a></div>
+            </div>
+        </div>
+        <div class="visa-page-features-section section-padding_medium">
+            <div class="container">
+                <div class="box-list box-list_3">
+                    <div class="box-list__item box box_type_1 visa-page-features-section__box" data-aos="fade-up">
+                        <div class="elem-with-yellow-square">
+                            <div class="box__title elem-with-yellow-square__not-yellow-square visa-page-features-section__box-title">{{ visa.duration_validity }}</div>
+                            <div class="elem-with-yellow-square__yellow-square yellow-square visa-page-features-section__yellow-square"></div>
+                        </div>
+                        <div class="box__text visa-page-features-section__box-text">Надолго</div>
+                    </div>
+                    <div class="box-list__item box box_type_1 visa-page-features-section__box" data-aos="fade-up"
+                         data-aos-delay="50">
+                        <div class="elem-with-yellow-square">
+                            <div class="box__title elem-with-yellow-square__not-yellow-square visa-page-features-section__box-title">{{ visa.duration_registration }}</div>
+                            <div class="elem-with-yellow-square__yellow-square yellow-square visa-page-features-section__yellow-square"></div>
+                        </div>
+                        <div class="box__text visa-page-features-section__box-text">Быстро</div>
+                    </div>
+                    <div class="box-list__item box box_type_1 visa-page-features-section__box" data-aos="fade-up"
+                         data-aos-delay="100">
+                        <div class="elem-with-yellow-square">
+                            <div class="box__title elem-with-yellow-square__not-yellow-square visa-page-features-section__box-title">{{ visa.price }}
+                                <span class="rouble">п</span></div>
+                            <div class="elem-with-yellow-square__yellow-square yellow-square visa-page-features-section__yellow-square"></div>
+                        </div>
+                        <div class="box__text visa-page-features-section__box-text">Не дорого</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-section" id="article">
+            <div class="container">
+                <div class="title title_h2" data-aos="fade-up">
+                    <div class="title__text">Процесс оформления визы в {{ visa.title_2 }}</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div data-aos="fade-up">
+                    {{ visa.text|safe }}
+                </div>
+            </div>
+
+            {% if visa.visaphoto_set.all %}
+                <div class="visa-page-picture-list visa-page__picture-list">
+                    <a class="visa-page-picture-list__item elem-with-yellow-square elem-with-yellow-square_borderlike elem-with-yellow-square_borderlike_left"
+                       data-aos="fade-up" href="{{ visa.visaphoto_set.all.0.photo_1.url }}" data-js="photoswipe-item"
+                       data-photoswipe-group-id="0" width="{{ visa.visaphoto_set.all.0.photo_1.width }}"
+                       height="{{ visa.visaphoto_set.all.0.photo_1.height }}"
+                       {% if visa.visaphoto_set.all.0.note_1 %}title="{{ visa.visaphoto_set.all.0.note_1 }}"{% endif %}>
+                        <img class="elem-with-yellow-square__not-yellow-square"
+                             src="{{ visa.visaphoto_set.all.0.thumbnail_1.url }}">
+                        <div class="yellow-square elem-with-yellow-square__yellow-square"></div>
+                    </a>
+                    <a class="visa-page-picture-list__item elem-with-yellow-square elem-with-yellow-square_borderlike"
+                       data-aos="fade-up" href="{{ visa.visaphoto_set.all.0.photo_2.url }}" data-js="photoswipe-item"
+                       data-photoswipe-group-id="0" width="{{ visa.visaphoto_set.all.0.photo_1.width }}"
+                       height="{{ visa.visaphoto_set.all.0.photo_1.height }}"
+                       {% if visa.visaphoto_set.all.0.note_2 %}title="{{ visa.visaphoto_set.all.0.note_2 }}"{% endif %}>
+                        <img class="elem-with-yellow-square__not-yellow-square"
+                             src="{{ visa.visaphoto_set.all.0.thumbnail_2.url }}">
+                        <div class="yellow-square elem-with-yellow-square__yellow-square"></div>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+
+
+        {% if visa.visapipeline_set.all %}
+            <div class="visa-page-pipeline-section section-padding_small">
+                <div class="container">
+                    <div class="title title_h2">
+                        <div class="title__text">Как мы работаем</div>
+                        <div class="title__divider"></div>
+                    </div>
+                    <div class="box-list box-list_with-arrows">
+                        {% for pipeline in visa.visapipeline_set.all %}
+                            <div class="box-list__item box box_type_1" data-aos="fade-up">
+                                <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                        class="box__icon elem-with-yellow-square__not-yellow-square"
+                                        src="{{ pipeline.pipeline.icon.url }}">
+                                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                                </div>
+                                <div class="box__text">{{ pipeline.pipeline.title|safe }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="visa-page-doc-section bg_grey section-padding_small" id="docs">
+            <div class="container" data-aos="fade-up">
+                <div class="title title_h2">
+                    <div class="title__text">Список документов</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="select_type_3">
+                    <select name="" data-js="select-type-3">
+                        <option data-placeholder>Частные лица</option>
+                        {% for person in persons %}
+                            <option value="{{ person.slug }}"
+                                    {% if current_person.slug == person.slug %}selected{% endif %}>{{ person.person_title__title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="visa-page-doc-section__grid">
+                    <div class="visa-page-doc-section__left box_outer-styles">
+                        <div class="title title_h3">
+                            <div class="title__text">Необходимые документы. <span
+                                    data-visa-document="person">{{ current_person.person_title }}</span>.
+                            </div>
+                            <div class="title__divider"></div>
+                        </div>
+                        <div class="doc-list" data-visa-document="documents">
+                            {% for document in current_person.visadocument_set.all %}
+
+                                <div class="doc-list__item doc">
+                                    <div class="doc__counter-n-title">
+                                        <div class="doc__counter">{{ forloop.counter }}</div>
+                                        <div class="doc__title">{{ document.document_title }}</div>
+                                    </div>
+                                    <div class="doc__text">{{ document.description }}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="visa-page-doc-section__right box_outer-styles text_position_center">
+                        <div class="title title_h3 popbox__title">
+                            <div class="title__text">Задать вопрос</div>
+                            <div class="title__divider"></div>
+                        </div>
+                        <form class="form form_column" data-js="form" data-form-note="Вопрос">
+                            <input class="input input_shadow form__elem" placeholder="Ваше Имя" type="text" name="name">
+                            <input class="input input_shadow form__elem" placeholder="Ваш Телефон или E-mail"
+                                   type="text" name="phone">
+                            <textarea class="input input_shadow form__elem" placeholder="Вопрос"
+                                      name="question"></textarea>
+                            <button class="btn form__elem">Отправить вопрос</button>
+                            <label class="checkbox"><span class="checkbox__text">Даю согласие на обработку  моих <a
+                                    class="text_underline_hoverable" href="">персональных данных</a></span>
+                                <input class="checkbox__input" name="checkbox" checked type="checkbox"><span
+                                        class="checkbox__checkmark"></span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if representatives %}
+            <div class="map-n-contact" data-js="map-n-contact" id="representatives">
+                <div class="btn map-n-contact__map-toggler" data-js="map-n-contact__map-toggler">Показать карту</div>
+                <div class="map-n-contact__map-overlay" data-js="map-n-contact__map-overlay"></div>
+                <div class="map-n-contact__map" id="map-n-contact__map-container"
+                     data-map-coordinates="{{ current_representative.coordinates }}"
+                     data-map-hint="Представитель {{ visa.title_3 }}<br>{{ current_representative.city }}"
+                     data-map-address="{{ current_representative.address }}" data-map-placemark="{% static 'img/placemark-2.png' %}"></div>
+                <div class="container map-n-contact__container section-padding_small">
+                    <div class="map-n-contact__box" data-js="map-n-contact__box" data-aos="fade-up">
+                        <div class="title title_h2">
+                            <div class="title__text">Адреса консульств / посольств </div>
+                            <div class="title__divider"></div>
+                        </div>
+                        <div>
+                            <div class="contact-name-n-value">
+                                <div class="contact-name-n-value__name">Представитель {{ visa.title_3 }} в</div>
+                                <div class="select_type_2">
+                                    <select data-js="select-type-2">
+                                        {% for representative in representatives %}
+                                            <option value="{{ representative.slug }}"
+                                                    {% if representative.city == current_representative.city %}selected{% endif %}>
+                                                {{ representative.city_2 }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="contact-name-n-value">
+                                <div class="contact-name-n-value__name">Адрес:</div>
+                                <div class="contact-name-n-value__value"
+                                     data-visa-representative="address">{{ current_representative.address|safe }}</div>
+                            </div>
+
+                            <div class="contact-name-n-value">
+                                <div class="contact-name-n-value__name">Телефоны:</div>
+
+                                <div data-visa-representative="phone-holder-list">
+                                    {% for phone in current_representative.phone %}
+                                        <a class="contact-name-n-value__value contact-name-n-value__value_phone"
+                                           data-visa-representative="phone" href="tel: {{ phone }}">{{ phone }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            {% if current_representative.email %}
+                                <div class="contact-name-n-value" data-visa-representative="email-holder-list">
+                                    <div class="contact-name-n-value__name">E-mail:</div>
+                                    <a class="contact-name-n-value__value" data-visa-representative="email"
+                                       href="mailto:{{ current_representative.email }}">{{ current_representative.email }}</a>
+                                </div>
+                            {% endif %}
+
+                            {% if current_representative.website %}
+                                <div class="contact-name-n-value" data-visa-representative="website-holder-list">
+                                    <div class="contact-name-n-value__name">Сайт:</div>
+                                    <a class="contact-name-n-value__value" target="_blank"
+                                       data-visa-representative="website"
+                                       href="https://{{ current_representative.website }}">{{ current_representative.website }}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

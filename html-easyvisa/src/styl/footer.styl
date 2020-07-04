@@ -1,0 +1,183 @@
+.footer-first {
+  padding 48px 0 54px 0
+  border-bottom: 1px solid #f6f6f6;
+
+  &__container {
+    display: flex;
+    justify-content space-between
+    align-items center
+    flex-wrap wrap
+  }
+
+  &__logo {
+    margin: 20px 44px 20px 0
+
+    .logo__img {
+      width: 254px;
+      height: 106px;
+    }
+  }
+}
+
+.footer-first-column {
+  margin: 0 14px auto 14px;
+
+  &:nth-of-type(3) {
+    margin-right: 0
+  }
+
+  &__title {
+    margin-bottom: 8px
+    font-family: "Proxima Nova Semibold";
+    color: #2e2e2e;
+    font-size: 24px;
+  }
+}
+
+.footer-first-nav {
+  display: flex;
+  flex-direction column
+
+  &__item {
+    margin: 7px 0
+    width: max-content
+    color: #4a4a4a;
+    font-size: 18px;
+    transition .3s
+
+    &:hover {
+      color darken(#4a4a4a, 40%)
+      text-shadow: darken(#4a4a4a, 40%) 0.5px 0 0;
+    }
+  }
+
+  &__franchise-card {
+    &:hover {
+      .franchise-card__text {
+        color darken(#4a4a4a, 40%)
+        text-shadow: darken(#4a4a4a, 40%) 0.5px 0 0;
+      }
+    }
+
+    .franchise-card__text {
+      color: #4a4a4a;
+      font-size: 18px;
+    }
+  }
+}
+
+.footer-second {
+  padding 36px 0 36px 0
+
+  &__copyright {
+    max-width: 1097px;
+    color: #6c6c6c;
+    font-family: "Proxima Nova Light";
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer-first {
+    padding 38px 0 42px 0
+
+    &__logo {
+      margin-right: 14px
+
+      .logo__img {
+        width: 200px;
+        height: auto
+      }
+    }
+  }
+
+  .footer-first-column {
+    &__title {
+      margin-bottom: 7px
+      font-size: 21px;
+    }
+  }
+
+  .footer-first-nav {
+    &__item {
+      margin: 6px 0
+      font-size: 16px
+    }
+
+    &__franchise-card {
+      .franchise-card__text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-second {
+    padding: 30px 0 30px 0;
+  }
+
+  .footer-second__copyright {
+    font-size: 14px
+  }
+
+  .footer-first {
+    padding 26px 0 10px 0
+
+    &__logo {
+      width: 44%
+      min-width: 134px;
+    }
+  }
+
+  .footer-first-column {
+    margin-bottom: 20px
+    width: 44%
+
+    &:nth-of-type(1) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(2) {
+      margin-left: 0
+    }
+
+    &__title {
+      margin-bottom: 5px
+      font-size: 18px;
+    }
+  }
+
+  .footer-first-nav {
+    &__item {
+      margin: 5px 0
+      font-size: 14px
+    }
+
+    &__franchise-card {
+      .franchise-card__text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-first-column {
+    margin: 0 0 20px 0
+
+    &__title {
+      margin-bottom: 5px
+      font-size: 17px;
+    }
+  }
+
+  .footer-first-nav {
+    &__franchise-card {
+      .franchise-card__img {
+        display: none
+      }
+    }
+  }
+}

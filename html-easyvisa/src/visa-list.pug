@@ -1,0 +1,1161 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Визы'
+
+block content
+    div
+        .container
+            .crumbs
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") Визы
+
+    .visa-list-page
+        .container
+            .title.title_h1
+                .title__text Визы
+                .title__divider
+
+            .country-card-list
+                .country-card.country-card-list__item(data-show-more="show-more" data-show-more-height="118" data-show-more-when="750")
+                    .country-card__title.country
+                        .country__icon(style="background-image: url('img/flag-usa.svg')")
+                        .country__text Европа
+                    .country-list.show-more__content(data-show-more-content="show-more__content")
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Австрия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Бельгия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Болгария
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Венгрия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Гстония
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Гловакия
+
+
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Гвстрия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Дельгия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Дипр
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Динляндия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Естония
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Евейцария
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Жвстрия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Жюксембург
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Зипр
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Финляндия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Эстония
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Швейцария
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Нидерланды
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Люксембург
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Кипр
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Финляндия
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Эстония
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Швейцария
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Нидерланды
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Люксембург
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Кипр
+
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Финляндия
+
+                    .show-more__btn(data-js="show-more__btn")
+                    .show-more__shadow(data-js="show-more__shadow")
+
+                .country-card.country-card-list__item
+                    .country-card__title.country
+                        .country__icon(style="background-image: url('img/flag-usa.svg')")
+                        .country__text Великобритания
+                    .country-list
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Великобритания
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Ирландия
+
+                .country-card.country-card-list__item
+                    .country-card__title.country
+                        .country__icon(style="background-image: url('img/flag-usa.svg')")
+                        .country__text Америка
+                    .country-list
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Канада
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text Мексика
+
+                        .country-list__column
+                            a.country.country-list__item(href="")
+                                .country__icon(style="background-image: url('img/flag-usa.svg')")
+                                .country__text США
+
+
+
+
+
+
+            .visa-list-page__visa-list-section
+                .title.title_h2
+                    .title__text Визы в Америку
+                    .title__divider
+
+                .visa-title-list(data-js="visa-container")
+                    .visa-title-list__column(data-js="visa-title-list-column")
+                        .visa-title-list__item(data-js="visa-title-list-item")
+                            .visa-title(data-js="visa-title")
+                                .visa-title__text Виза в Новую Зеландию
+                                .visa-title__icon
+                            .visa-card(data-js="visa-card")
+                                .visa-card__grid
+                                    .visa-card__grid-item
+                                        .visa-card__name-n-value-list
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок пребывания
+                                                .visa-card__value до 3 лет
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок получения визы
+                                                .visa-card__value от 1 дня
+                                            .visa-card__name-n-value
+                                                .visa-card__name Стоимость оформления
+                                                .visa-card__value от 4500 <span class="rouble">п</span>
+                                    .visa-card__grid-item
+                                        .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                    .visa-card__grid-item
+                                        a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                    .visa-title-list__column(data-js="visa-title-list-column")
+                        .visa-title-list__item(data-js="visa-title-list-item")
+                            .visa-title(data-js="visa-title")
+                                .visa-title__text Виза в Австралию
+                                .visa-title__icon
+                            .visa-card(data-js="visa-card")
+                                .visa-card__grid
+                                    .visa-card__grid-item
+                                        .visa-card__name-n-value-list
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок пребывания
+                                                .visa-card__value до 3 лет
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок получения визы
+                                                .visa-card__value от 1 дня
+                                            .visa-card__name-n-value
+                                                .visa-card__name Стоимость оформления
+                                                .visa-card__value от 4500 <span class="rouble">п</span>
+                                    .visa-card__grid-item
+                                        .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                    .visa-card__grid-item
+                                        a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+
+
+                .title.title_h2
+                    .title__text Визы в Европу
+                    .title__divider
+
+                .show-more(data-show-more="show-more" data-show-more-height="150" data-show-more-when="750")
+                    .visa-title-list.show-more__content(data-js="visa-container" data-show-more-content="show-more__content")
+                        .visa-title-list__column(data-js="visa-title-list-column")
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Австрию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Бельгию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Нидерланды
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Новую Зеландию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                        .visa-title-list__column(data-js="visa-title-list-column")
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Австрию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Бельгию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Нидерланды
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Новую Зеландию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                        .visa-title-list__column(data-js="visa-title-list-column")
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Австрию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Бельгию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Нидерланды
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Новую Зеландию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                    .show-more__btn(data-js="show-more__btn")
+                    .show-more__shadow(data-js="show-more__shadow")
+
+
+                .title.title_h2
+                    .title__text Визы в Великобританию
+                    .title__divider
+                .show-more(data-show-more="show-more" data-show-more-height="150" data-show-more-when="750")
+                    .visa-title-list.show-more__content(data-js="visa-container" data-show-more-content="show-more__content")
+                        .visa-title-list__column(data-js="visa-title-list-column")
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Австрию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Бельгию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Нидерланды
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Новую Зеландию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                        .visa-title-list__column(data-js="visa-title-list-column")
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Австрию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Бельгию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn() Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Нидерланды
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Новую Зеландию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                            .visa-title-list__item(data-js="visa-title-list-item")
+                                .visa-title(data-js="visa-title")
+                                    .visa-title__text Виза в Великобританию
+                                    .visa-title__icon
+                                .visa-card(data-js="visa-card")
+                                    .visa-card__grid
+                                        .visa-card__grid-item
+                                            .visa-card__name-n-value-list
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок пребывания
+                                                    .visa-card__value до 3 лет
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Срок получения визы
+                                                    .visa-card__value от 1 дня
+                                                .visa-card__name-n-value
+                                                    .visa-card__name Стоимость оформления
+                                                    .visa-card__value от 4500 <span class="rouble">п</span>
+                                        .visa-card__grid-item
+                                            .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                        .visa-card__grid-item
+                                            a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+                    .show-more__btn(data-js="show-more__btn")
+                    .show-more__shadow(data-js="show-more__shadow")
+
+
+
+                .title.title_h2
+                    .title__text Визы в Америку
+                    .title__divider
+
+                .visa-title-list(data-js="visa-container")
+                    .visa-title-list__column(data-js="visa-title-list-column")
+                        .visa-title-list__item(data-js="visa-title-list-item")
+                            .visa-title(data-js="visa-title")
+                                .visa-title__text Виза в Новую Зеландию
+                                .visa-title__icon
+                            .visa-card(data-js="visa-card")
+                                .visa-card__grid
+                                    .visa-card__grid-item
+                                        .visa-card__name-n-value-list
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок пребывания
+                                                .visa-card__value до 3 лет
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок получения визы
+                                                .visa-card__value от 1 дня
+                                            .visa-card__name-n-value
+                                                .visa-card__name Стоимость оформления
+                                                .visa-card__value от 4500 <span class="rouble">п</span>
+                                    .visa-card__grid-item
+                                        .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                    .visa-card__grid-item
+                                        a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                    .visa-title-list__column(data-js="visa-title-list-column")
+                        .visa-title-list__item(data-js="visa-title-list-item")
+                            .visa-title(data-js="visa-title")
+                                .visa-title__text Виза в Австралию
+                                .visa-title__icon
+                            .visa-card(data-js="visa-card")
+                                .visa-card__grid
+                                    .visa-card__grid-item
+                                        .visa-card__name-n-value-list
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок пребывания
+                                                .visa-card__value до 3 лет
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок получения визы
+                                                .visa-card__value от 1 дня
+                                            .visa-card__name-n-value
+                                                .visa-card__name Стоимость оформления
+                                                .visa-card__value от 4500 <span class="rouble">п</span>
+                                    .visa-card__grid-item
+                                        .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                    .visa-card__grid-item
+                                        a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                .title.title_h2
+                    .title__text Визы в Америку
+                    .title__divider
+
+                .visa-title-list(data-js="visa-container")
+                    .visa-title-list__column(data-js="visa-title-list-column")
+                        .visa-title-list__item(data-js="visa-title-list-item")
+                            .visa-title(data-js="visa-title")
+                                .visa-title__text Виза в Новую Зеландию
+                                .visa-title__icon
+                            .visa-card(data-js="visa-card")
+                                .visa-card__grid
+                                    .visa-card__grid-item
+                                        .visa-card__name-n-value-list
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок пребывания
+                                                .visa-card__value до 3 лет
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок получения визы
+                                                .visa-card__value от 1 дня
+                                            .visa-card__name-n-value
+                                                .visa-card__name Стоимость оформления
+                                                .visa-card__value от 4500 <span class="rouble">п</span>
+                                    .visa-card__grid-item
+                                        .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                    .visa-card__grid-item
+                                        a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+                    .visa-title-list__column(data-js="visa-title-list-column")
+                        .visa-title-list__item(data-js="visa-title-list-item")
+                            .visa-title(data-js="visa-title")
+                                .visa-title__text Виза в Австралию
+                                .visa-title__icon
+                            .visa-card(data-js="visa-card")
+                                .visa-card__grid
+                                    .visa-card__grid-item
+                                        .visa-card__name-n-value-list
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок пребывания
+                                                .visa-card__value до 3 лет
+                                            .visa-card__name-n-value
+                                                .visa-card__name Срок получения визы
+                                                .visa-card__value от 1 дня
+                                            .visa-card__name-n-value
+                                                .visa-card__name Стоимость оформления
+                                                .visa-card__value от 4500 <span class="rouble">п</span>
+                                    .visa-card__grid-item
+                                        .btn.visa-card__btn(data-popbox-target="popbox-callback") Заказать визу в один клик
+                                    .visa-card__grid-item
+                                        a.visa-card__link(href="") Подробная информация об условиях оформления визы
+
+
+
+
+
+
+
+
+
+
+
+

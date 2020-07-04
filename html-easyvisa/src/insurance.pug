@@ -1,0 +1,115 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Страхование'
+
+block content
+    div
+        .container(data-aos="fade-up")
+            .crumbs
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") Страхование
+
+    .insurance-page
+        .container
+            .title.title_h1(data-aos="fade-up")
+                .title__text Страхование
+                .title__divider
+                .title__subtitle Оставьте заявку, наш менеджер свяжется с Вами для уточнения деталей
+
+        .insurance-page-form-section
+            .container
+                form
+                    .box-list.box-list_3.box-list_has-counter(data-aos="fade-up")
+                        .box-list__item.box.box_type_2
+                            .box__counter 1
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:71px;" src="img/icon-plane.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__title Куда Вы поедете?
+                            .select_type_4
+                                select(name="" data-js="select-type-1")
+                                    option(value="" data-placeholder) Выберите направление
+                                    option(value="Казань") Казань
+                                    option(value="Уфа") Уфа
+                                    option(value="Краснодар") Краснодар
+                                    option(value="Пенза") Пенза
+                                    option(value="Новосибирск") Новосибирск
+                                    option(value="Ростов-на-Дону") Ростов-на-Дону
+
+                        .box-list__item.box.box_type_2(data-aos="fade-up")
+                            .box__counter 2
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:68px;" src="img/icon-calendar.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__title Укажите дату поездки
+                            .datepicker-container(data-js="datepicker-container")
+                                input.input.input_grey(readonly="readonly" name="date" data-js="datepicker" placeholder="Дата поездки (с и до)")
+                                .datepicker-arrow(data-js="datepicker-arrow")
+
+
+                        .box-list__item.box.box_type_2(data-aos="fade-up")
+                            .box__counter 3
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:79px;" src="img/icon-person-2.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__title Укажите свой возраст
+                            .select_type_4
+                                select(name="" data-js="select-type-1")
+                                    option(value="" data-placeholder) Ваш возраст
+                                    option(value="12-43") 12-43
+                                    option(value="14-88") 14-88
+                                    option(value="15-45") 15-45
+                                    option(value="16-87") 16-87
+                                    option(value="56-56") 56-56
+                                    option(value="53-78") 53-78
+
+                        .box-list__item.box-list__item_100.box.box_type_2(data-aos="fade-up")
+                            .box__counter 4
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:65px;" src="img/icon-phone-2.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__title Оставьте свои контактные данные
+                            .form.form_row.form_row_4.form_100
+                                input.input.input_grey.form__elem(placeholder="Ваше Имя" name="name")
+                                input.input.input_grey.form__elem(placeholder="Ваш Телефон" name="phone")
+                                input.input.input_grey.form__elem(placeholder="Ваш E-mail" name="email")
+                                button.btn.form__elem Оставить заявку
+
+
+        .insurance-page-text-section.section-padding_large
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Всегда входит в базовый вариант страхования
+                    .title__divider
+
+                .insurance-page-text-section__grid
+                    .insurance-page-text-section__left(data-aos="fade-up")
+                        p Медицинское страхование — возмещаются расходы на медицинские услуги (по амбулаторному и стационарному лечению), а также оплачиваются необходимые, прописанные врачом после осмотра лекарства.
+                        p &nbsp;
+                        p Если во время поездки путешественнику понадобится срочная медицинская помощь, нужно просто позвонить в сервисный центр. В любой ситуации, в любое время суток там можно получить подробную консультацию — как действовать в сложившихся обстоятельствах и к кому конкретно нужно обратиться.
+                        //p &nbsp;
+                        //p &nbsp;
+
+                    .insurance-page-text-section__right
+                        a.elem-with-yellow-square.elem-with-yellow-square_borderlike(href='img/picture-insurance-page-3.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="325" height="298" title="" data-aos="fade-up")
+                            img.elem-with-yellow-square__not-yellow-square(src="img/picture-insurance-page-3.jpg")
+                            .yellow-square.elem-with-yellow-square__yellow-square
+
+                .insurance-page-text-section__img-list
+                    a.elem-with-yellow-square.elem-with-yellow-square_borderlike.insurance-page-text-section__img(href='img/picture-insurance-page-1.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="631" height="298" title="" data-aos="fade-up")
+                        img.elem-with-yellow-square__not-yellow-square(src="img/picture-insurance-page-1.jpg")
+                        .yellow-square.elem-with-yellow-square__yellow-square
+
+                    a.elem-with-yellow-square.elem-with-yellow-square_borderlike.insurance-page-text-section__img(href='img/picture-insurance-page-2.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="237" height="240" title="" data-aos="fade-up")
+                        img.elem-with-yellow-square__not-yellow-square(src="img/picture-insurance-page-2.jpg")
+                        .yellow-square.elem-with-yellow-square__yellow-square
+
+                    a.elem-with-yellow-square.elem-with-yellow-square_borderlike.insurance-page-text-section__img(href='img/picture-insurance-page-4.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="298" title="" data-aos="fade-up")
+                        img.elem-with-yellow-square__not-yellow-square(src="img/picture-insurance-page-4.jpg")
+                        .yellow-square.elem-with-yellow-square__yellow-square
+
+

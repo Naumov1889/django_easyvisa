@@ -1,0 +1,54 @@
+.franchise-page-top-section {
+  padding-bottom: 180px;
+}
+.franchise-page-top-section:before {
+  background-color: rgba(24,24,24,0.6) !important;
+}
+.franchise-page-top-section__subtitle {
+  max-width: 536px;
+}
+.franchise-page-top-section__btn-list {
+  display: flex;
+}
+.franchise-page-top-section__btn {
+  margin-right: 28px;
+  width: 348px;
+  height: 68px;
+  font-size: 19px;
+}
+@media (max-width: 1500px) {
+  .franchise-page-top-section {
+    padding-bottom: 120px;
+  }
+}
+@media (max-width: 1050px) {
+  .franchise-page-top-section {
+    padding-bottom: 86px;
+  }
+  .franchise-page-top-section__subtitle {
+    max-width: 510px;
+  }
+  .franchise-page-top-section__btn {
+    margin-right: 20px;
+    width: 280px;
+    height: auto;
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-page-top-section {
+    padding-bottom: 60px;
+  }
+  .franchise-page-top-section__btn-list {
+    flex-direction: column;
+  }
+  .franchise-page-top-section__btn {
+    margin: 0 0 15px 0;
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .franchise-page-top-section {
+    padding-bottom: 34px;
+  }
+}

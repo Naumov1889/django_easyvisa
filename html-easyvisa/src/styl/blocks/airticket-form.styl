@@ -1,0 +1,96 @@
+.airticket-form {
+  flex-wrap wrap
+
+  .form__elem:nth-child(1),
+  .form__elem:nth-child(2),
+  .form__elem:nth-child(3) {
+    width: calc(33.3% - 16px);
+  }
+
+  .form__elem:nth-child(4),
+  .form__elem:nth-child(5),
+  .form__elem:nth-child(6),
+  .form__elem:nth-child(7) {
+    width: calc(25% - 16px);
+  }
+
+  .datepicker-container {
+    width: auto;
+
+    input {
+      width: 100%
+    }
+
+    &_opened input {
+      box-shadow none
+    }
+  }
+
+  .datepicker {
+    left auto
+    right 0
+  }
+
+
+  .select_type_4 .edd-head,
+  .select_type_4 .edd-head:hover,
+  .select_type_4 .edd-root-open .edd-head {
+    box-shadow none
+    background-color: #ffffff
+  }
+
+}
+
+@media (max-width: 900px) {
+  .airticket-form {
+    flex-wrap wrap
+
+    .form__elem:nth-child(4),
+    .form__elem:nth-child(5),
+    .form__elem:nth-child(6) {
+      width: calc(33.3% - 16px);
+    }
+
+    .form__elem:nth-child(7) {
+      width: calc(100% - 16px);
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .airticket-form {
+    flex-wrap wrap
+
+    .form__elem:nth-child(1),
+    .form__elem:nth-child(2),
+    .form__elem:nth-child(3) {
+      width: calc(50% - 16px);
+    }
+
+    .form__elem:nth-child(4),
+    .form__elem:nth-child(5),
+    .form__elem:nth-child(6) {
+      width: calc(50% - 16px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .airticket-form {
+    flex-wrap wrap
+
+    .form__elem {
+      width: 100% !important
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .airticket-form {
+    .datepicker-container .datepicker {
+      left 0
+      right 0
+    }
+  }
+}

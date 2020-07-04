@@ -1,0 +1,21 @@
+@require '../blocks/variables-n-mixins.styl'
+
+.index-page-feedback-section__slider {
+  .slider-list__item {
+    img {
+      { orange_frame }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .index-page-feedback-section__slider {
+    .slider-list__item {
+      img {
+        width: 100%
+        max-height 300px
+        object-fit cover
+      }
+    }
+  }
+}

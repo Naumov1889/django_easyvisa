@@ -1,0 +1,73 @@
+@require "../blocks/variables-n-mixins.styl"
+
+.index-page-callback-section {
+  position: relative;
+  display: flex;
+  align-items center
+  min-height: 420px;
+  padding 40px 0
+  background-attachment fixed
+
+  &__title {
+    max-width: 474px;
+  }
+
+  &__form {
+    margin-top: 42px
+    margin-bottom: 0
+  }
+
+  &__input {
+    width: 360px
+  }
+
+  &__btn {
+    width: 272px;
+    font-size: 18px
+  }
+}
+
+@media (max-width: 1050px) {
+  .index-page-callback-section {
+    min-height: 340px;
+
+    &__btn {
+      font-size: 17px
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .index-page-callback-section {
+    min-height unset
+    padding 28px 0 34px 0
+
+    &__title {
+      max-width: unset;
+      text-align center
+
+      .title__divider {
+        margin-right: auto;
+        margin-left: auto
+      }
+    }
+
+    &__form {
+      flex-direction column
+      align-items center
+      margin: 0
+      margin-top: 30px
+      margin-bottom: -15px
+    }
+
+    &__input {
+      width: 320px
+      text-align center
+    }
+
+    &__btn {
+      width: 320px
+      font-size: 16px
+    }
+  }
+}

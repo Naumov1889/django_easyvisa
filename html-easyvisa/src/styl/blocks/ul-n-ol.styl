@@ -1,0 +1,27 @@
+li {
+  position: relative;
+  margin: 7px 0
+  padding-left 20px
+
+  &:before {
+    content: ""
+    position: absolute;
+    left: 0
+    top: 7px // for fz 18
+    width: 7px;
+    height: 7px;
+    background-color: #ffea00;
+    border-radius 50%
+  }
+}
+
+@media (max-width: 1050px) {
+  li {
+    padding-left 17px
+
+    &:before {
+      width: 6px
+      height: 6px
+    }
+  }
+}

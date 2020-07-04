@@ -1,0 +1,168 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — Языковые курсы</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div class="english-page">
+        <div class="bg_img section-padding_medium text_color_white" style="background-image: url({% static 'img/bg-english-page.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="crumbs">
+              <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+                <div class="crumbs__icon dash_small"></div>
+              </div>
+              <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Языковые курсы</a></div>
+            </div>
+            <div class="title title_h1">
+              <div class="title__text">Online English <span class="title__text_extra">by “EasyVisa Agency”</span></div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle">Курсы английского языка</div>
+            </div>
+          </div>
+        </div>
+        <div class="english-level-section">
+          <div class="container">
+            <div class="box-list">
+              <div class="box-list__item box" data-aos="fade-up">
+                <div class="elem-with-yellow-square">
+                  <div class="elem-with-yellow-square__not-yellow-square english-level-section__text">Курсы для начинающих</div>
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+              </div>
+              <div class="box-list__item box" data-aos="fade-up">
+                <div class="elem-with-yellow-square">
+                  <div class="elem-with-yellow-square__not-yellow-square english-level-section__text">Курсы для продвинутых</div>
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="english-text-section-1 text-section section-padding_large">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Уроки английского языка</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="english-text-section-1__grid">
+              <div class="english-text-section-1__left" data-aos="fade-up">
+                <p>Для получения минимального результата в разговорном английском  необходимо заниматься два раза в неделю по два часа на протяжении 3 месяцев.</p>
+                <p>&nbsp;</p>
+                <p>Занятия проводятся на платформе ZOOM. В конце каждого занятия преподаватель дает домашнее задание и список слов, которые необходимо выучить.</p>
+                <p>&nbsp;</p>
+                <p>Мы не просто обучаем английскому языку, мы даем людям возможность зарабатывать на своих знаниях.  Английский язык – это неотъемлемая часть нашей жизни. Поэтому знание языка обязательно для современного человека.</p>
+                <p>&nbsp;</p>
+                <h3>Преимущества изучения языка</h3>
+                <ul>
+                  <li>возможность получить высокооплачиваемую работу за рубежом;</li>
+                  <li>свободное общение во время путешествий;</li>
+                  <li>саморазвитие;</li>
+                  <li>чтение литературы и просмотр фильмов.</li>
+                </ul>
+                <p>Если ваша задача — начать общаться на языке в минимальные сроки, мы научим уверенно использовать самые важные слова и правила. Если хотите говорить как носитель языка, мы предложим программу углубленного изучения.</p>
+                <p>&nbsp;</p>
+                <div class="btn english-text-section__btn" data-form-note-filler="Получить консультацию по Online English”" data-popbox-target="popbox-callback">Получить консультацию</div>
+              </div>
+              <div class="english-text-section-1__right">
+                <div class="box-list box-list_3">
+                  <div class="box-list__item box box_type_1" data-aos="fade-up">
+                    <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:83px;" src="{% static 'img/icon-teacher-3.svg' %}">
+                      <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                    </div>
+                    <div class="box__title">Индивидуальные <br>занятия</div>
+                    <div class="box__text">Один на один с учителем <br>{{ prices.price_1 }} за 70 мин</div>
+                  </div>
+                  <div class="box-list__item box box_type_1" data-aos="fade-up">
+                    <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:81px;" src="{% static 'img/icon-teacher-4.svg' %}">
+                      <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                    </div>
+                    <div class="box__title">Занятия в <br>группе</div>
+                    <div class="box__text">Группа до 6 человек <br>{{ prices.price_2 }} за 70 мин</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="english-page-plans-section bg_grey section-padding_small">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Английский в группе</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="box-list box-list_3">
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="elem-with-yellow-square">
+                  <div class="elem-with-yellow-square__not-yellow-square english-page-plans-section__text-1">Min</div>
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="english-page-plans-section__text-2">Минимальный</div>
+                <div class="english-page-plans-section__text-3">Кол-во занятий: <b>3</b> <br>За одно занятие: <b>{{ prices.price_3 }}</b> <span class="rouble">п</span></div>
+                <div class="english-page-plans-section__text-4">{{ prices.price_4 }} <span class="rouble">п</span></div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="elem-with-yellow-square">
+                  <div class="elem-with-yellow-square__not-yellow-square english-page-plans-section__text-1">Std</div>
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="english-page-plans-section__text-2">Стандартный</div>
+                <div class="english-page-plans-section__text-3">Кол-во занятий: <b>8</b> <br>За одно занятие: <b>{{ prices.price_5 }}</b> <span class="rouble">п</span> <span class="text_line-through">{{ prices.price_3 }} <span class="rouble">п</span></span></div>
+                <div class="english-page-plans-section__text-4">{{ prices.price_6 }} <span class="rouble">п</span></div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="elem-with-yellow-square">
+                  <div class="elem-with-yellow-square__not-yellow-square english-page-plans-section__text-1">Мax</div>
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="english-page-plans-section__text-2">Максимальный</div>
+                <div class="english-page-plans-section__text-3">Кол-во занятий: <b>12</b> <br>За одно занятие: <b>{{ prices.price_7 }}</b> <span class="rouble">п</span> <span class="text_line-through">{{ prices.price_3 }} <span class="rouble">п</span></span></div>
+                <div class="english-page-plans-section__text-4">{{ prices.price_8 }} <span class="rouble">п</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="english-text-section-2 text-section section-padding_medium">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Наши преимущества</div>
+              <div class="title__divider"></div>
+            </div>
+            <div><a data-aos="fade-up" class="english-text-section-2__img elem-with-yellow-square elem-with-yellow-square_borderlike" href="{% static 'img/picture-english-page.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="484" height="750"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-english-page.jpg' %}"><span class="yellow-square elem-with-yellow-square__yellow-square"></span></a>
+              <ul>
+                <li data-aos="fade-up"><b>Низкая стоимость занятий</b>
+                  <p>Уроки в группе дешевле индивидуальных занятий примерно в 4-5 раз.</p>
+                </li>
+                <li data-aos="fade-up"><b>Легче преодолеть языковой барьер</b>
+                  <p>Чтобы научиться свободно говорить по-английски, нужно как можно больше общаться. Поэтому большая часть урока - разговорная практика. Мы планируем каждое занятие так, чтобы вы легко преодолели языковой барьер и научились применять новые знания в повседневном общении.</p>
+                </li>
+                <li data-aos="fade-up"><b>Длительность занятия 70 мин</b>
+                  <p>Одного академ. часа (45 мин.) мало для полноценного урока. Поэтому мы увеличили   длительность занятия, чтобы уделить больше времени каждому ученику и у Вас было больше разговорной практики.</p>
+                </li>
+                <li data-aos="fade-up"><b>Бесплатная литература</b>
+                  <p>Мы бесплатно предоставляем всю необходимую литературу, используем лучшие  учебники мировых издательств Oxford, Cambridge.</p>
+                </li>
+                <li data-aos="fade-up"><b>Опытные преподаватели</b>
+                  <p>Опыт преподавания языка от 9 лет. Каждый преподаватель проходит многоэтапный отбор. Проводятся тренинги и курсы повышения квалификации. Наш приоритет — отбор сильных преподавателей, которые не просто хорошо говорят по-английски, но и умеют передавать свои знания, и заинтересованы в прогрессе учеников.</p>
+                </li>
+              </ul>
+            </div>
+            <div data-aos="fade-up" class="btn english-text-section__btn" data-form-note-filler="Записаться на Online English”" data-popbox-target="popbox-callback">Записаться на урок</div>
+          </div>
+        </div>
+        <div class="english-text-section-3 text-section bg_grey section-padding_medium">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Почему мы?</div>
+              <div class="title__divider"></div>
+            </div>
+            <p data-aos="fade-up">Обучаем практическому английскому языку, который поможет в реальной жизни. Преподаём курсы от начального до продвинутого уровней сложности. Занятия ведут как русскоязычные преподаватели, так и носители языка.</p>
+            <p>&nbsp;</p>
+            <p data-aos="fade-up">Если ваша задача — начать общаться на языке в минимальные сроки, мы научим уверенно использовать самые важные слова и правила. Если хотите говорить как носитель языка, мы предложим программу углубленного изучения. Преподаватель уделит вам достаточно внимания, отследит ошибки и поможет справиться с трудностями.</p>
+            <p>&nbsp;</p>
+            <p data-aos="fade-up">Занятия помогут найти друзей и открыть новые перспективы. Мы создаем позитивную рабочую атмосферу на уроках — вы выучите английский и хорошо проведете время. В команде, где все друг друга поддерживают, добиться результата намного проще.</p>
+          </div>
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+.index-page-payment-section__box {
+  padding: 0px !important;
+  width: 235px;
+  height: 131px;
+}
+.index-page-payment-section-box-list {
+  margin: -8px -8px 0 -8px;
+}
+.index-page-payment-section-box-list__item {
+  margin: 8px;
+}
+@media (max-width: 1050px) {
+  .index-page-payment-section__box {
+    width: 170px;
+    height: 96px;
+  }
+  .index-page-payment-section__box img {
+    transform: scale(0.75);
+  }
+}
+@media (max-width: 600px) {
+  .index-page-payment-section-box-list {
+    margin: -7px -7px 0 -7px;
+  }
+  .index-page-payment-section-box-list__item {
+    margin: 7px;
+  }
+}
+@media (max-width: 400px) {
+  .index-page-payment-section__box {
+    width: 138px;
+    height: 82px;
+  }
+}

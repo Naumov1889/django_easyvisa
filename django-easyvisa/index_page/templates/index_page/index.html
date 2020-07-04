@@ -1,0 +1,492 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="index-page-firstscreen-section text_color_white">
+        <div class="container" data-aos="fade-up">
+            <div class="index-page-firstscreen-section-grid">
+                <div class="index-page-firstscreen-section__left">
+                    <div class="title title_h1 index-page-firstscreen-section__title">
+                        <div class="title__text">Оформляем более <span class="text_color_primary">5000</span> виз
+                            ежегодно в СНГ и Европе
+                        </div>
+                        <div class="title__subtitle"><span class="dash"></span> <span
+                                class="text_color_primary">98,1%</span> одобрения на получение визы
+                        </div>
+                    </div>
+                    <div class="index-page-firstscreen-section__btn btn" data-form-note-filler="—"
+                         data-popbox-target="popbox-callback">Узнать подробнее
+                    </div>
+                    <div class="index-page-firstscreen-section-features">
+                        <div class="index-page-firstscreen-section-feature index-page-firstscreen-section-features__item"
+                             data-aos="fade-up">
+                            <div class="index-page-firstscreen-section-feature__title">6+</div>
+                            <div class="index-page-firstscreen-section-feature__subtitle">международных <br>представительств
+                            </div>
+                        </div>
+                        <div class="index-page-firstscreen-section-feature index-page-firstscreen-section-features__item"
+                             data-aos="fade-up" data-aos-delay="50">
+                            <div class="index-page-firstscreen-section-feature__title">50+</div>
+                            <div class="index-page-firstscreen-section-feature__subtitle">турагенств <br>доверяет нам
+                            </div>
+                        </div>
+                        <div class="index-page-firstscreen-section-feature index-page-firstscreen-section-features__item"
+                             data-aos="fade-up" data-aos-delay="100">
+                            <div class="index-page-firstscreen-section-feature__title">5144</div>
+                            <div class="index-page-firstscreen-section-feature__subtitle">выданных виз за <br>прошедший
+                                год
+                            </div>
+                        </div>
+                        <div class="index-page-firstscreen-section-feature index-page-firstscreen-section-features__item"
+                             data-aos="fade-up" data-aos-delay="150">
+                            <div class="index-page-firstscreen-section-feature__title">98,1%</div>
+                            <div class="index-page-firstscreen-section-feature__subtitle">одобрения на <br>получение
+                                визы
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-page-firstscreen-section__right index-page-firstscreen-section-countries-card">
+                    <div class="index-page-firstscreen-section-countries-card__title">Выберите направление:</div>
+                    <div class="index-page-firstscreen-section-countries">
+                                                <a class="index-page-firstscreen-section-country index-page-firstscreen-section-countries__item country"
+                           href="{% url 'visa:visa_detail' slug='ssha' %}">
+                            <div class="country__icon index-page-firstscreen-section-country__icon"
+                                 style="background-image: url({% static 'img/flag-usa.svg' %})"></div>
+                            <div class="country__text index-page-firstscreen-section-country__text">США</div>
+                        </a>
+                        <a class="index-page-firstscreen-section-country index-page-firstscreen-section-countries__item country"
+                           href="{% url 'visa:visa_detail' slug='velikobritaniya' %}">
+                            <div class="country__icon index-page-firstscreen-section-country__icon"
+                                 style="background-image: url({% static 'img/flag-uk.svg' %})"></div>
+                            <div class="country__text index-page-firstscreen-section-country__text">Англия</div>
+                        </a>
+                        <a class="index-page-firstscreen-section-country index-page-firstscreen-section-countries__item country"
+                           href="{% url 'visa:visa_list' %}#europe">
+                            <div class="country__icon index-page-firstscreen-section-country__icon"
+                                 style="background-image: url({% static 'img/flag-eu.svg' %})"></div>
+                            <div class="country__text index-page-firstscreen-section-country__text">Европа</div>
+                        </a>
+                        <a class="index-page-firstscreen-section-country index-page-firstscreen-section-countries__item country"
+                           href="{% url 'visa:visa_list' %}#asia">
+                            <div class="country__icon index-page-firstscreen-section-country__icon"
+                                 style="background-image: url({% static 'img/flag-china.svg' %})"></div>
+                            <div class="country__text index-page-firstscreen-section-country__text">Азия</div>
+                        </a>
+                        <a class="index-page-firstscreen-section-country index-page-firstscreen-section-countries__item country"
+                           href="{% url 'visa:visa_detail' slug='avstraliya' %}">
+                            <div class="country__icon index-page-firstscreen-section-country__icon"
+                                 style="background-image: url({% static 'img/flag-australia.svg' %})"></div>
+                            <div class="country__text index-page-firstscreen-section-country__text">Австралия</div>
+                        </a>
+                        <a class="index-page-firstscreen-section-country index-page-firstscreen-section-countries__item country"
+                           href="{% url 'visa:visa_list' %}">
+                            <div class="country__icon index-page-firstscreen-section-country__icon"
+                                 style="background-image: url({% static 'img/icon-dots.svg' %})"></div>
+                            <div class="country__text index-page-firstscreen-section-country__text">Больше направлений
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-popular-destinations-section section-padding_large">
+        <div class="container">
+            <div class="title title_h2">
+                <div class="title__text">Популярные направления</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="index-page-popular-destinations-section-slider slider slider_type_1">
+                <div class="slider-list" data-js="slider-index-page-popular-destinations">
+                    {% for popular_destination in popular_destinations %}
+
+                        <div class="index-page-popular-destinations-section-slider__item slider-list__item">
+                            <div class="index-page-popular-destinations-section-slider__content"><img
+                                    class="index-page-popular-destinations-section__img"
+                                    src="{{ popular_destination.thumbnail.url }}">
+                                <div class="index-page-popular-destinations-section-text">
+                                    <a class="index-page-popular-destinations-section-text__title"
+                                       href="{% url 'visa:visa_detail' slug=popular_destination.slug %}">
+                                        {{ popular_destination.city }}
+                                    </a>
+                                    <div class="index-page-popular-destinations-section-text__hidden-part">
+                                        <div class="index-page-popular-destinations-section-text__name-n-value-list">
+                                            <div class="index-page-popular-destinations-section-text__name-n-value">
+                                                <div class="index-page-popular-destinations-section-text__name">Цена
+                                                    от
+                                                </div>
+                                                <div class="index-page-popular-destinations-section-text__value">{{ popular_destination.price }}
+                                                    <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                                </div>
+                                            </div>
+                                            <div class="index-page-popular-destinations-section-text__name-n-value">
+                                                <div class="index-page-popular-destinations-section-text__name">Срок
+                                                    выдачи от
+                                                </div>
+                                                <div class="index-page-popular-destinations-section-text__value">{{ popular_destination.how_long }}</div>
+                                            </div>
+                                        </div>
+                                        <div class="index-page-popular-destinations-section-text__btn btn"
+                                             data-form-note-filler="Виза в {{ popular_destination.city }}"
+                                             data-popbox-target="popbox-callback">Оставить заявку
+                                        </div>
+                                    </div>
+                                    <div class="index-page-popular-destinations-section-text__bottom">
+                                        <div class="index-page-popular-destinations-section-text__country">{{ popular_destination.country }}</div>
+                                        <div class="index-page-popular-destinations-section-text__hidden-part index-page-popular-destinations-section-text__cases">
+                                            Выдано <span>{{ popular_destination.visa_counter }}</span> виз
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-features-section bg_grey section-padding_small">
+        <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+                <div class="title__text">Оформи визу у нас</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="slider">
+                <div class="box-list box-list_3" data-js="slider-type-8"
+                     data-slider-wrap-children-class="slider-list__item">
+                    <div class="box-list__item box box_type_1" data-aos="fade-up">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:95px;"
+                                src="{% static 'img/icon-chat-2.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Личный менеджер</div>
+                        <div class="box__text">Поддержка 24/7, консультирование<br>по всем вопросам</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:88px;"
+                                src="{% static 'img/icon-safety.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Безопасность</div>
+                        <div class="box__text">Ваши данные под надежной<br>защитой</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:95px;"
+                                src="{% static 'img/icon-placemark-2.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Без вашего присутствия</div>
+                        <div class="box__text">Экономьте ваше время<br>и деньги</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="150">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:82px;;"
+                                src="{% static 'img/icon-thumb-up.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Работа на результат</div>
+                        <div class="box__text">Команда профессионалов<br>выполнит все на 100%</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:78px;"
+                                src="{% static 'img/icon-speed.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Скорость</div>
+                        <div class="box__text">Оформление визы<br>от 1 рабочего дня</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="250">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:82px;"
+                                src="{% static 'img/icon-wallet.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Без оплаченной брони</div>
+                        <div class="box__text">Нам не нужны оплаченные брони,<br>вы не рискуете своими деньгами</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-staff-section">
+        <div class="index-page-staff-section__container container" data-aos="fade-up">
+            <div class="index-page-staff-section__title title title_h2">
+                <div class="title__text">Наша команда</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="index-page-staff-section-slider slider">
+                <div class="slider-list index-page-staff-section-slider-list" data-js="slider-type-2">
+                    {% for person in staff %}
+                        <div class="slider-list__item index-page-staff-section-slider-list__item">
+                            <div class="index-page-staff-section__grid" data-aos="fade-up" data-aos-delay="100"
+                                 data-aos-offset="250">
+                                <div class="index-page-staff-section__left">
+                                    <div class="index-page-staff-section__quote quote">{{ person.quote }}</div>
+                                    <div class="index-page-staff-section__name-n-job">
+                                        <div class="index-page-staff-section__name quote-name">{{ person.name }}</div>
+                                        <div class="index-page-staff-section__job quote-job">{{ person.job }}</div>
+                                    </div>
+                                </div>
+                                <div class="index-page-staff-section__right elem-with-yellow-square"><img
+                                        class="index-page-staff-section__img elem-with-yellow-square__not-yellow-square"
+                                        src="{{ person.photo.url }}">
+                                    <div class="elem-with-yellow-square__yellow-square yellow-square index-page-staff-section__yellow-square"></div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-services-section bg_grey section-padding_small">
+        <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+                <div class="title__text">Услуги EasyVisa Agency</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="index-page-services-section__slider slider slider_type_3">
+                <div class="slider-list slider-type-3-list" data-js="slider-type-3">
+                    <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up">
+                        <div class="slider-type-3-item__grid">
+                            <div class="slider-type-3-item__title-n-subtitle">
+                                <div class="slider-type-3-item__title">Авиабилеты</div>
+                                <div class="slider-type-3-item__subtitle">Подбор выгодных авиабилетов</div>
+                            </div>
+                            <a class="slider-type-3-item__link" href="{% url 'base:airticket_page' %}">Подробнее <span
+                                    class="icon icon_arrow"></span></a><img
+                                class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-1.png' %}">
+                        </div>
+                    </div>
+                    <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up"
+                         data-aos-delay="50">
+                        <div class="slider-type-3-item__grid">
+                            <div class="slider-type-3-item__title-n-subtitle">
+                                <div class="slider-type-3-item__title">Страхование</div>
+                                <div class="slider-type-3-item__subtitle" style="max-width: 290px;">Страховка для вылета
+                                    за границу по выгодным тарифам
+                                </div>
+                            </div>
+                            <a class="slider-type-3-item__link" href="{% url 'base:insurance_page' %}">Подробнее <span
+                                    class="icon icon_arrow"></span></a><img
+                                class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-2.png' %}">
+                        </div>
+                    </div>
+                    <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up"
+                         data-aos-delay="100">
+                        <div class="slider-type-3-item__grid">
+                            <div class="slider-type-3-item__title-n-subtitle">
+                                <div class="slider-type-3-item__title">Загранпаспорт</div>
+                                <div class="slider-type-3-item__subtitle">Оформление паспорта <br>на 5 и 10 лет</div>
+                            </div>
+                            <a class="slider-type-3-item__link" href="{% url 'base:foreign_passport_page' %}">Подробнее
+                                <span class="icon icon_arrow"></span></a><img
+                                class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-3.png' %}">
+                        </div>
+                    </div>
+                    <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up"
+                         data-aos-delay="150">
+                        <div class="slider-type-3-item__grid">
+                            <div class="slider-type-3-item__title-n-subtitle">
+                                <div class="slider-type-3-item__title">Языковые курсы</div>
+                                <div class="slider-type-3-item__subtitle" style="max-width: 200px">by “EasyVisa Agency”</div>
+                            </div>
+                            <a class="slider-type-3-item__link" href="{% url 'english_page:home' %}">Подробнее <span
+                                    class="icon icon_arrow"></span></a><img
+                                class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-4.png' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-courses-section section-padding_large">
+        <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+                <div class="title__text">Курсы английского языка</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="slider">
+                <div class="box-list box-list_4 index-page-courses-section__first-box-list" data-js="slider-type-8"
+                     data-slider-wrap-children-class="slider-list__item">
+                    <div class="box-list__item box box_type_1" data-aos="fade-up">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:81px;"
+                                src="{% static 'img/icon-price.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Доступная цена</div>
+                        <div class="box__text">Стоимость обучения<br>{{ english_course_price }}</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:81px;"
+                                src="{% static 'img/icon-chat-1.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Практика</div>
+                        <div class="box__text">До 80% разговорной <br>практики</div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:95px;"
+                                src="{% static 'img/icon-chat-2.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Личный менеджер</div>
+                        <div class="box__text" style="max-width: 270px;">Персональный менеджер для контроля учебного
+                            процесса
+                        </div>
+                    </div>
+                    <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="150">
+                        <div class="box__icon-wrapper elem-with-yellow-square"><img
+                                class="box__icon elem-with-yellow-square__not-yellow-square" style="width:79px;"
+                                src="{% static 'img/icon-teacher.svg' %}">
+                            <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                        </div>
+                        <div class="box__title">Опытные учителя</div>
+                        <div class="box__text" style="max-width: 270px;">Сертифицированные преподаватели (TEFL, TESOL,
+                            TKT)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-list box-list_3 index-page-courses-section__second-box-list">
+                <div class="box-list__item box box_type_1" data-aos="fade-up">
+                    <div class="box__title">Индивидуальные занятия</div>
+                    <div class="box__text">С преподавателями-носителями языка. Получайте ценнейший опыт общения с
+                        носителями языка на 20 или 40-минутных индивидуальных занятиях.
+                    </div>
+                </div>
+                <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                    <div class="box__title">Групповые занятия</div>
+                    <div class="box__text">Практикуйтесь в разговорном английском на групповых занятиях с 4-5 студентами
+                        одного уровня. Занятия начинаются каждые 24 часа в сутки через каждые 30 минут.
+                    </div>
+                </div>
+                <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box__title">Самостоятельное обучение</div>
+                    <div class="box__text">Интерактивные уроки для самостоятельной практики и закрепления материала
+                        доступны на нашей онлайн платформе. Занимайтесь в любое время в любом месте.
+                    </div>
+                </div>
+            </div>
+            <a class="index-page-courses-section__btn btn" style="max-width: 278px"
+                 href="{% url 'english_page:home' %}">Подробнее
+            </a>
+        </div>
+    </div>
+    <div class="index-page-usa-section text_color_white">
+        <div class="container">
+            <div class="index-page-usa-section-grid">
+                <div class="index-page-usa-section-grid__left" data-aos="fade-up">
+                    <div class="title title_h2">
+                        <div class="title__text">Америка +</div>
+                        <div class="title__divider"></div>
+                        <div class="title__subtitle">Твое будущее в США</div>
+                    </div>
+                    <div class="index-page-usa-section__btn btn" data-form-note-filler="Америка +. Консультация"
+                         data-popbox-target="popbox-callback">Получить консультацию
+                    </div>
+                </div>
+                <div class="index-page-usa-section-grid__right">
+                    <div class="feature-card-list">
+                        <div class="feature-card feature-card-list__item" data-aos="fade-up">
+                            <div class="feature-card__title">Light</div>
+                            <div class="feature-card__divider"></div>
+                            <ul class="feature-card__features feature-card-features">
+                                <li class="feature-card-features__item">Виза под ключ</li>
+                                <li class="feature-card-features__item">Личный менеджер</li>
+                                <li class="feature-card-features__item">Поддержка 24/7</li>
+                                <li class="feature-card-features__item">Оплата от 10$/час</li>
+                                <li class="feature-card-features__item">Жилье</li>
+                            </ul>
+                            <div class="feature-card__bottom" data-form-note-filler="Америка +. Light"
+                                 data-popbox-target="popbox-callback">Узнать стоимость
+                            </div>
+                        </div>
+                        <div class="feature-card feature-card-list__item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="feature-card__title">EXTRA</div>
+                            <div class="feature-card__divider"></div>
+                            <ul class="feature-card__features feature-card-features">
+                                <li class="feature-card-features__item">Виза под ключ</li>
+                                <li class="feature-card-features__item">Личный менеджер</li>
+                                <li class="feature-card-features__item">Поддержка 24/7</li>
+                                <li class="feature-card-features__item">Оплата от 13$/час</li>
+                                <li class="feature-card-features__item">Жилье</li>
+                                <li class="feature-card-features__item">Страховка в случае отказа</li>
+                            </ul>
+                            <div class="feature-card__bottom" data-form-note-filler="Америка +. Extra"
+                                 data-popbox-target="popbox-callback">Узнать стоимость
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-feedback-section bg_grey section-padding_small">
+        <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+                <div class="title__text">Отзывы наших клиентов</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="index-page-feedback-section__slider slider slider_type_1">
+                <div class="slider-list" data-js="slider-type-1">
+                    {% for photo in feedback_photos %}
+                        <a class="slider-list__item" href="{{ photo.photo.url }}" data-js="photoswipe-item"
+                           data-photoswipe-group-id="0" width="{{ photo.photo.width }}"
+                           height="{{ photo.photo.height }}" {% if photo.note %}title="{{ photo.note }}"{% endif %}
+                           data-aos="fade-up"><img src="{{ photo.thumbnail_index_page.url }}"
+                                                   {% if photo.note %}alt="{{ photo.note }}"{% endif %}></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-payment-section section-padding_large">
+        <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+                <div class="title__text">Мы принимаем</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="box-list index-page-payment-section-box-list">
+                <div class="box-list__item box index-page-payment-section__box index-page-payment-section-box-list__item"
+                     data-aos="fade-up"><img src="{% static 'img/logo-payment-1.jpg' %}"></div>
+                <div class="box-list__item box index-page-payment-section__box index-page-payment-section-box-list__item"
+                     data-aos="fade-up" data-aos-delay="50"><img src="{% static 'img/logo-payment-2.jpg' %}"></div>
+                <div class="box-list__item box index-page-payment-section__box index-page-payment-section-box-list__item"
+                     data-aos="fade-up" data-aos-delay="100"><img src="{% static 'img/logo-payment-3.jpg' %}"></div>
+                <div class="box-list__item box index-page-payment-section__box index-page-payment-section-box-list__item"
+                     data-aos="fade-up" data-aos-delay="150"><img src="{% static 'img/logo-payment-4.jpg' %}"></div>
+                <div class="box-list__item box index-page-payment-section__box index-page-payment-section-box-list__item"
+                     data-aos="fade-up" data-aos-delay="200"><img src="{% static 'img/logo-payment-5.jpg' %}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="index-page-callback-section text_color_white bg_img"
+         style="background-image: url({% static 'img/bg-index-page-callback.jpg' %})">
+        <div class="container" data-aos="fade-up">
+            <div class="title title_h2 index-page-callback-section__title">
+                <div class="title__text">Остались вопросы?</div>
+                <div class="title__divider"></div>
+                <div class="title__subtitle">Оставьте свой номер и наш менеджер перезвонит вам в течение часа и
+                    ответит
+                    на все волнующие вас вопросы
+                </div>
+            </div>
+            <form class="form form_row index-page-callback-section__form" data-js="form"
+                  data-form-note="Запрос на обратный звонок">
+                <input class="input index-page-callback-section__input form__elem"
+                       placeholder="Введите номер телефона"
+                       type="tel" name="phone">
+                <button class="btn index-page-callback-section__btn form__elem">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

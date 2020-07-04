@@ -1,0 +1,118 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Отзывы'
+
+block content
+    div
+        .container
+            .crumbs(data-aos="fade-up")
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") Отзывы
+
+    .feedback-page
+        .container(data-aos="fade-up")
+            .title.title_h1
+                .title__text Отзывы
+                .title__divider
+
+            .feedback-page-leave-feedback
+                .feedback-page-leave-feedback__text Посодействуйте развитию нашей компании! Мы очень ценим Вашу инициативу и рады каждому отзыву и предложению,  ведь они помогают нам стать лучше.
+                .btn.feedback-page-leave-feedback__btn(data-popbox-target="popbox-feedback") Оставить отзыв
+
+            .video-slider.slider.slider_type_1.section-padding_medium
+                .slider-list(data-js="slider-type-4")
+                    a.slider-list__item.video-slider__item(href="https://www.youtube.com/embed/dQw4w9WgXcQ" data-js="photoswipe-item" data-photoswipe-group-id="1" width="1000" height="563" title="Первый отзыв")
+                        .video-slider__content
+                            img(src='img/picture-feedback-video-1.jpg' alt='Image description')
+                            .video-slider__btn
+                                .icon.icon_play-arrow
+                            .video-slider__overlay
+
+                    a.slider-list__item.video-slider__item(href="https://www.youtube.com/embed/fNFzfwLM72c" data-js="photoswipe-item" data-photoswipe-group-id="1" width="1000" height="563" title="")
+                        .video-slider__content
+                            img(src='img/picture-feedback-video-1.jpg' alt='Image description')
+                            .video-slider__btn
+                                .icon.icon_play-arrow
+                            .video-slider__overlay
+
+                    a.slider-list__item.video-slider__item(href="https://www.youtube.com/embed/dQw4w9WgXcQ" data-js="photoswipe-item" data-photoswipe-group-id="1" width="1000" height="563" title="")
+                        .video-slider__content
+                            img(src='img/picture-feedback-video-1.jpg' alt='Image description')
+                            .video-slider__btn
+                                .icon.icon_play-arrow
+                            .video-slider__overlay
+
+                    a.slider-list__item.video-slider__item(href="https://www.youtube.com/embed/fNFzfwLM72c" data-js="photoswipe-item" data-photoswipe-group-id="1" width="1000" height="563" title="")
+                        .video-slider__content
+                            img(src='img/picture-feedback-video-1.jpg' alt='Image description')
+                            .video-slider__btn
+                                .icon.icon_play-arrow
+                            .video-slider__overlay
+
+
+
+
+
+
+
+        .feedback-page-waterfall-section.bg_grey
+            .container.feedback-page-waterfall-section__container.section-padding_medium
+                .feedback-waterfall-wrapper
+                    .feedback-waterfall(data-js="waterfall")
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-1.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="")
+                            img(src='img/picture-feedback-1.jpg' data-src='img/picture-feedback-1.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-2.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="")
+                            img(src='img/picture-feedback-2.jpg' data-src='img/picture-feedback-2.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-3.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="")
+                            img(src='img/picture-feedback-3.jpg' data-src='img/picture-feedback-3.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-4.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="")
+                            img(src='img/picture-feedback-4.jpg' data-src='img/picture-feedback-4.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-5.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="430" title="")
+                            img(src='img/picture-feedback-5.jpg' data-src='img/picture-feedback-5.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-6.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="390" title="")
+                            img(src='img/picture-feedback-6.jpg' data-src='img/picture-feedback-6.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-7.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="470" title="")
+                            img(src='img/picture-feedback-7.jpg' data-src='img/picture-feedback-7.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-8.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="470" title="")
+                            img(src='img/picture-feedback-8.jpg' data-src='img/picture-feedback-8.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-9.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="465" title="")
+                            img(src='img/picture-feedback-9.jpg' data-src='img/picture-feedback-9.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-10.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="474" title="")
+                            img(src='img/picture-feedback-10.jpg' data-src='img/picture-feedback-10.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-11.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="505" title="")
+                            img(src='img/picture-feedback-11.jpg' data-src='img/picture-feedback-11.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-12.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="505" title="")
+                            img(src='img/picture-feedback-12.jpg'  alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-13.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="500" title="")
+                            img(src='img/picture-feedback-13.jpg' data-src='img/picture-feedback-13.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-14.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="532" title="")
+                            img(src='img/picture-feedback-14.jpg' data-src='img/picture-feedback-14.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-15.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="382" title="")
+                            img(src='img/picture-feedback-15.jpg' data-src='img/picture-feedback-15.jpg' alt='Image description')
+
+                        a.feedback-waterfall__item(data-aos="fade-up" href='img/picture-feedback-16.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="451" title="")
+                            img(src='img/picture-feedback-16.jpg' data-src='img/picture-feedback-16.jpg' alt='Image description')
+
+
+
+
+
+

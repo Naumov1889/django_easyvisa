@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 93%;
+}

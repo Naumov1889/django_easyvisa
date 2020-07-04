@@ -1,0 +1,121 @@
+.feature-card {
+  position: relative;
+  padding: 16px 25px 80px 25px;
+  width: 295px;
+  max-width: 100%;
+  box-shadow: 0 8px 13px rgba(43,43,43,0.09);
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.feature-card__title {
+  color: #454545;
+  font-family: "Proxima Nova Extrabold";
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.66px;
+}
+.feature-card__divider {
+  position: relative;
+  margin: 16px 0;
+  width: 100%;
+  height: 1px;
+}
+.feature-card__divider:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -30px;
+  right: -30px;
+  height: 1px;
+  background-color: #e1e1e1;
+}
+.feature-card__bottom {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 62px;
+  border-radius: 0 0 5px 5px;
+  background-color: #ffea00;
+  color: #2b2b2b;
+  font-family: "Proxima Nova Semibold";
+  font-size: 18px;
+  letter-spacing: 0.85px;
+  cursor: pointer;
+}
+.feature-card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature-card-list__item {
+  margin: 0 25px;
+}
+.feature-card-features__item {
+  margin: 11px 0;
+  font-size: 18px;
+  color: #595959;
+}
+@media (max-width: 1050px) {
+  .feature-card-list {
+    display: flex;
+    margin: 0 -12px;
+  }
+  .feature-card-list__item {
+    margin: 0 12px;
+  }
+  .feature-card {
+    padding: 14px 20px 76px 20px;
+    width: 266px;
+  }
+  .feature-card__title {
+    font-size: 22px;
+  }
+  .feature-card__divider {
+    margin: 14px 0;
+  }
+  .feature-card__bottom {
+    height: 54px;
+    font-size: 17px;
+  }
+  .feature-card-features__item {
+    margin: 11px 0;
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .feature-card-list {
+    display: flex;
+    margin: 0 -2%;
+  }
+  .feature-card-list__item {
+    margin: 0 2%;
+    width: 46%;
+  }
+}
+@media (max-width: 600px) {
+  .feature-card {
+    padding: 14px 17px 72px 17px;
+  }
+  .feature-card__bottom {
+    height: 52px;
+    font-size: 16px;
+  }
+  .feature-card-features__item {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .feature-card-list {
+    display: flex;
+    margin: -24px 0 0 0;
+  }
+  .feature-card-list__item {
+    margin: 24px 0 0 0;
+    width: 100%;
+  }
+}

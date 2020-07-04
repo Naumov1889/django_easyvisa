@@ -1,0 +1,33 @@
+.franchise-card {
+  display: flex;
+  align-items center
+  transition .3s
+
+  &:hover {
+    .franchise-card__text {
+      color darken(#676666, 40%)
+      text-shadow: darken(#676666, 40%) 0.5px 0 0;
+    }
+    .franchise-card__img {
+      filter: brightness(0) invert(0);
+    }
+  }
+
+  &__text {
+    color: #676666;
+    font-size: 15px;
+    font-weight: 400;
+    transition .3s
+  }
+
+  &__img {
+    transition .3s
+    margin-left: 16px
+    width: 63px;
+    height: 22px;
+    background: url("../../img/icon-franchise-card.png")
+    background-size: contain;
+    background-repeat: no-repeat
+    background-position: center
+  }
+}

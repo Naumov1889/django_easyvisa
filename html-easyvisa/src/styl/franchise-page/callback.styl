@@ -1,0 +1,115 @@
+.franchise-page-callback-section {
+  &__container {
+    position: relative;
+  }
+
+  &__grid {
+    display: flex;
+  }
+
+  &__left {
+    min-width: 616px;
+  }
+
+  &__form.form {
+    flex-wrap wrap
+
+    .form__elem {
+      margin: 0 8px 16px 8px;
+      width: calc(50% - 16px);
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items flex-end
+    margin-left: 90px
+  }
+
+  &__quote-name-n-job {
+    position: relative;
+    z-index 3
+    white-space nowrap
+    text-align: right
+  }
+
+  &__photo-wrap {
+    width: 378px;
+  }
+
+  &__photo.elem-with-yellow-square {
+    position: absolute;
+    bottom 0
+    right: -54px
+    font-size: 0
+    line-height: 0
+    width: 378px
+
+    .elem-with-yellow-square__yellow-square {
+      right 14px
+      top: 160px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .franchise-page-callback-section {
+    &__right {
+      margin-left: 15px
+    }
+
+    &__quote-name-n-job {
+      position: absolute;
+      right: 52px
+      padding: 5px 8px 5px 8px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .franchise-page-callback-section {
+    &__quote-name-n-job {
+      position: absolute;
+      right: 52px
+      padding: 5px 8px 5px 8px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    &__photo-wrap {
+      width: 320px;
+    }
+
+    &__photo.elem-with-yellow-square {
+      right: -64px
+      width: 320px
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .franchise-page-callback-section {
+    &__left {
+      min-width unset
+    }
+
+    &__right {
+      display: none
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .franchise-page-callback-section {
+    &__form.form {
+      .form__elem {
+        margin: 0 0 15px 0;
+        width: 100%;
+      }
+    }
+  }
+}

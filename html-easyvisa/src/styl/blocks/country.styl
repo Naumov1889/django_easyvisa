@@ -1,0 +1,44 @@
+.country {
+  display: flex;
+  align-items center
+  transition .3s
+
+  &__icon {
+    margin-right: 15px
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat
+    background-size: cover;
+    background-position: center
+    border-radius 50%
+
+    position: relative;
+
+    &:before {
+      content: ''
+      position: absolute;
+      top: 0
+      right 0
+      bottom: 0;
+      left 0
+      border-radius 50%
+      border: 2px solid #ffea00;
+      opacity 0
+      transition .3s ease
+    }
+
+
+  }
+
+  &__text {
+    transition .3s
+  }
+
+  &:hover {
+    .country__icon {
+      &:before {
+        opacity 1
+      }
+    }
+  }
+}

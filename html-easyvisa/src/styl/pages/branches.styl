@@ -1,0 +1,207 @@
+.branches-page-branches-list-1 {
+  padding-top 0 !important
+}
+
+.branch {
+  position: relative;
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover;
+  border-radius 5px
+  overflow hidden
+
+  &__content {
+    position: relative;
+    z-index 2
+    display: flex;
+    flex-direction column
+    justify-content space-between
+    align-items flex-start
+    padding 26px 18px 34px 32px
+    height: 100%
+    min-height: 450px;
+  }
+
+  &:before {
+    content ''
+    position: absolute;
+    z-index 1
+    top 0
+    left 0
+    width: 100%
+    height: 100%
+    background-color: rgba(28, 28, 28, 0.87);
+  }
+
+  &__legend {
+    font-size: 19px;
+    color: #dfdfdf;
+  }
+
+  &__city {
+    margin-bottom: 28px
+    font-size: 37px;
+  }
+
+  &__city-divider {
+    width: 77px;
+    height: 3px;
+  }
+
+  &__address {
+    font-size: 22px
+  }
+
+  &__phone-list {
+    display: flex;
+    flex-direction column
+    align-items flex-start
+    margin-top: 22px;
+  }
+
+  &__phone {
+    margin-top: 8px
+    font-size: 23px
+
+    &:first-child {
+      margin-top: 0
+    }
+  }
+
+  &__instagram {
+    margin-top: 10px
+  }
+
+  &__btn {
+    margin-top: 28px
+    width: 248px;
+  }
+}
+
+
+.branch-instagram {
+  display: flex;
+  align-items center
+  color: #ffea00;
+  font-family: "Proxima Nova Semibold";
+  font-size: 22px;
+  line-height: 29px;
+
+  &:hover {
+    .branch-instagram__text:before {
+      display: none
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    &:before {
+      content: ''
+      position: absolute;
+      bottom: 0
+      left 0
+      width: 100%
+      height: 1px
+      background-color: #ffea00
+    }
+  }
+
+  &__icon {
+    margin: 1px 12px 0 0
+  }
+}
+
+
+@media (max-width: 1150px) {
+  .branch {
+    &__content {
+      padding 23px 20px 26px 20px
+      min-height: unset;
+    }
+
+    &__legend {
+      font-size: 18px;
+    }
+
+    &__city {
+      margin-bottom: 24px
+      font-size: 30px;
+    }
+
+    &__city-divider {
+      margin-top: 6px
+      width: 77px;
+      height: 2px;
+    }
+
+    &__address {
+      font-size: 20px
+    }
+
+    &__phone {
+      font-size: 21px
+    }
+  }
+
+  .branch-instagram {
+    font-size: 19px;
+    line-height: 27px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .branches-list.box-list_3 {
+    margin: 0 -1.5% -3% -1.5% !important
+
+    .branches-list__item {
+      margin: 0 1.5% 3% 1.5% !important
+      width: 47% !important
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .branches-list.box-list_3 {
+    margin: 0 0 -15px 0 !important
+
+    .branches-list__item {
+      margin: 0 0 15px 0 !important
+      width: 100% !important
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .branch {
+    &__content {
+      padding 16px 17px 20px 17px;//23px 20px 26px 20px
+    }
+
+    &__city {
+      margin-bottom: 20px
+      font-size: 25px;
+    }
+
+    &__address {
+      font-size: 18px
+    }
+
+    &__phone-list {
+      margin-top: 20px;
+    }
+
+    &__phone {
+      font-size: 20px
+    }
+
+    &__instagram {
+      margin-top: 7px
+    }
+
+    &__btn {
+      margin-top: 26px
+      width: 100%
+    }
+  }
+}

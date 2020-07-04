@@ -1,0 +1,20 @@
+@media (max-width: 850px) {
+  .index-page-features-section .tns-ovh {
+    overflow: visible;
+  }
+  .index-page-features-section .box-list {
+    margin: 0 !important;
+  }
+  .index-page-features-section .box.box-list__item {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100%;
+  }
+  .index-page-features-section .slider-list__item {
+    transition: 0.3s ease;
+  }
+  .index-page-features-section .slider-list__item[aria-hidden="true"] {
+    opacity: 0.6;
+    transform: scale(0.92);
+  }
+}

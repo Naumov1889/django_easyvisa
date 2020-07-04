@@ -1,0 +1,328 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Франчайзинг'
+
+block content
+    .franchise-page
+        .franchise-page-top-section.bg_img.section-padding_large.text_color_white(style="background-image:url('img/bg-franchise-page-1.jpg')")
+            .container(data-aos="fade-up")
+                .crumbs
+                    .crumbs__item
+                        a.crumbs__link(href="") Главная
+                        .crumbs__icon.dash_small
+                    .crumbs__item
+                        a.crumbs__link.crumbs__link_current(href="") Франчайзинг
+
+                .title.title_h1
+                    .title__text Франшиза <br>EasyVisa Agency
+                    .title__divider
+                    .title__subtitle.franchise-page-top-section__subtitle Откройте визовый центр под известным брендом международной сети «EasyVisa Agency»
+
+                .franchise-page-top-section__btn-list
+                    .franchise-page-top-section__btn.btn(data-popbox-target="popbox-callback") Узнать условия франшизы
+                    a.franchise-page-top-section__btn.btn.btn_1(data-scroll-to="features") Преимущества франшизы
+
+
+
+        .franchise-page-quote-section
+            .container.franchise-page-quote-section__container(data-aos="fade-up")
+                .franchise-page-quote-section__text.text_position_center
+                    .title.title_h2
+                        .title__text Наша цель
+                        .title__divider
+
+                    .quote.box_outer-styles.franchise-page-quote-section__quote Выстраивание системы, позволяющей максимально упростить процедуру открытия визы для всех граждан РФ
+
+                    .franchise-page-quote-section__quote-name-n-job-list
+                        .quote-name-n-job.franchise-page-quote-section__quote-name-n-job.franchise-page-quote-section__quote-name-n-job_1
+                            .quote-name Илья Блажиевский
+                            .quote-job основатель компании
+                        .quote-name-n-job.franchise-page-quote-section__quote-name-n-job.franchise-page-quote-section__quote-name-n-job_2
+                            .quote-name Максим Горохов
+                            .quote-job генеральный директор
+
+                .franchise-page-quote-section__photo-list
+                    .elem-with-yellow-square.franchise-page-quote-section__photo.franchise-page-quote-section__photo_1
+                        img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-1.png")
+                        .elem-with-yellow-square__yellow-square.yellow-square
+                    .elem-with-yellow-square.franchise-page-quote-section__photo.franchise-page-quote-section__photo_2
+                        img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-2.png")
+                        .elem-with-yellow-square__yellow-square.yellow-square
+
+        .franchise-page-features-1-section.bg_grey.section-padding_small
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Мы в цифрах
+                    .title__divider
+
+                .box-list.box-list_3
+                    .box-list__item.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            .box__title.box__icon.elem-with-yellow-square__not-yellow-square 7
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text(style="max-width:226px;") визовых центров, открытых в России и в СНГ
+
+                    .box-list__item.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            .box__title.box__icon.elem-with-yellow-square__not-yellow-square 45
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text(style="max-width:260px;") опытных штатных сотрудников по всей стране
+
+                    .box-list__item.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            .box__title.box__icon.elem-with-yellow-square__not-yellow-square 5000
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text(style="max-width:282px;") клиентов и оформленных виз в год по всей сети
+
+                    .box-list__item.box_type_1.box-list__item_100(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            .box__title.box__icon.elem-with-yellow-square__not-yellow-square 1 700 000 руб.
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text оборот лучшего офиса в месяц
+
+        .franchise-page-history-section.bg_img.section-padding_small.text_color_white(style="background-image:url('img/bg-franchise-page-2.jpg')")
+            .container(data-aos="fade-up")
+                .title.title_h2
+                    .title__text Истории успеха
+                    .title__divider
+
+
+                .slider.slider_type_6.text_color_black
+                    .slider-list.slider-type-6-list(data-js="slider-type-6")
+                        .slider-list__item.slider-type-6-list__item.slider-type-6-item
+                            .slider-type-6__grid
+                                .slider-type-6__left.slider-type-6__box.box_outer-styles
+                                    .slider-type-6__person-name Гилязов Роман
+                                    .slider-type-6__city г. Стамбул
+                                    .slider-type-6__name-n-value-list
+                                        .slider-type-6__name-n-value
+                                            p Население города:
+                                            b 15 550 000 человек
+                                        .slider-type-6__name-n-value
+                                            p Сотрудников сегодня
+                                            b 6 человек
+                                        .slider-type-6__name-n-value
+                                            p Операционная прибыль
+                                            b на 2-м месяце
+                                        .slider-type-6__name-n-value
+                                            p Период окупаемости
+                                            b 4 месяца
+                                        .slider-type-6__name-n-value
+                                            p Продажа виз за месяц
+                                            b от 30 до 220 ед. в месяц
+
+                                .slider-type-6__right.slider-type-6__box.box_outer-styles.show-more(data-show-more="show-more" data-show-more-height="70" data-show-more-when="600" data-height-after-show-more-js="223")
+                                    .show-more__content(data-show-more-content="show-more__content")
+                                        b За решением какого вопроса Вы к нам обратились?
+                                        p Решил попробовать свои силы в другой отрасли бизнеса.
+
+                                        b Что больше всего убедило при выборе нашей франшизы?
+                                        p Все вопросы разрешила личная встреча и посещение офисов компании.
+
+                                        b Ваше мнение о франшизе? Что больше всего понравилось?
+                                        p Понравилось, что на все вопросы всегда есть емкие ответы и стартовая  помощь кураторов.
+
+                                        b Какая главная ценность нашей франшизы?
+                                        p Значительно опережает конкурентов
+
+                                        b Какого результата смогли добиться?
+                                        p Прекрасно чувствуем себя в новой сфере.
+
+                                        b Что смогло нас выделить на фоне аналогичных предложений?
+                                        p Широкий формат поддержки на начальном этапе и сопровождение после.
+
+                                        b Кому бы вы порекомендовали нашу франшизу?
+                                        p Наверное, всем кто хочет развиваться в туристическом направлении.
+
+                                        b Какая главная ценность нашей франшизы?
+                                        p Значительно опережает конкурентов
+
+                                        b Какого результата смогли добиться?
+                                        p Прекрасно чувствуем себя в новой сфере.
+
+                                        b Что смогло нас выделить на фоне аналогичных предложений?
+                                        p Широкий формат поддержки на начальном этапе и сопровождение после.
+
+                                        b Кому бы вы порекомендовали нашу франшизу?
+                                        p Наверное, всем кто хочет развиваться в туристическом направлении.
+                                    .show-more__btn(data-js="show-more__btn")
+                                    .show-more__shadow(data-js="show-more__shadow")
+
+
+                        .slider-list__item.slider-type-6-list__item.slider-type-6-item
+                            .slider-type-6__grid
+                                .slider-type-6__left.slider-type-6__box.box_outer-styles
+                                    .slider-type-6__person-name Гилязов Роман
+                                    .slider-type-6__city г. Стамбул
+                                    .slider-type-6__name-n-value-list
+                                        .slider-type-6__name-n-value
+                                            p Население города:
+                                            b 15 550 000 человек
+                                        .slider-type-6__name-n-value
+                                            p Сотрудников сегодня
+                                            b 6 человек
+                                        .slider-type-6__name-n-value
+                                            p Операционная прибыль
+                                            b на 2-м месяце
+                                        .slider-type-6__name-n-value
+                                            p Период окупаемости
+                                            b 4 месяца
+                                        .slider-type-6__name-n-value
+                                            p Продажа виз за месяц
+                                            b от 30 до 220 ед. в месяц
+
+                                .slider-type-6__right.slider-type-6__box.box_outer-styles.show-more(data-show-more="show-more" data-show-more-height="70" data-show-more-when="600" data-height-after-show-more-js="223")
+                                    .show-more__content(data-show-more-content="show-more__content")
+                                        b За решением какого вопроса Вы к нам обратились?
+                                        p Решил попробовать свои силы в другой отрасли бизнеса.
+
+                                        b Что больше всего убедило при выборе нашей франшизы?
+                                        p Все вопросы разрешила личная встреча и посещение офисов компании.
+
+                                        b Ваше мнение о франшизе? Что больше всего понравилось?
+                                        p Понравилось, что на все вопросы всегда есть емкие ответы и стартовая  помощь кураторов.
+
+                                        b Какая главная ценность нашей франшизы?
+                                        p Значительно опережает конкурентов
+
+                                        b Какого результата смогли добиться?
+                                        p Прекрасно чувствуем себя в новой сфере.
+
+                                        b Что смогло нас выделить на фоне аналогичных предложений?
+                                        p Широкий формат поддержки на начальном этапе и сопровождение после.
+
+                                        b Кому бы вы порекомендовали нашу франшизу?
+                                        p Наверное, всем кто хочет развиваться в туристическом направлении.
+
+                                        b Какая главная ценность нашей франшизы?
+                                        p Значительно опережает конкурентов
+
+                                        b Какого результата смогли добиться?
+                                        p Прекрасно чувствуем себя в новой сфере.
+
+                                        b Что смогло нас выделить на фоне аналогичных предложений?
+                                        p Широкий формат поддержки на начальном этапе и сопровождение после.
+
+                                        b Кому бы вы порекомендовали нашу франшизу?
+                                        p Наверное, всем кто хочет развиваться в туристическом направлении.
+                                    .show-more__btn(data-js="show-more__btn")
+                                    .show-more__shadow(data-js="show-more__shadow")
+
+
+        .franchise-page-features-2-section.section-padding_medium#features
+            .container
+                .title.title_h2
+                    .title__text Что вы получаете, становясь франчайзи
+                    .title__divider
+
+                .slider
+                    .box-list.box-list_4(data-js="slider-type-7" data-slider-wrap-children-class="slider-list__item")
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width: 77px;height: 87px;" src="img/icon-person.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Специалиста/куратор, который ответит на все вопросы
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width: 49px;height: 91px;" src="img/icon-yandex.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text(style="max-width: 230px;") Настройка рекламы в Яндекс за доп. плату
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width: 80px;height: 91px;" src="img/icon-loudspeaker.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Рекламные <br>промо-материалы
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:84px;height: 84px;" src="img/icon-lock.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Доступ в закрытый чат компании 24/7
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:82px;height: 82px;" src="img/icon-globe.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Продающий и сильный сайт
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:90px;height: 79px;" src="img/icon-teacher-2.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Предварительное обучение персонала
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:94px;height: 74px;" src="img/icon-cloud.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text(style="max-width: 204px;") Доступ к уникальной базе знаний
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:77px;height: 77px;" src="img/icon-calendar.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text(style="max-width: 214px;") Календарный план проекта
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:98px;height: 98px;" src="img/icon-stock.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Инвестиционный план для инвесторов
+
+
+                        .box-list__item.box_type_1(data-aos="fade-up")
+                            .box__icon-wrapper.elem-with-yellow-square
+                                img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:85px;height: 85px;" src="img/icon-computer.svg")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+                            .box__text Дизайн-проект помещения
+
+
+        .franchise-page-callback-section.bg_grey
+            .container.franchise-page-callback-section__container.section-padding_medium(data-aos="fade-up")
+                .franchise-page-callback-section__grid
+                    .franchise-page-callback-section__left
+                        .title.title_h2
+                            .title__text Получите подробную презентацию о франшизе, заполнив форму
+                            .title__divider
+
+                        form.form.form_row.form_row_4.franchise-page-callback-section__form
+                            input.input.input_shadow.form__elem(placeholder="Ваше Имя" name="name")
+                            input.input.input_shadow.form__elem(placeholder="Ваш E-mail" name="email")
+                            input.input.input_shadow.form__elem(placeholder="Ваш Телефон" name="phone")
+                            button.btn.form__elem Получить презентацию
+
+                    .franchise-page-callback-section__right
+                        .quote-name-n-job.franchise-page-callback-section__quote-name-n-job
+                            .quote-name Илья Блажиевский
+                            .quote-job основатель компании
+
+                        .franchise-page-callback-section__photo-wrap
+                            .elem-with-yellow-square.franchise-page-callback-section__photo
+                                img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-1.png")
+                                .elem-with-yellow-square__yellow-square.yellow-square
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

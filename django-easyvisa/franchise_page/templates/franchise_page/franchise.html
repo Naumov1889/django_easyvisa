@@ -1,0 +1,217 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — Франчайзинг</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div class="franchise-page">
+        <div class="franchise-page-top-section bg_img section-padding_large text_color_white" style="background-image:url({% static 'img/bg-franchise-page-1.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="crumbs">
+              <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+                <div class="crumbs__icon dash_small"></div>
+              </div>
+              <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Франчайзинг</a></div>
+            </div>
+            <div class="title title_h1">
+              <div class="title__text">Франшиза <br>EasyVisa Agency</div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle franchise-page-top-section__subtitle">Откройте визовый центр под известным брендом международной сети «EasyVisa Agency»</div>
+            </div>
+            <div class="franchise-page-top-section__btn-list">
+              <div class="franchise-page-top-section__btn btn" data-form-note-filler="Узнать условия франшизы" data-popbox-target="popbox-callback">Узнать условия франшизы</div>
+              <a class="franchise-page-top-section__btn btn btn_1" data-scroll-to="features">Преимущества франшизы</a>
+            </div>
+          </div>
+        </div>
+        <div class="franchise-page-quote-section">
+          <div class="container franchise-page-quote-section__container" data-aos="fade-up">
+            <div class="franchise-page-quote-section__text text_position_center">
+              <div class="title title_h2">
+                <div class="title__text">Наша цель</div>
+                <div class="title__divider"></div>
+              </div>
+              <div class="quote box_outer-styles franchise-page-quote-section__quote">Выстраивание системы, позволяющей максимально упростить процедуру открытия визы для всех граждан РФ</div>
+              <div class="franchise-page-quote-section__quote-name-n-job-list">
+                <div class="quote-name-n-job franchise-page-quote-section__quote-name-n-job franchise-page-quote-section__quote-name-n-job_1">
+                  <div class="quote-name">Илья Блажиевский</div>
+                  <div class="quote-job">основатель компании</div>
+                </div>
+                <div class="quote-name-n-job franchise-page-quote-section__quote-name-n-job franchise-page-quote-section__quote-name-n-job_2">
+                  <div class="quote-name">Максим Горохов</div>
+                  <div class="quote-job">генеральный директор</div>
+                </div>
+              </div>
+            </div>
+            <div class="franchise-page-quote-section__photo-list">
+              <div class="elem-with-yellow-square franchise-page-quote-section__photo franchise-page-quote-section__photo_1"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-staff-1.png' %}">
+                <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+              </div>
+              <div class="elem-with-yellow-square franchise-page-quote-section__photo franchise-page-quote-section__photo_2">
+                  <img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-staff-2.png' %}">
+                <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="franchise-page-features-1-section bg_grey section-padding_small">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Мы в цифрах</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="box-list box-list_3">
+
+                {% for feature in features %}
+              <div class="box-list__item box_type_1 {% if feature.wide %}box-list__item_100{% endif %}" data-aos="fade-up">
+                <div class="box__icon-wrapper elem-with-yellow-square">
+                  <div class="box__title box__icon elem-with-yellow-square__not-yellow-square">{{ feature.title }}</div>
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__text">{{ feature.description|safe }}</div>
+              </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="franchise-page-history-section bg_img section-padding_small text_color_white" style="background-image:url({% static 'img/bg-franchise-page-2.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="title title_h2">
+              <div class="title__text">Истории успеха</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="slider slider_type_6 text_color_black">
+              <div class="slider-list slider-type-6-list" data-js="slider-type-6">
+                  {% for story in stories %}
+                <div class="slider-list__item slider-type-6-list__item slider-type-6-item">
+                  <div class="slider-type-6__grid">
+                    <div class="slider-type-6__left slider-type-6__box box_outer-styles">
+                      <div class="slider-type-6__person-name">{{ story.name }}</div>
+                      <div class="slider-type-6__city">{{ story.city }}</div>
+                      <div class="slider-type-6__name-n-value-list">
+                          {% for characteristic in story.storycharacteristic_set.all %}
+                        <div class="slider-type-6__name-n-value">
+                          <p>{{ characteristic.characteristic }}</p><b>{{ characteristic.value }}</b>
+                        </div>
+                          {% endfor %}
+                      </div>
+                    </div>
+                    <div class="slider-type-6__right slider-type-6__box box_outer-styles show-more" data-show-more="show-more" data-show-more-height="70" data-show-more-when="600" data-height-after-show-more-js="223">
+                      <div class="show-more__content" data-show-more-content="show-more__content">
+                          {{ story.text|safe }}
+                      </div>
+                      <div class="show-more__btn" data-js="show-more__btn"></div>
+                      <div class="show-more__shadow" data-js="show-more__shadow"></div>
+                    </div>
+                  </div>
+                </div>
+                  {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="franchise-page-features-2-section section-padding_medium" id="features">
+          <div class="container">
+            <div class="title title_h2">
+              <div class="title__text">Что вы получаете, становясь франчайзи</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="slider">
+              <div class="box-list box-list_4" data-js="slider-type-7" data-slider-wrap-children-class="slider-list__item">
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width: 77px;height: 87px;" src="{% static 'img/icon-person.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Специалиста/куратор, который ответит на все вопросы</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width: 49px;height: 91px;" src="{% static 'img/icon-yandex.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text" style="max-width: 230px;">Настройка рекламы в Яндекс за доп. плату</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width: 80px;height: 91px;" src="{% static 'img/icon-loudspeaker.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Рекламные <br>промо-материалы</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:84px;height: 84px;" src="{% static 'img/icon-lock.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Доступ в закрытый чат компании 24/7</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:82px;height: 82px;" src="{% static 'img/icon-globe.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Продающий и сильный сайт</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:90px;height: 79px;" src="{% static 'img/icon-teacher-2.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Предварительное обучение персонала</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:94px;height: 74px;" src="{% static 'img/icon-cloud.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text" style="max-width: 204px;">Доступ к уникальной базе знаний</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:77px;height: 77px;" src="{% static 'img/icon-calendar.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text" style="max-width: 214px;">Календарный план проекта</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:98px;height: 98px;" src="{% static 'img/icon-stock.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Инвестиционный план для инвесторов</div>
+                </div>
+                <div class="box-list__item box_type_1" data-aos="fade-up">
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:85px;height: 85px;" src="{% static 'img/icon-computer.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__text">Дизайн-проект помещения</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="franchise-page-callback-section bg_grey" id="franchise-form">
+          <div class="container franchise-page-callback-section__container section-padding_medium" data-aos="fade-up">
+            <div class="franchise-page-callback-section__grid">
+              <div class="franchise-page-callback-section__left">
+                <div class="title title_h2">
+                  <div class="title__text">Получите подробную презентацию о франшизе, заполнив форму</div>
+                  <div class="title__divider"></div>
+                </div>
+                <form class="form form_row form_row_4 franchise-page-callback-section__form" data-js="form" data-form-note="Франшиза. Презентация">
+                  <input class="input input_shadow form__elem" placeholder="Ваше Имя" name="name">
+                  <input class="input input_shadow form__elem" placeholder="Ваш E-mail" type="email" name="email">
+                  <input class="input input_shadow form__elem" placeholder="Ваш Телефон" type="tel" name="phone">
+                  <button class="btn form__elem">Получить презентацию</button>
+                </form>
+              </div>
+              <div class="franchise-page-callback-section__right">
+                <div class="quote-name-n-job franchise-page-callback-section__quote-name-n-job">
+                  <div class="quote-name">Илья Блажиевский</div>
+                  <div class="quote-job">основатель компании</div>
+                </div>
+                <div class="franchise-page-callback-section__photo-wrap">
+                  <div class="elem-with-yellow-square franchise-page-callback-section__photo"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-staff-1.png' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — Юридическим лицам</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div>
+        <div class="container" data-aos="fade-up">
+          <div class="crumbs">
+            <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+              <div class="crumbs__icon dash_small"></div>
+            </div>
+            <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Юридическим лицам</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="legal-entity-page">
+        <div class="container">
+          <div class="title title_h1" data-aos="fade-up">
+            <div class="title__text">Юридическим лицам</div>
+            <div class="title__divider"></div>
+            <div class="title__subtitle" style="max-width: 964px">Специальные условия для туристических агентств, туроператоров, частных коммерческих организаций, корпораций и госучреждений</div>
+          </div>
+        </div>
+        <div class="legal-entity-page-features-1-section section-padding_small">
+          <div class="container">
+            <div class="box-list box-list_arbitrary-width">
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:80px;" src="{% static 'img/icon-services-list.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Полный спектр <br>услуг</div>
+                <div class="box__text" style="max-width:248px;">Все услуги по одному договору – визы, билеты, гостиницы, трансферы, мероприятия</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:75px;;" src="{% static 'img/icon-briefcase.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Специальный <br>отдел</div>
+                <div class="box__text" style="max-width:242px;">Уже давно у нас сгруппирован полноценный отдел по работе c юридическими лицами</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:83px;" src="{% static 'img/icon-graph.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Финансовая <br>отчетность</div>
+                <div class="box__text" style="max-width:190px;">Предоставим полную финансовую отчётность и прозрачные цены</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="150">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:87px;" src="{% static 'img/icon-person.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Персональный <br>менеджер</div>
+                <div class="box__text" style="max-width: 230px;">Наше твердое правило: один клиент – один закрепленный за ним менеджер</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="legal-entity-page-callback-section text_color_white section-padding_medium bg_img bg_center" style="background-image: url({% static 'img/bg-legal-entity-page-callback.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="title title_h2 legal-entity-callback-section__title">
+              <div class="title__text">С нами уже более 220 юридических лиц</div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle" style="max-width: 478px">Заполните форму ниже и узнайте подробнее обо всех преимуществах партнерства с EasyVisa</div>
+            </div>
+            <form class="form form_row form_row_4" data-js="form" data-form-note="Юр.лица. Получить презентацию">
+              <input class="input legal-entity-callback-section__input form__elem" placeholder="Ваше Имя" name="name">
+              <input class="input legal-entity-callback-section__input form__elem" type="tel" placeholder="Ваш Телефон" name="phone">
+              <input class="input legal-entity-callback-section__input form__elem" placeholder="Ваш E-mail" type="email" name="email">
+              <button class="btn legal-entity-callback-section__btn form__elem">Получить презентацию</button>
+            </form>
+          </div>
+        </div>
+        <div class="section-padding_large">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Наши услуги для юридических лиц</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="slider slider_type_3">
+              <div class="slider-list slider-type-3-list" data-js="slider-type-3">
+                <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up">
+                  <div class="slider-type-3-item__grid">
+                    <div class="slider-type-3-item__title-n-subtitle">
+                      <div class="slider-type-3-item__title">Авиабилеты по низким ценам</div>
+                      <div class="slider-type-3-item__subtitle" style="margin-bottom: 20px">Выкуп билетов как на регулярных, так и на чартерных рейсах</div>
+                    </div>
+                    <a class="slider-type-3-item__link" href="{% url 'base:airticket_page' %}">Подробнее <span class="icon icon_arrow"></span></a><img class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-1.png' %}">
+                  </div>
+                </div>
+                <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up" data-aos-delay="50">
+                  <div class="slider-type-3-item__grid">
+                    <div class="slider-type-3-item__title-n-subtitle">
+                      <div class="slider-type-3-item__title">Оформление виз</div>
+                      <div class="slider-type-3-item__subtitle" style="max-width: 290px;">Визы в шенген и не только от 1 рабочего дня</div>
+                    </div><a class="slider-type-3-item__link" href="{% url 'visa:visa_list' %}">Подробнее <span class="icon icon_arrow"></span></a><img class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-5.png' %}">
+                  </div>
+                </div>
+                <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up" data-aos-delay="100">
+                  <div class="slider-type-3-item__grid">
+                    <div class="slider-type-3-item__title-n-subtitle">
+                      <div class="slider-type-3-item__title">Загранпаспорт</div>
+                      <div class="slider-type-3-item__subtitle">Оформление паспорта <br>на 5 и 10 лет</div>
+                    </div><a class="slider-type-3-item__link" href="{% url 'base:foreign_passport_page' %}">Подробнее <span class="icon icon_arrow"></span></a><img class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-3.png' %}">
+                  </div>
+                </div>
+                <div class="slider-list__item slider-type-3-list__item slider-type-3-item" data-aos="fade-up" data-aos-delay="150">
+                  <div class="slider-type-3-item__grid">
+                    <div class="slider-type-3-item__title-n-subtitle">
+                      <div class="slider-type-3-item__title">Языковые курсы</div>
+                      <div class="slider-type-3-item__subtitle" style="max-width: 220px">by “EasyVisa Agency”</div>
+                    </div><a class="slider-type-3-item__link" href="{% url 'english_page:home' %}">Подробнее <span class="icon icon_arrow"></span></a><img class="slider-type-3-item__img" src="{% static 'img/picture-slider-services-4.png' %}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="legal-entity-page-features-2-section bg_grey section-padding_small">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">С нами выгодно и надежно</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="box-list box-list_arbitrary-width">
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:88px;" src="{% static 'img/icon-safety.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Безопасность</div>
+                <div class="box__text">Ваши данные под надежной <br>защитой</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:82px;;" src="{% static 'img/icon-thumb-up.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Работа на результат</div>
+                <div class="box__text">Команда профессионалов <br>выполнит все на 100%</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:78px;" src="{% static 'img/icon-speed.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Скорость</div>
+                <div class="box__text">Оформление визы <br>от 1 рабочего дня</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="150">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:82px;" src="{% static 'img/icon-wallet.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Без оплаченной брони</div>
+                <div class="box__text" style="max-width: 270px;">Нам не нужны оплаченные брони, вы не рискуете своими деньгами</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

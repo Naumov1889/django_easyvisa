@@ -1,0 +1,24 @@
+li {
+  position: relative;
+  margin: 7px 0;
+  padding-left: 20px;
+}
+li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  background-color: #ffea00;
+  border-radius: 50%;
+}
+@media (max-width: 1050px) {
+  li {
+    padding-left: 17px;
+  }
+  li:before {
+    width: 6px;
+    height: 6px;
+  }
+}

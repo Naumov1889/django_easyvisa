@@ -1,0 +1,167 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — Загранпаспорт</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div class="foreign-passport-page">
+        <div class="bg_img section-padding_medium text_color_white" style="background-image: url({% static 'img/bg-foreign-passport-1.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="crumbs">
+              <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+                <div class="crumbs__icon dash_small"></div>
+              </div>
+              <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Загранпаспорт</a></div>
+            </div>
+            <div class="title title_h1">
+              <div class="title__text">Загранпаспорт</div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle">Оставьте заявку, наш менеджер свяжется с Вами для уточнения деталей</div>
+            </div>
+            <form class="form form_row form_row_4" data-js="form" data-form-note="Загранпаспорт">
+              <input class="input form__elem" placeholder="Ваше Имя" name="name">
+              <input class="input form__elem" placeholder="Ваш Телефон" name="phone">
+              <input class="input form__elem" placeholder="Ваш E-mail" type="email" name="email">
+              <button class="btn form__elem">Оставить заявку</button>
+            </form>
+          </div>
+        </div>
+        <div class="text-section section-padding_large">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Как подать заявление на загранпаспорт</div>
+              <div class="title__divider"></div>
+            </div>
+            <div data-aos="fade-up">
+              <p>С помощью “EasyVisa Agency” вы можете подать заявление на заграничный паспорт старого и нового поколения. Заняться получением загранпаспорта лучше задолго до начала поездки, так как нужно учитывать срок его оформления:</p>
+              <p>&nbsp;</p>
+              <h3>Срок оформления загранпаспорта</h3>
+              <ul>
+                <li>1 месяц при подаче документов по месту жительства (как указано в паспорте);</li>
+                <li>3 месяца при подаче документов по месту пребывания (не по месту жительства)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="foreign-passport-page-features-section section-padding_small bg_grey">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Пакет необходимых документов</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="box-list box-list_3">
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:84px;" src="{% static 'img/icon-services-list.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Заявления</div>
+                <div class="box__text">2 заявления о выдаче <br>загранпаспорта.</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:103px;" src="{% static 'img/icon-photos.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">4 фотографии</div>
+                <div class="box__text">3,5х4,5 в овале на матовой бумаге (на биометрический паспорт - 2 любые фото).</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="100">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:89px;" src="{% static 'img/icon-passport-1.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Внутренний паспорт</div>
+                <div class="box__text">Копии страниц с отметками, <br>а также 18, 19 и 20 страниц.</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:86px;" src="{% static 'img/icon-passport-2.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Загранпаспорт (если имеется)</div>
+                <div class="box__text">Копия 1-й страницы действующего загранпаспорта.</div>
+              </div>
+              <div class="box-list__item box box_type_1" data-aos="fade-up" data-aos-delay="50">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:85px;" src="{% static 'img/icon-passport-3.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Трудовая книжка</div>
+                <div class="box__text">Копия трудовой книжки.</div>
+              </div>
+              <div class="box-list__item box box_type_1 foreign-passport-page-features-section__box_with-btn" data-aos="fade-up" data-aos-delay="100">
+                <div class="box__title">В особых случаях</div>
+                <div class="btn foreign-passport-page-features-section__btn" data-js="foreign-passport-page-features-section__btn">
+                  <div class="icon icon_arrow_1"></div>
+                </div>
+              </div>
+              <div class="box-list__item box-list__item_100 box box_type_1 foreign-passport-page-features-section__hidden-box foreign-passport-page-features-section__box_hidden" data-js="foreign-passport-page-features-section__hidden-box" style="width: 100% !important;">
+                <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:89px;" src="{% static 'img/icon-passport-1.svg' %}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title">Для мужчин от 18 до 27 лет</div>
+                <div class="box__text" style="max-width: 300px">Оригинал и копия военного билета с отметками о действующей отсрочке.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-section section-padding_large">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Оформление загранпаспорта</div>
+              <div class="title__divider"></div>
+            </div>
+            <div data-aos="fade-up">
+              <h3>Получить старый загранпаспорт</h3>
+              <p>Загранпаспорт старого поколения выдается на 5 лет на взрослых и детей с их рождения. Перечень документов, необходимых для оформления паспорта на себя и ребенка, вы найдете в подробном описании услуги Получение загранпаспорта старого образца.</p>
+              <p>&nbsp;</p>
+            </div>
+            <div data-aos="fade-up">
+              <h3>Заявление на новый загранпаспорт</h3>
+              <p>Загранпаспорт нового поколения или биометрический загранпаспорт выдается на 10 лет на взрослых и детей с их рождения. В загранпаспорт нового поколения вписываются биометрические показатели владельца — сканируется отпечаток пальца. Биометрические показатели указываются в паспортах для взрослых и детей старше 12-ти лет. Детям младше 12-ти лет паспорт нового поколения выдаётся без сканирования.</p>
+              <p>&nbsp;</p>
+            </div><a class="btn" style="max-width: 320px" data-aos="fade-up" data-scroll-to="callback">Оформить загранпаспорт</a>
+          </div>
+        </div>
+        <div class="text_color_white section-padding_medium bg_img bg_center" id="callback" style="background-image: url({% static 'img/bg-foreign-passport-2.jpg' %})">
+          <div class="container" data-aos="fade-up">
+            <div class="title title_h2">
+              <div class="title__text">Нужен загранпаспорт?</div>
+              <div class="title__divider"></div>
+              <div class="title__subtitle">Вы можете оставить заявку, менеджер свяжется с вами для уточнения деталей!</div>
+            </div>
+            <form class="form form_row form_row_4" data-js="form" data-form-note="Загранпаспорт">
+              <input class="input form__elem" placeholder="Ваше Имя" name="name">
+              <input class="input form__elem" placeholder="Ваш Телефон" name="phone">
+              <input class="input form__elem" placeholder="Ваш Город" name="city">
+              <button class="btn form__elem">Перезвоните мне</button>
+            </form>
+          </div>
+        </div>
+        <div class="foreign-passport-page-text-section-3 text-section section-padding_large">
+          <div class="container">
+            <div class="foreign-passport-page-text-section-3__grid">
+              <div class="foreign-passport-page-text-section-3__left">
+                <div class="title title_h2" data-aos="fade-up">
+                  <div class="title__text">Процесс подачи заявлений</div>
+                  <div class="title__divider"></div>
+                </div>
+                <div data-aos="fade-up">
+                  <h3>Если выезжаете за границу</h3>
+                  <p>Проверьте срок действия заграничного паспорта. Для посещения многих стран срок действия должен быть от одного до трех или шести месяцев на момент завершения поездки. Подробнее можно узнать в визовом центре, а также в посольстве или консульстве страны, которую вы планируете посетить.</p>
+                  <p>&nbsp;</p>
+                  <p>Перед поездкой проверьте судебную задолженность: из-за неё вас могут задержать в аэропорту и не допустить к вылету. Оплачивать задолженность нужно заранее, чтобы информация об оплате успела дойти до ведомства.</p>
+                  <p>&nbsp;</p>
+                  <h3>После электронной подачи заявления</h3>
+                  <p>В случае успешной электронной подачи заявления, в личный кабинет придет приглашение на посещение ведомства. Мы запишем вас на прием в отделение МВД России или МФЦ. Перечень документов, которые необходимо взять с собой на прием, вам дополнительно сообщат наши менеджеры.</p>
+                  <p>&nbsp;</p>
+                  <h3>При личной подаче заявления</h3>
+                  <p>Если вы все же подали заявление напрямую в ведомство или уже получили новый паспорт, не забудьте внести его данные в ваш профиль, чтобы они всегда были под рукой.</p>
+                </div>
+              </div>
+              <div class="foreign-passport-page-text-section-3__right"><a class="foreign-passport-page-text-section-3__right-elem elem-with-yellow-square elem-with-yellow-square_borderlike" data-aos="fade-up" href="{% static 'img/picture-foreign-passport-page-1.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="476" height="276" title=""><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-foreign-passport-page-1.jpg' %}">
+                  <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a><a class="foreign-passport-page-text-section-3__right-elem elem-with-yellow-square elem-with-yellow-square_borderlike" data-aos="fade-up" href="{% static 'img/picture-foreign-passport-page-2.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="476" height="276" title=""><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-foreign-passport-page-2.jpg' %}">
+                  <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

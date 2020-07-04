@@ -1,0 +1,89 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+{% load static %}
+{% load to_list %}
+      <div>
+        <div class="container">
+          <div class="crumbs">
+            <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+              <div class="crumbs__icon dash_small"></div>
+            </div>
+            <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Наши филиалы</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="branches-page">
+        <div class="container">
+          <div class="title title_h1">
+            <div class="title__text">Наши филиалы</div>
+            <div class="title__divider"></div>
+          </div>
+          <div class="branches-list branches-page-branches-list-1 box-list box-list_3 text_color_white section-padding_large">
+
+            {% for branch in countries.0.branch_set.all %}
+            <div class="branches-list__item branch box-list__item" style="background-image: url({{ branch.photo.url }})">
+              <div class="branch__content">
+                <div class="branch__text">
+                  <div class="branch__legend">Город:</div>
+                  <div class="branch__city title title_h2">
+                    <div class="title__text">{{ branch.city }}</div>
+                    <div class="title__divider branch__city-divider"></div>
+                  </div>
+                  <div class="branch__address">{{ branch.address }}</div>
+                  <div class="branch__phone-list">
+                      {% for phone in branch.phone|to_list %}
+                      <a class="branch__phone" href="tel: {{ phone }}">{{ phone }}</a>
+                      {% endfor %}
+                  </div>
+                  <div class="branch__instagram branch-instagram">
+                      <a class="branch__instagram branch-instagram" href="{{ branch.instagram_link }}">
+                      <div class="branch-instagram__icon icon icon_instagram_2"></div>
+                      <div class="branch-instagram__text">{{ branch.instagram_tag }}</div>
+                      </a>
+                  </div>
+                </div>
+                <div class="branch__btn btn btn_1" data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="{{ branch.coordinates }}" data-map-placemark="{% static 'img/placemark.png' %}" data-map-city="{{ branch.city }}" data-map-address="{{ branch.address }}">Показать на карте</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      {% for country in countries|slice:"1:" %}
+        <div class="{% if not forloop.counter|divisibleby:2 %}bg_grey{% endif %} section-padding_small">
+          <div class="container">
+            <div class="title title_h2 text_position_center">
+              <div class="title__text">Наш филиал в {{ country.title_2 }}</div>
+              <div class="title__divider"></div>
+            </div>
+              {% for branch in country.branch_set.all %}
+                <div class="branches-list box-list box-list_3 text_color_white">
+                  <div class="branches-list__item branch box-list__item" style="background-image: url({{ branch.photo.url }})">
+                    <div class="branch__content">
+                      <div class="branch__text">
+                        <div class="branch__legend">Город:</div>
+                        <div class="branch__city title title_h2">
+                          <div class="title__text">{{ branch.city }}</div>
+                          <div class="title__divider branch__city-divider"></div>
+                        </div>
+                        <div class="branch__address">{{ branch.address }}</div>
+                        <div class="branch__phone-list">
+                            {% for phone in branch.phone|to_list %}
+                              <a class="branch__phone" href="tel: {{ phone }}">{{ phone }}</a>
+                              {% endfor %}
+                        </div>
+                        <div class="branch__instagram branch-instagram"><a class="branch__instagram branch-instagram" href="{{ branch.instagram_link }}">
+                            <div class="branch-instagram__icon icon icon_instagram_2"></div>
+                            <div class="branch-instagram__text">{{ branch.instagram_tag }}</div></a></div>
+                      </div>
+                      <div class="branch__btn btn btn_1" data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="{{ branch.coordinates }}" data-map-placemark="{% static 'img/placemark.png' %}" data-map-city="{{ branch.city }}" data-map-address="{{ branch.address }}">Показать на карте</div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+{% endblock %}

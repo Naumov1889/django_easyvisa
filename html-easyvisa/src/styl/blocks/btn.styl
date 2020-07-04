@@ -1,0 +1,51 @@
+.btn {
+  display: flex;
+  justify-content center
+  align-items center
+  padding 19px 12px
+  max-width 100%
+  font-family: "Proxima Nova Semibold";
+  font-size: 17px
+  color: #191919;
+  box-shadow: 0 20px 21px rgba(255, 234, 0, 0.1);
+  border-radius: 5px;
+  background-color: #ffea00;
+  cursor pointer
+  transition .3s
+  white-space nowrap
+
+  &:hover {
+    background-color:  darken(#ffea00, 8%);
+    color: darken(#191919, 30%) !important
+    text-shadow: darken(#191919, 30%) 0.5px 0 0 !important;
+  }
+
+  &_1 {
+    padding 17px 12px
+    font-family: "Proxima Nova Reg";
+    font-size: 18px
+    background-color: transparent
+    border: 1px solid #838383;
+    box-shadow none
+    
+    &:hover {
+      border-color #ffea00
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .btn {
+    padding 16px 12px
+  }
+}
+
+@media (max-width: 1050px) {
+  .btn {
+    font-size: 16px
+
+    &_h1 {
+      font-size: 17px
+    }
+  }
+}

@@ -1,0 +1,248 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Авиабилеты'
+
+block content
+    .visa-page
+        .visa-page-top-section.bg_img.section-padding_medium.text_color_white(style="background-image: url('img/bg-visa-page-finland.jpg')")
+            .container(data-aos="fade-up")
+                .crumbs
+                    .crumbs__item
+                        a.crumbs__link(href="") Главная
+                        .crumbs__icon.dash_small
+                    .crumbs__item
+                        a.crumbs__link(href="") Визы
+                        .crumbs__icon.dash_small
+                    .crumbs__item
+                        a.crumbs__link.crumbs__link_current(href="") Виза в Финляндию
+
+                .title.title_h1
+                    .title__text Виза в <br>Финляндию
+                    .title__divider
+                .btn(style="max-width: 326px" data-popbox-target="popbox-callback") Записаться на консультацию
+
+                .visa-page-top-section__anchor-list.visa-page-anchor-list.text_color_primary
+                    a.visa-page-anchor-list__item.text_underline_hoverable(href="") Процесс оформления визы
+                    a.visa-page-anchor-list__item.text_underline_hoverable(href="") Список документов
+                    a.visa-page-anchor-list__item.text_underline_hoverable(href="") Адреса консульств / посольств
+
+        .visa-page-features-section.section-padding_medium
+            .container
+                .box-list.box-list_3
+                    .box-list__item.box.box_type_1.visa-page-features-section__box(data-aos="fade-up")
+                        .elem-with-yellow-square
+                            .box__title.elem-with-yellow-square__not-yellow-square.visa-page-features-section__box-title до 5 лет
+                            .elem-with-yellow-square__yellow-square.yellow-square.visa-page-features-section__yellow-square
+                        .box__text.visa-page-features-section__box-text Надолго
+
+                    .box-list__item.box.box_type_1.visa-page-features-section__box(data-aos="fade-up" data-aos-delay="50")
+                        .elem-with-yellow-square
+                            .box__title.elem-with-yellow-square__not-yellow-square.visa-page-features-section__box-title от 2 дней
+                            .elem-with-yellow-square__yellow-square.yellow-square.visa-page-features-section__yellow-square
+                        .box__text.visa-page-features-section__box-text Быстро
+
+                    .box-list__item.box.box_type_1.visa-page-features-section__box(data-aos="fade-up" data-aos-delay="100")
+                        .elem-with-yellow-square
+                            .box__title.elem-with-yellow-square__not-yellow-square.visa-page-features-section__box-title от 1800 <span class="rouble">п</span>
+                            .elem-with-yellow-square__yellow-square.yellow-square.visa-page-features-section__yellow-square
+                        .box__text.visa-page-features-section__box-text Не дорого
+
+        .text-section
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Процесс оформления визы в Финляндию
+                    .title__divider
+
+                div(data-aos="fade-up")
+                    p Гражданам России и стран СНГ для посещения Финляндии необходима виза, документы на оформление которой подают в консульства и визовые центры в городах РФ. Финляндия входит в число стран-участниц Шенгенского соглашения, так что, располагая финским Шенгеном, можно запросто заглянуть на денек-другой в гости к соседям по Северной Европе. 
+                    p &nbsp;
+                    p Из особенностей подачи документов — обязательное заполнения анкеты онлайн. В остальном требования «общешенгенские»; срок действия паспорта — 3 месяца на дату окончания поездки.
+                    p &nbsp;
+                    p Воспользуйтесь услугами «EasyVisa Agency», чтобы избежать возможных осложнений в процессе получения визового разрешения, а также сэкономить время, которое можно уделить решению других насущных вопросов.
+                    p &nbsp;
+
+                div(data-aos="fade-up")
+                    h3 Виды виз
+                    p Шенгенская виза выдается для краткосрочной поездки:
+                    ul
+                        li Туризм
+                        li Деловая командировка
+                        li Посещение родственников
+                        li Транзит
+                    p Въездной документ оформляется по единой схеме с небольшими различиями в списке бумаг, зависящими от конкретной цели визита в страну. Туристический Шенген — наиболее востребованная категория, поэтому визовые центры в основном «заточены» под него.
+                    p &nbsp;
+                    p Разрешение на пребывание — аналог вида на жительство — для более длительного пребывания в Финляндии. Документ выдается в форме биометрической карточки (а не наклейки в паспорте). Он дает право на работу, учебу, воссоединение семьи, брак с гражданином Финляндии или человеком, постоянно находящимся в стране на законных основаниях.
+
+            .visa-page-picture-list.visa-page__picture-list
+                a.visa-page-picture-list__item.elem-with-yellow-square.elem-with-yellow-square_borderlike.elem-with-yellow-square_borderlike_left(data-aos="fade-up" href='img/picture-visa-findland-1.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="662" height="466" title="")
+                    img.elem-with-yellow-square__not-yellow-square(src="img/picture-visa-findland-1.jpg")
+                    .yellow-square.elem-with-yellow-square__yellow-square
+
+                a.visa-page-picture-list__item.elem-with-yellow-square.elem-with-yellow-square_borderlike(data-aos="fade-up" href='img/picture-visa-findland-2.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="708" height="467" title="")
+                    img.elem-with-yellow-square__not-yellow-square(src="img/picture-visa-findland-2.jpg")
+                    .yellow-square.elem-with-yellow-square__yellow-square
+
+        .visa-page-pipeline-section.section-padding_small
+            .container
+                .title.title_h2
+                    .title__text Как мы работаем
+                    .title__divider
+
+                .box-list.box-list_with-arrows
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:101px;" src="img/icon-building.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text Приезжаете к нам в офис
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:78px;" src="img/icon-services-list.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text Мы делаем анкету, страховку <br>и фотографию
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:79px;" src="img/icon-fingerprint.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text Сдаете биометрические <br>данные в визовом центре
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:99px;" src="img/icon-tickets.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__text Забираете готовую визу <br>через 5-10 дней
+
+
+
+
+        .visa-page-doc-section.bg_grey.section-padding_small
+            .container(data-aos="fade-up")
+                .title.title_h2
+                    .title__text Список документов
+                    .title__divider
+
+
+                .select_type_3
+                    select(name="" data-js="select-type-3")
+                        option(value="Казань" data-placeholder) Частные лица
+                        option(value="Для детей и учащихся") Для детей и учащихся
+                        option(value="Для предпринимателей") Для предпринимателей
+                        option(value="Для безработных и пенсионеров") Для безработных и пенсионеров
+                        option(value="Для граждан других стран") Для граждан других стран
+                        option(value="Для невесты") Для невесты
+                        option(value="Виза на лечение") Виза на лечение
+
+                .visa-page-doc-section__grid
+                    .visa-page-doc-section__left.box_outer-styles
+                        .title.title_h3
+                            .title__text Необходимые документы
+                            .title__divider
+                        .doc-list
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 1
+                                    .doc__title Анкета
+                                .doc__text Лично заполненная туристом <a href="">онлайн-анкета</a> на английском или русском, но латинским алфавитом (анкету можно заполнить и от руки)
+
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 2
+                                    .doc__title Загранпаспорт
+                                .doc__text Срок действия — не менее 3 месяцев с момента окончания поездки, обязательно наличие в нем не менее двух чистых страниц и подписи владельца, если есть — второй, а также старый/аннулированный загранпаспорт.
+
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 3
+                                    .doc__title Фотография
+                                .doc__text 1 цветное фото без уголка (требования к фото см ниже)
+
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 4
+                                    .doc__title Копия внутреннего паспорта
+                                .doc__text Нужны страницы российского паспорта с фото и пропиской
+
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 5
+                                    .doc__title Справка с места работы
+                                .doc__text Справка с работы с прописанными должностью и зарплатой
+
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 5
+                                    .doc__title Справка с места работы
+                                .doc__text Справка с работы с прописанными должностью и зарплатой
+
+                            .doc-list__item.doc
+                                .doc__counter-n-title
+                                    .doc__counter 5
+                                    .doc__title Справка с места работы
+                                .doc__text Справка с работы с прописанными должностью и зарплатой
+
+
+
+
+
+
+                    .visa-page-doc-section__right.box_outer-styles.text_position_center
+                        .title.title_h3.popbox__title
+                            .title__text Задать вопрос
+                            .title__divider
+
+                        form(class="form form_column" method="POST")
+                            input(class="input input_shadow form__elem" placeholder="Ваше Имя" type="text" name="name" required)
+                            input(class="input input_shadow form__elem" placeholder="Ваш Телефон или E-mail" type="text" name="phone" required)
+                            textarea(class="input input_shadow form__elem" placeholder="Вопрос" name="question" required)
+
+                            button(class="btn btn_green form__btn js-callback-btn form__elem" type="submit") Отправить вопрос
+                            label(class="checkbox")
+                                span.checkbox__text Даю согласие на обработку  моих <a class="text_underline_hoverable" href="">персональных данных</a>
+                                input(class="checkbox__input" checked type="checkbox")
+                                span.checkbox__checkmark
+
+
+
+        .map-n-contact(data-js="map-n-contact")
+            .btn.map-n-contact__map-toggler(data-js="map-n-contact__map-toggler") Показать карту
+            .map-n-contact__map-overlay(data-js="map-n-contact__map-overlay")
+            .map-n-contact__map#map-n-contact__map-container(data-placemark="placemark-2.png")
+            .container.map-n-contact__container.section-padding_small
+                .map-n-contact__box(data-js="map-n-contact__box" data-aos="fade-up")
+                    .title.title_h2
+                        .title__text Адреса консульств / посольств 
+                        .title__divider
+                    div
+                        .contact-name-n-value
+                            .contact-name-n-value__name Посольство Финляндии в
+                            .select_type_2
+                                select(name="" data-js="select-type-2")
+                                    option(value="Казань" data-placeholder) Cанкт-Петербург
+                                    option(value="Москва") Казань
+                                    option(value="Санкт-Петербург") Уфа
+                                    option(value="Уфа") Краснодар
+                                    option(value="Стамбул") Пенза
+                                    option(value="Стамбул") Новосибирск
+                                    option(value="Стамбул") Ростов-на-Дону
+
+
+                        .contact-name-n-value
+                            .contact-name-n-value__name Адрес:
+                            .contact-name-n-value__value Кропоткинский пер., 15-17
+                        .contact-name-n-value
+                            .contact-name-n-value__name Режим работы:
+                            .contact-name-n-value__value ПН-ПТ с 9:00 до 20:00<br>СБ-ВС выходной
+                        .contact-name-n-value
+                            .contact-name-n-value__name Телефоны:
+                            div
+                                a.contact-name-n-value__value.contact-name-n-value__value_phone(href="") +7 (911) 187-55-17
+                                a.contact-name-n-value__value.contact-name-n-value__value_phone(href="") +7 (911) 757-64-32
+                        .contact-name-n-value
+                            .contact-name-n-value__name E-mail:
+                            a.contact-name-n-value__value(href="") sanomat.mos@formin.fi
+                        .contact-name-n-value
+                            .contact-name-n-value__name Сайт:
+                            a.contact-name-n-value__value(href="") visa.finland.eu
+

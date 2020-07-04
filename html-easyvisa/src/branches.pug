@@ -1,0 +1,163 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Наши филиалы'
+
+block content
+    div
+        .container
+            .crumbs
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") Наши филиалы
+
+    .branches-page
+        .container
+            .title.title_h1
+                .title__text Наши филиалы
+                .title__divider
+
+
+            .branches-list.branches-page-branches-list-1.box-list.box-list_3.text_color_white.section-padding_large
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Санкт-Петербург
+                                .title__divider.branch__city-divider
+                            .branch__address Проспект Большой В.О. д. 9/6, ЛИТЕР А, офис 117 - 199004
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (911) 187-55-17
+                                a.branch__phone(href="") +7 (911) 757-64-32
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[48.684908573825604, 44.44431949999993]" data-map-city="Санкт-Петербург" data-map-address="Проспект Большой В.О. д. 9/6, ЛИТЕР А, офис 117 - 199004") Показать на карте
+
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Казань
+                                .title__divider.branch__city-divider
+                            .branch__address Московская ул., 25/29, офис 301, Респ. Татарстан - 420111
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (906) 321-44-39
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa_kazan
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[55.75662395445685,37.61999281985646]" data-map-city="Москва" data-map-address="Москва, адрес....") Показать на карте
+
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Уфа
+                                .title__divider.branch__city-divider
+                            .branch__address Ленина ул., 25/29, офис 301, Респ. Башкортстан - 420111
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (937) 166-22-58
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa_ufa
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[53.23405544902954,50.18190797490537]" data-map-city="Самара" data-map-address="Самара, адрес....") Показать на карте
+
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Новосибирск
+                                .title__divider.branch__city-divider
+                            .branch__address Ясный берег ул., д.10, оф. 1 Новосибирская область - 630029
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (953) 891-61-02
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa_nsk
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[53.23405544902954,50.18190797490537]" data-map-city="Самара" data-map-address="Самара, адрес....") Показать на карте
+
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Пенза
+                                .title__divider.branch__city-divider
+                            .branch__address Славы ул., 10, офис 272, Пензинская область - 440600
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (937) 910-99-95
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa_penza
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[53.23405544902954,50.18190797490537]" data-map-city="Самара" data-map-address="Самара, адрес....") Показать на карте
+
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Краснодар
+                                .title__divider.branch__city-divider
+                            .branch__address Красная ул., 176, Краснодарский край - 350020
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (918) 976-98-93
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa_krd
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[53.23405544902954,50.18190797490537]" data-map-city="Самара" data-map-address="Самара, адрес....") Показать на карте
+
+                .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                    .branch__content
+                        .branch__text
+                            .branch__legend Город:
+                            .branch__city.title.title_h2
+                                .title__text Ростов-на-Дону
+                                .title__divider.branch__city-divider
+                            .branch__address Текучева ул., 139/94 офис 77, Ростовская область - 344018
+                            .branch__phone-list
+                                a.branch__phone(href="") +7 (989) 508 14-01
+                            .branch__instagram.branch-instagram
+                                a.branch__instagram.branch-instagram(href="")
+                                    .branch-instagram__icon.icon.icon_instagram_2
+                                    .branch-instagram__text easyvisa_usa_rostov
+                        .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[53.23405544902954,50.18190797490537]" data-map-city="Самара" data-map-address="Самара, адрес....") Показать на карте
+
+
+
+        .bg_grey.section-padding_small
+            .container
+                .title.title_h2.text_position_center
+                    .title__text Наш филиал в Турции
+                    .title__divider
+
+
+                .branches-list.box-list.box-list_3.text_color_white
+                    .branches-list__item.branch.box-list__item(style="background-image: url('img/picture-airticket-1.jpg')")
+                        .branch__content
+                            .branch__text
+                                .branch__legend Город:
+                                .branch__city.title.title_h2
+                                    .title__text Стамбул
+                                    .title__divider.branch__city-divider
+                                .branch__address Santur Street 3D, office N4,Kamer Hatun/Beyoglu/İstanbul - 34475
+                                .branch__phone-list
+                                    a.branch__phone(href="") +90 (538) 083-91-62
+                                .branch__instagram.branch-instagram
+                                    a.branch__instagram.branch-instagram(href="")
+                                        .branch-instagram__icon.icon.icon_instagram_2
+                                        .branch-instagram__text easyvisa_usa_istanbul
+                            .branch__btn.btn.btn_1(data-popbox-target="popbox-map" data-js="open-branches-map-btn" data-map-coordinates="[53.23405544902954,50.18190797490537]" data-map-city="Самара" data-map-address="Самара, адрес....") Показать на карте
+
+

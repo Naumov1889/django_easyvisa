@@ -1,0 +1,284 @@
+doctype html
+html(lang="ru-Ru")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        block title
+            -let title = "EASYVISA AGENCY"
+            -let page = ''
+        title #{title + (page.length ? " - " : "") + (typeof page === 'string' ? page : page[page.length - 1])}
+        link(rel="icon" type="image/png" href="img/favicon.ico")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css")
+        <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+        link(rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+        link(rel="stylesheet" href="css/concat-css-libs.css")
+        link(rel="stylesheet" href="css/concat-css.css")
+    body
+        block header
+            header.header
+                .header-first
+                    .header-first__container.container
+
+                        .header-first__nav.header-first-nav
+                            a.header-first-nav__item.header-first__franchise-card.franchise-card(href="franchise.html")
+                                .franchise-card__text Франчайзинг
+                                .franchise-card__img
+                            .header-first__separator
+                            a.header-first-nav__item(href="about.html") О компании
+                            .header-first__separator
+                            a.header-first-nav__item(href="feedback.html") Отзывы
+                            .header-first__separator
+                            a.header-first-nav__item(href="legal-entity.html") Юридическим лицам
+                            .header-first__separator
+                            a.header-first-nav__item(href="contact.html") Контакты
+                            .header-first__separator
+
+                        .header-first__contact-us.header-first-contact-us
+                            .header-first-contact-us__text Свяжитесь с нами:
+                            .header-first-contact-us__list.social
+                                a.social__item(href="")
+                                    .icon.icon_whatsapp
+                                a.social__item(href="")
+                                    .icon.icon_instagram
+                                a.social__item(href="")
+                                    .icon.icon_vk
+
+
+                        .header-first__separator
+
+                        .header-first__location-select.header-first-location-select
+                            .header-first-location-select__icon-placemark.icon.icon_placemark
+                            .select_type_1
+                                select(name="" data-js="select-type-1")
+                                    option(value="Казань" data-placeholder) Cанкт-Петербург
+                                    option(value="Москва") Казань
+                                    option(value="Санкт-Петербург") Уфа
+                                    option(value="Уфа") Краснодар
+                                    option(value="Стамбул") Пенза
+                                    option(value="Стамбул") Новосибирск
+                                    option(value="Стамбул") Ростов-на-Дону
+
+                .header-second
+                    .header-second__container.container
+                        a.header-second__logo.logo(href="index.html")
+                            img.logo__img(src="img/logo-easyvisa.png")
+
+                        .header-second__nav.header-second-nav
+                            a.header-second-nav__item(href="visa-list.html") Визы
+                            a.header-second-nav__item(href="airticket.html") Авиабилеты
+                            a.header-second-nav__item(href="foreign-passport.html") Загранпаспорт
+                            a.header-second-nav__item(href="insurance.html") Страхование
+                            a.header-second-nav__item(href="") Работа за рубежом
+                            a.header-second-nav__item(href="branches.html") Наши филиалы
+
+                        a.header-second__contact.contact-card(href="")
+                            .contact-card__icon.icon.icon_phone
+                            .contact-card__text +7 (911) 187-55-17
+
+                .header-mob-topbar
+                    .header-mob-topbar__container.container
+                        a.header-mob-topbar__logo.logo(href="index.html")
+                            img.logo__img(src="img/logo-easyvisa.png")
+
+                        a.header-mob-topbar__contact.contact-card(href="")
+                            .contact-card__icon.icon.icon_phone
+                            .contact-card__text +7 (911) 187-55-17
+                        button.burger(data-js="burger")
+                            i
+
+
+                .header-mob-menu(data-js="header-mob-menu")
+                    .header-mob-menu__container.container
+                        .header-mob-menu__content
+                            .header-mob-menu__nav.header-mob-menu-nav.header-mob-menu-nav_type_1
+                                a.header-mob-menu-nav__item(href="visa-list.html") Визы
+                                a.header-mob-menu-nav__item(href="airticket.html") Авиабилеты
+                                a.header-mob-menu-nav__item(href="foreign-passport.html") Загранпаспорт
+                                a.header-mob-menu-nav__item(href="insurance.html") Страхование
+                                a.header-mob-menu-nav__item(href="") Работа за рубежом
+                                a.header-mob-menu-nav__item(href="branches.html") Наши филиалы
+
+                            .header-mob-menu__nav.header-mob-menu__nav-second.header-mob-menu-nav.header-mob-menu-nav_type_2
+                                a.header-mob-menu-nav__item.header-mob-menu__franchise-card.franchise-card(href="franchise.html")
+                                    .franchise-card__text Франчайзинг
+                                    .franchise-card__img
+                                a.header-mob-menu-nav__item(href="about.html") О компании
+                                a.header-mob-menu-nav__item(href="feedback.html") Отзывы
+                                a.header-mob-menu-nav__item(href="legal-entity.html") Юридическим лицам
+                                a.header-mob-menu-nav__item(href="contact.html") Контакты
+
+                            .header-mob-menu__contact-us-list.social
+                                a.social__item(href="")
+                                    .icon.icon_whatsapp
+                                a.social__item(href="")
+                                    .icon.icon_instagram
+                                a.social__item(href="")
+                                    .icon.icon_vk
+
+                            .header-mob-menu-location-select
+                                .header-mob-menu-location-select__icon-placemark.icon.icon_placemark
+                                .select_type_1
+                                    select(name="" data-js="select-type-1")
+                                        option(value="Казань" data-placeholder) Cанкт-Петербург
+                                        option(value="Москва") Казань
+                                        option(value="Санкт-Петербург") Уфа
+                                        option(value="Уфа") Краснодар
+                                        option(value="Стамбул") Пенза
+                                        option(value="Стамбул") Новосибирск
+                                        option(value="Стамбул") Ростов-на-Дону
+
+
+
+        .popbox_main_content.site-content-wrapper(data-js="site-content-wrapper")
+            block content
+
+            block footer
+                footer.footer
+                    .footer-first
+                        .footer-first__container.container
+                            a.footer-first__logo.logo(href="index.html")
+                                img.logo__img(src="img/logo-easyvisa.png")
+
+
+                            .footer-first-column
+                                .footer-first-column__title Услуги
+                                .footer-first__nav.footer-first-nav
+                                    a.footer-first-nav__item(href="visa-list.html") Визы
+                                    a.footer-first-nav__item(href="foreign-passport.html") Загранпаспорт
+                                    a.footer-first-nav__item(href="insurance.html") Страхование
+                                    a.footer-first-nav__item(href="airticket.html") Авиабилеты
+
+                            .footer-first-column
+                                .footer-first-column__title Направления
+                                .footer-first__nav.footer-first-nav
+                                    a.footer-first-nav__item(href="") США
+                                    a.footer-first-nav__item(href="") Британия
+                                    a.footer-first-nav__item(href="") Европа
+                                    a.footer-first-nav__item(href="") еще
+
+                            .footer-first-column
+                                .footer-first-column__title Инфо
+                                .footer-first__nav.footer-first-nav
+                                    a.footer-first-nav__item.footer-first-nav__franchise-card.franchise-card(href="franchise.html")
+                                        .franchise-card__text Франчайзинг
+                                        .franchise-card__img
+                                    a.footer-first-nav__item(href="feedback.html") Отзывы
+                                    a.footer-first-nav__item(href="branches.html") Наши филиалы
+                                    a.footer-first-nav__item(href="about.html") О компании
+
+
+
+
+
+                    .footer-second
+                        .container
+                            .footer-second__copyright.show-more(data-show-more="show-more" data-show-more-height="100" data-show-more-when="2000")
+                                .show-more__content(data-show-more-content="show-more__content")
+                                    p Copyright © 2020 ООО "ИЗИВИЗА"
+                                    <br>
+                                    p Данный сайт, его материалы, дизайн являются объектами авторского права. Все права защищены и охраняются законом. Запрещается использование любых материалов сайта без письменного разрешения правообладателя. При полном или частичом использовании материалов гиперссылка на единый-визовый-центр.рф обязательна.
+                                    <br>
+                                    p Обращаем ваше внимание на то, что информация на сайте предоставлена исключительно для ознакомления и не является публичной офертой, определяемой положениями ст. 437 ГК РФ.
+                                    <br>
+                                    p Заполняя любые формы на данном сайте, Вы вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями.
+                                .show-more__btn(data-js="show-more__btn")
+                                .show-more__shadow(data-js="show-more__shadow")
+
+            .pswp(tabindex='-1' role='dialog' aria-hidden='true')
+                //
+                  Background of PhotoSwipe.
+                  It's a separate element, as animating opacity is faster than rgba().
+                .pswp__bg
+                // Slides wrapper with overflow:hidden.
+                .pswp__scroll-wrap
+                    // Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory.
+                    // don't modify these 3 pswp__item elements, data is added later on.
+                    .pswp__container
+                        .pswp__item
+                        .pswp__item
+                        .pswp__item
+                    // Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+                    .pswp__ui.pswp__ui--hidden
+                        .pswp__top-bar
+                            // Controls are self-explanatory. Order can be changed.
+                            .pswp__counter
+                            button.pswp__button.pswp__button--close(title="Закрыть (Esc)")   <!--(title='Close (Esc)')-->
+                            button.pswp__button.pswp__button--fs(title="Полноэкранный режим")  <!--(title='Toggle fullscreen')-->
+                            button.pswp__button.pswp__button--zoom(title="Увеличить/уменьшить")   <!--(title='Zoom in/out')-->
+                            // Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR
+                            // element will get class pswp__preloader--active when preloader is running
+                            .pswp__preloader
+                                .pswp__preloader__icn
+                                    .pswp__preloader__cut
+                                        .pswp__preloader__donut
+                        .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+                            .pswp__share-tooltip
+                        button.pswp__button.pswp__button--arrow--left(title="предыдущий")  <!--(title='Previous (arrow left)')-->
+                        button.pswp__button.pswp__button--arrow--right(title="следующий")  <!--(title='Next (arrow right)')-->
+                        .pswp__caption
+                            .pswp__caption__center
+
+
+
+        .popbox(data-popbox-id="popbox-callback")
+            .popbox_container(style="box-shadow:0 12px 32px rgba(43, 43, 43, 0.07)")
+                button(class="popbox__cross" data-popbox-close="popbox-callback")
+                    i.icon.icon_cross
+                .popbox__box
+                    .title.title_h3.popbox__title
+                        .title__text Заказать обратный звонок
+                        .title__divider
+                        .title__subtitle Оставьте свои контакты, наш менеджер свяжется с вами в течении 15 минут и ответит на ваши вопросы
+
+                    form(class="form form_column" data-form-note="Запрос на обратный звонок ")
+                        input(class="input input_grey form__elem" placeholder="Имя" type="text" name="name" required)
+                        input(class="input input_grey form__elem" placeholder="Номер телефона" type="tel" name="phone" required)
+
+                        button(class="btn form__elem" data-js="callback-btn") Заказать звонок
+
+                    p.form__agreement Нажимая кнопку, вы соглашаетесь с условиями <a class="text_underline_hoverable" href="">политики конфиденциальностих</a>
+
+        .popbox(data-popbox-id="popbox-feedback")
+            .popbox_container(style="box-shadow:0 12px 32px rgba(43, 43, 43, 0.07)")
+                button(class="popbox__cross" data-popbox-close="popbox-feedback")
+                    i.icon.icon_cross
+                .popbox__box
+                    .title.title_h3.popbox__title
+                        .title__text Оставить отзыв
+                        .title__divider
+                        .title__subtitle Мы очень ценим Вашу инициативу и рады каждому отзыву и предложению
+
+                    form(class="form form_column" method="POST")
+                        input(class="input input_grey form__elem" placeholder="Имя" type="text" name="name" required)
+                        input(class="input input_grey form__elem" placeholder="E-mail" name="email" required)
+                        textarea(class="input input_grey form__elem" placeholder="Отзыв" name="question" required)
+
+                        button(class="btn form__elem") Оставить отзыв
+
+                    p.form__agreement Нажимая кнопку, вы соглашаетесь с условиями <a class="text_underline_hoverable" href="">политики конфиденциальностих</a>
+
+        .popbox(data-popbox-id="popbox-callback-result")
+            .popbox_container(style="padding-bottom: 12px")
+                button(class="popbox__cross" data-popbox-close="popbox-callback-result")
+                    i.icon.icon_cross
+                .popbox__box
+                    .title.title_h3.popbox__title
+                        .title__text Спасибо, ваша заявка отправлена
+                        .title__divider
+
+        .popbox.popbox-map(data-popbox-id="popbox-map")
+            .popbox_container(style="box-shadow:0 12px 32px rgba(43, 43, 43, 0.07)")
+                button(class="popbox__cross" data-popbox-close="popbox-map")
+                    i.icon.icon_cross
+                .popbox-map-container#popbox-map-container(data-placemark="placemark.png")
+
+        <div data-js="spinner" class="spinner lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js")
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&lang=ru_RU")
+        script(src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js")
+        script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+        script(src="js/concat-js-libs.js")
+        script(src="js/common.js")

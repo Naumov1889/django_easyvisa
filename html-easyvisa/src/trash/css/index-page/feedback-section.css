@@ -1,0 +1,11 @@
+.index-page-feedback-section__slider .slider-list__item img {
+  border-radius: 5px;
+  border: 1px solid #ffea00;
+}
+@media (max-width: 600px) {
+  .index-page-feedback-section__slider .slider-list__item img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,95 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+{% load static %}
+      <div>
+        <div class="container">
+          <div class="crumbs" data-aos="fade-up">
+            <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+              <div class="crumbs__icon dash_small"></div>
+            </div>
+            <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Контакты</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-n-contact-page">
+        <div class="container">
+          <div class="title title_h1" data-aos="fade-up">
+            <div class="title__text">Контакты «EasyVisa Agency» <span data-branch="title">{{ current_branch.city }}</span></div>
+            <div class="title__divider"></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-n-contact" data-js="map-n-contact">
+        <div class="btn map-n-contact__map-toggler" data-js="map-n-contact__map-toggler">Показать карту</div>
+        <div class="map-n-contact__map-overlay" data-js="map-n-contact__map-overlay"></div>
+
+        <div class="map-n-contact__map" id="map-n-contact__map-container" data-map-coordinates="{{ current_branch.coordinates }}" data-map-hint="EASYVISA AGENCY<br>{{ current_branch.city }}" data-map-address="{{ current_branch.address }}" data-map-placemark="{% static 'img/placemark.png' %}"></div>
+
+        <div class="container map-n-contact__container section-padding_medium">
+          <div class="map-n-contact__box" data-js="map-n-contact__box" data-aos="fade-up">
+            <div class="contact-name-n-value">
+              <div class="contact-name-n-value__name">Ваш город:</div>
+              <div class="select_type_2">
+                <select name="" data-js="select-type-1">
+                    {% for branch in branches_city_n_slug %}
+                      <option value="{{ branch.slug }}"
+                                  {% if branch.slug == current_branch.slug %}selected{% endif %}>
+                              {{ branch.city }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="contact-name-n-value">
+              <div class="contact-name-n-value__name">Адрес:</div>
+              <div class="contact-name-n-value__value" data-branch="address" style="width: auto">{{ current_branch.address|safe }}</div>
+            </div>
+            <div class="contact-name-n-value">
+              <div class="contact-name-n-value__name">Режим работы:</div>
+              <div class="contact-name-n-value__value" data-branch="work-hours">{{ current_branch.work_hours|safe }}</div>
+            </div>
+            <div class="contact-name-n-value">
+              <div class="contact-name-n-value__name">Телефоны:</div>
+              <div data-branch="phone2-holder-list">
+                  {% for phone in current_branch.phone %}
+                  <a class="contact-name-n-value__value contact-name-n-value__value_phone" data-branch="phone2" href="tel: {{ phone }}">{{ phone }}</a>
+                  {% endfor %}
+              </div>
+            </div>
+            {% if current_branch.email %}
+            <div class="contact-name-n-value" data-branch="email-holder-list">
+              <div class="contact-name-n-value__name">E-mail:</div>
+                <a class="contact-name-n-value__value" data-branch="email" href="{{ current_branch.email }}">{{ current_branch.email }}</a>
+            </div>
+            {% endif %}
+            <div class="contact-name-n-value">
+              <div class="contact-name-n-value__name">Социальные сети:</div>
+              <div class="map-n-contact__social social">
+                {% if request.session.current_branch.whatsapp %}
+                <a class="social__item" data-branch="whatsapp" href="{{ request.session.current_branch.whatsapp }}"><div class="icon icon_whatsapp"></div></a>
+                {% endif %}
+
+                {% if request.session.current_branch %}
+                <a class="social__item" data-branch="instagram" href="{{ request.session.current_branch.instagram_link }}"><div class="icon icon_instagram"></div></a>
+                {% endif %}
+
+                {% if request.session.current_branch.vk %}
+                <a class="social__item" data-branch="vk" href="{{ session.current_branch.vk }}"><div class="icon icon_vk"></div></a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="btn btn_1 map-n-contact__btn" data-form-note-filler="—" data-popbox-target="popbox-callback">Задать вопрос</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-n-contact-page-callback-section text_color_white section-padding_medium bg_img" style="background-image: url({% static 'img/bg-map-n-contact-page-callback.jpg' %})">
+        <div class="container map-n-contact-page-callback-section__container" data-aos="fade-up">
+          <div class="map-n-contact-page-callback-section__subtitle">В вашем городе еще нет филиала EasyVisa?</div>
+          <div class="title title_h1 map-n-contact-page-callback-section__title">
+            <div class="title__text">Станьте первым!</div>
+          </div>
+          <button class="btn map-n-contact-page-callback-section__btn" data-form-note-filler="Открыть филиал" data-popbox-target="popbox-callback">Получить уникальное предложение</button>
+        </div>
+      </div>
+
+{% endblock %}

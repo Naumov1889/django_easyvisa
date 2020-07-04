@@ -1,0 +1,19 @@
+.header-first-contact-us-list {
+  display: flex;
+  align-items: center;
+}
+.header-first-contact-us-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 29px;
+  height: 29px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: $small_shadow;
+  transition: 0.3s;
+}
+.header-first-contact-us-list__item:hover {
+  transform: translate3d(0, 1px, 0);
+}

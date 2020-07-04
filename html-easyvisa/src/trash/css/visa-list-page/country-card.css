@@ -1,0 +1,132 @@
+.country-list .country__text {
+  font-size: 21px;
+  color: #4e4e4e;
+}
+.country-list .country:hover .country__text {
+  color: #373737;
+  text-shadow: #373737 0.5px 0 0;
+}
+.country-card-list__item {
+  margin-top: 30px;
+}
+.country-card {
+  padding: 22px 10px 0 28px;
+  box-shadow: 0 12px 32px rgba(43,43,43,0.07);
+  border-radius: 5px;
+  background-color: #fff;
+}
+.country-card__title {
+  margin-bottom: 18px;
+}
+.country-card__title .country__icon {
+  margin-right: 20px;
+  width: 41px;
+  height: 41px;
+}
+.country-card__title .country__icon:before {
+  opacity: 1;
+}
+.country-card__title .country__text {
+  padding-top: 5px;
+  font-family: "Proxima Nova Semibold";
+  color: #272727;
+  font-size: 36px;
+}
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -18px -7px 0 -7px;
+  padding-bottom: 14px;
+}
+.country-list__column {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 7px 0 7px;
+  width: 224px;
+}
+.country-list__item {
+  margin: 15px 0 15px 0;
+  width: max-content;
+}
+@media (max-width: 1050px) {
+  .country-list .country__icon {
+    margin-right: 12px;
+    width: 25px;
+    height: 25px;
+  }
+  .country-list .country__text {
+    font-size: 18px;
+  }
+  .country-card-list__item {
+    margin-top: 24px;
+  }
+  .country-card {
+    padding: 20px 10px 0 20px;
+  }
+  .country-card__title {
+    margin-bottom: 18px;
+  }
+  .country-card__title .country__icon {
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+  }
+  .country-card__title .country__text {
+    padding-top: 2px;
+    font-size: 27px;
+  }
+  .country-list {
+    margin: -14px -7px 0 -7px;
+    padding-bottom: 12px;
+  }
+  .country-list__column {
+    margin: 14px 7px 0 7px;
+    width: 190px;
+  }
+  .country-list__item {
+    margin: 10px 0 10px 0;
+  }
+}
+@media (max-width: 600px) {
+  .country-list .country__icon {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+  .country-list .country__text {
+    font-size: 17px;
+  }
+  .country-card-list__item {
+    margin-top: 17px;
+  }
+  .country-card {
+    padding: 20px 10px 0 17px;
+  }
+  .country-card__title .country__icon {
+    margin-right: 12px;
+    width: 31px;
+    height: 31px;
+  }
+  .country-card__title .country__text {
+    font-size: 23px;
+  }
+  .country-list {
+    margin: -15px -7px 0 -7px;
+  }
+  .country-list__column {
+    margin: 15px 7px 0 7px;
+    width: 174px;
+  }
+  .country-list__item {
+    margin: 7px 0 7px 0;
+  }
+}
+@media (max-width: 430px) {
+  .country-list {
+    margin: 0px -7px 0 -7px;
+  }
+  .country-list__column {
+    margin: 0 7px 0 7px;
+    width: 100%;
+  }
+}

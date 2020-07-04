@@ -1,0 +1,170 @@
+.franchise-page-quote-section {
+  padding-top: 120px;
+}
+.franchise-page-quote-section__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.franchise-page-quote-section__text {
+  position: relative;
+  z-index: 2;
+  max-width: 552px;
+}
+.franchise-page-quote-section__quote.quote {
+  padding: 18px 45px 18px 45px;
+  font-size: 25px !important;
+  line-height: 32px !important;
+  font-family: "Proxima Nova Semibold" !important;
+}
+.franchise-page-quote-section__quote-name-n-job-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0 44px 0;
+}
+.franchise-page-quote-section__quote-name-n-job {
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.franchise-page-quote-section__quote-name-n-job_1 {
+  text-align: left;
+}
+.franchise-page-quote-section__quote-name-n-job_2 {
+  text-align: right;
+}
+.franchise-page-quote-section__photo.elem-with-yellow-square {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.franchise-page-quote-section__photo.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+  top: 160px;
+  width: 200px;
+  height: 200px;
+}
+.franchise-page-quote-section__photo_1.elem-with-yellow-square {
+  left: -100px;
+}
+.franchise-page-quote-section__photo_1.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+  right: auto;
+  left: 0;
+}
+.franchise-page-quote-section__photo_2.elem-with-yellow-square {
+  right: -100px;
+}
+.franchise-page-quote-section__photo_2.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+  right: 27px;
+}
+@media (max-width: 1050px) {
+  .franchise-page-quote-section {
+    padding-top: 90px;
+  }
+  .franchise-page-quote-section__quote.quote {
+    padding: 18px 45px 18px 45px;
+    font-size: 18px !important;
+    line-height: unset !important;
+  }
+  .franchise-page-quote-section__quote-name-n-job-list {
+    margin: 60px 0 30px 0;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square img {
+    height: 370px;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+    top: 130px;
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 750px) {
+  .franchise-page-quote-section__quote-name-n-job-list {
+    margin: 17px 0 17px 0;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-page-quote-section__quote.quote {
+    font-family: "Proxima Nova Reg" !important;
+    font-size: 15px !important;
+  }
+  .franchise-page-quote-section__quote-name-n-job {
+    box-shadow: 0 12px 32px rgba(43,43,43,0.07);
+  }
+  .franchise-page-quote-section__quote-name-n-job .quote-name {
+    font-size: 14px !important;
+  }
+  .franchise-page-quote-section__quote-name-n-job .quote-job {
+    font-size: 12px !important;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square img {
+    height: 320px;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+    top: 100px;
+  }
+  .franchise-page-quote-section__photo_1.elem-with-yellow-square {
+    left: -90px;
+  }
+  .franchise-page-quote-section__photo_2.elem-with-yellow-square {
+    right: -90px;
+  }
+}
+@media (max-width: 450px) {
+  .franchise-page-quote-section {
+    padding-top: 80px;
+  }
+  .franchise-page-quote-section__quote.quote {
+    margin: 40px -6px 0 -6px;
+    font-size: 14px !important;
+  }
+  .franchise-page-quote-section__quote-name-n-job-list {
+    margin: 6px -6px 6px -6px;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square img {
+    height: 264px;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+    top: 86px;
+  }
+  .franchise-page-quote-section__photo_1.elem-with-yellow-square {
+    left: -76px;
+  }
+  .franchise-page-quote-section__photo_2.elem-with-yellow-square {
+    right: -80px;
+  }
+  .franchise-page-quote-section__photo_2.elem-with-yellow-square .elem-with-yellow-square__yellow-square {
+    right: -30px;
+  }
+}
+@media (max-width: 350px) {
+  .franchise-page-quote-section {
+    padding-top: 80px;
+  }
+  .franchise-page-quote-section__quote.quote {
+    margin: 40px -6px 0 -6px;
+    font-size: 14px !important;
+  }
+  .franchise-page-quote-section__quote-name-n-job-list {
+    margin: -6px -2px -8px -2px;
+  }
+  .franchise-page-quote-section__quote-name-n-job {
+    padding-top: 8px;
+  }
+  .franchise-page-quote-section__photo.elem-with-yellow-square img {
+    height: 250px;
+  }
+  .franchise-page-quote-section__photo_1.elem-with-yellow-square {
+    left: -68px;
+  }
+  .franchise-page-quote-section__photo_2.elem-with-yellow-square {
+    right: -74px;
+  }
+  .franchise-page-quote-section__photo_2.elem-with-yellow-square img {
+    width: 200px;
+    object-fit: cover;
+    object-position: right;
+  }
+}

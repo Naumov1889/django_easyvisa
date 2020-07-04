@@ -1,0 +1,23 @@
+.contact-card {
+  display: flex;
+  align-items: center;
+}
+.contact-card__icon {
+  margin-right: 12px;
+}
+.contact-card__text {
+  font-family: "Proxima Nova Semibold";
+  color: #2c2c2c;
+  font-size: 23px;
+  letter-spacing: 0.57px;
+}
+@media (max-width: 1250px) {
+  .contact-card__icon.icon {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+  }
+  .contact-card__text {
+    font-size: 20px;
+  }
+}

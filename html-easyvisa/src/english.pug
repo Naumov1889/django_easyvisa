@@ -1,0 +1,153 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Языковые курсы'
+
+block content
+    .english-page
+        .bg_img.section-padding_medium.text_color_white(style="background-image: url('img/bg-english-page.jpg')")
+            .container(data-aos="fade-up")
+                .crumbs
+                    .crumbs__item
+                        a.crumbs__link(href="") Главная
+                        .crumbs__icon.dash_small
+                    .crumbs__item
+                        a.crumbs__link.crumbs__link_current(href="") Языковые курсы
+
+                .title.title_h1
+                    .title__text Online English <span class="title__text_extra">by “EasyVisa Agency”</span>
+                    .title__divider
+                    .title__subtitle Курсы английского языка
+
+
+        .english-level-section
+            .container
+                .box-list
+                    .box-list__item.box(data-aos="fade-up")
+                        .elem-with-yellow-square
+                            .elem-with-yellow-square__not-yellow-square.english-level-section__text Курсы для начинающих
+                            .elem-with-yellow-square__yellow-square.yellow-square
+
+                    .box-list__item.box(data-aos="fade-up")
+                        .elem-with-yellow-square
+                            .elem-with-yellow-square__not-yellow-square.english-level-section__text Курсы для продвинутых
+                            .elem-with-yellow-square__yellow-square.yellow-square
+
+
+        .english-text-section-1.text-section.section-padding_large
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Уроки английского языка
+                    .title__divider
+                .english-text-section-1__grid
+                    .english-text-section-1__left(data-aos="fade-up")
+                        p Для получения минимального результата в разговорном английском  необходимо заниматься два раза в неделю по два часа на протяжении 3 месяцев.
+                        p &nbsp;
+                        p Занятия проводятся на платформе ZOOM. В конце каждого занятия преподаватель дает домашнее задание и список слов, которые необходимо выучить.
+                        p &nbsp;
+                        p Мы не просто обучаем английскому языку, мы даем людям возможность зарабатывать на своих знаниях.  Английский язык – это неотъемлемая часть нашей жизни. Поэтому знание языка обязательно для современного человека.
+                        p &nbsp;
+
+                        h3 Преимущества изучения языка
+                        ul
+                            li возможность получить высокооплачиваемую работу за рубежом;
+                            li свободное общение во время путешествий;
+                            li саморазвитие;
+                            li чтение литературы и просмотр фильмов.
+                        p Если ваша задача — начать общаться на языке в минимальные сроки, мы научим уверенно использовать самые важные слова и правила. Если хотите говорить как носитель языка, мы предложим программу углубленного изучения.
+                        p &nbsp;
+                        .btn.english-text-section__btn(data-form-note-filler="Записаться на Online English”" data-popbox-target="popbox-callback") Записаться на урок
+
+
+                    .english-text-section-1__right
+                        .box-list.box-list_3
+                            .box-list__item.box.box_type_1(data-aos="fade-up")
+                                .box__icon-wrapper.elem-with-yellow-square
+                                    img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:83px;" src="img/icon-teacher-3.svg")
+                                    .elem-with-yellow-square__yellow-square.yellow-square
+                                .box__title Индивидуальные <br>занятия
+                                .box__text Один на один с учителем <br>От 900р. За 70 мин
+
+                            .box-list__item.box.box_type_1(data-aos="fade-up")
+                                .box__icon-wrapper.elem-with-yellow-square
+                                    img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:81px;" src="img/icon-teacher-4.svg")
+                                    .elem-with-yellow-square__yellow-square.yellow-square
+                                .box__title Занятия в <br>группе
+                                .box__text Группа до 6 человек <br>От 375р. за 70 мин
+
+
+        .english-page-plans-section.bg_grey.section-padding_small
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Английский в группе
+                    .title__divider
+
+                .box-list.box-list_3
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .elem-with-yellow-square
+                            .elem-with-yellow-square__not-yellow-square.english-page-plans-section__text-1 Min
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .english-page-plans-section__text-2 Минимальный
+                        .english-page-plans-section__text-3 Кол-во занятий: <b>3</b> <br>За одно занятие: <b>500</b> <span class="rouble">п</span>
+                        .english-page-plans-section__text-4 1500 <span class="rouble">п</span>
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .elem-with-yellow-square
+                            .elem-with-yellow-square__not-yellow-square.english-page-plans-section__text-1 Std
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .english-page-plans-section__text-2 Стандартный
+                        .english-page-plans-section__text-3 Кол-во занятий: <b>8</b> <br>За одно занятие: <b>375</b> <span class="rouble">п</span> <span class="text_line-through">500 <span class="rouble">п</span></span>
+                        .english-page-plans-section__text-4 3000 <span class="rouble">п</span>
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .elem-with-yellow-square
+                            .elem-with-yellow-square__not-yellow-square.english-page-plans-section__text-1 Мax
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .english-page-plans-section__text-2 Максимальный
+                        .english-page-plans-section__text-3 Кол-во занятий: <b>12</b> <br>За одно занятие: <b>365</b> <span class="rouble">п</span> <span class="text_line-through">500 <span class="rouble">п</span></span>
+                        .english-page-plans-section__text-4 4380 <span class="rouble">п</span>
+
+
+
+
+        .english-text-section-2.text-section.section-padding_medium
+            .container(data-aos="fade-up")
+                    .title.title_h2
+                        .title__text Наши преиущества
+                        .title__divider
+
+                    div
+                        a.english-text-section-2__img.elem-with-yellow-square.elem-with-yellow-square_borderlike(href='img/picture-english-page.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="484" height="750")
+                            img.elem-with-yellow-square__not-yellow-square(src="img/picture-english-page.jpg")
+                            span.yellow-square.elem-with-yellow-square__yellow-square
+                        ul
+                            li
+                                b Низкая стоимость занятий
+                                p Уроки в группе дешевле индивидуальных занятий примерно в 4-5 раз.
+                            li
+                                b Легче преодолеть языковой барьер
+                                p Чтобы научиться свободно говорить по-английски, нужно как можно больше общаться. Поэтому большая часть урока - разговорная практика. Мы планируем каждое занятие так, чтобы вы легко преодолели языковой барьер и научились применять новые знания в повседневном общении.
+                            li
+                                b Длительность занятия 70 мин
+                                p Одного академ. часа (45 мин.) мало для полноценного урока. Поэтому мы увеличили   длительность занятия, чтобы уделить больше времени каждому ученику и у Вас было больше разговорной практики.
+                            li
+                                b Бесплатная литература
+                                p Мы бесплатно предоставляем всю необходимую литературу, используем лучшие  учебники мировых издательств Oxford, Cambridge.
+                            li
+                                b Опытные преподаватели
+                                p Опыт преподавания языка от 9 лет. Каждый преподаватель проходит многоэтапный отбор. Проводятся тренинги и курсы повышения квалификации. Наш приоритет — отбор сильных преподавателей, которые не просто хорошо говорят по-английски, но и умеют передавать свои знания, и заинтересованы в прогрессе учеников.
+
+                    .btn.english-text-section__btn(data-form-note-filler="Записаться на Online English”" data-popbox-target="popbox-callback") Записаться на урок
+
+
+
+
+        .english-text-section-3.text-section.bg_grey.section-padding_medium
+            .container(data-aos="fade-up")
+                .title.title_h2
+                    .title__text Почему мы?
+                    .title__divider
+
+                p Обучаем практическому английскому языку, который поможет в реальной жизни. Преподаём курсы от начального до продвинутого уровней сложности. Занятия ведут как русскоязычные преподаватели, так и носители языка.
+                p &nbsp;
+                p Если ваша задача — начать общаться на языке в минимальные сроки, мы научим уверенно использовать самые важные слова и правила. Если хотите говорить как носитель языка, мы предложим программу углубленного изучения. Преподаватель уделит вам достаточно внимания, отследит ошибки и поможет справиться с трудностями.
+                p &nbsp;
+                p Занятия помогут найти друзей и открыть новые перспективы. Мы создаем позитивную рабочую атмосферу на уроках — вы выучите английский и хорошо проведете время. В команде, где все друг друга поддерживают, добиться результата намного проще.

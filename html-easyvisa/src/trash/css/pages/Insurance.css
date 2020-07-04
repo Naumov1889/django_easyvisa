@@ -1,0 +1,154 @@
+.insurance-page-form-section {
+  margin-top: -10px;
+}
+.insurance-page-form-section .box-list__item {
+  z-index: 2;
+}
+.insurance-page-form-section .box-list__item:nth-child(1) {
+  z-index: 3;
+}
+.insurance-page-form-section .box-list__item:nth-child(2) {
+  z-index: 3;
+}
+.insurance-page-form-section .box-list__item:nth-child(4) {
+  z-index: 1;
+}
+.insurance-page-text-section__grid {
+  display: flex;
+  justify-content: space-between;
+}
+.insurance-page-text-section__left {
+  margin-bottom: 44px;
+  max-width: 710px;
+}
+.insurance-page-text-section__right {
+  position: relative;
+  z-index: 2;
+  margin: -66px 46px 0 30px;
+  width: 26.2%;
+}
+.insurance-page-text-section__img-list {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -18px;
+}
+.insurance-page-text-section__img {
+  z-index: 4;
+}
+.insurance-page-text-section__img:nth-child(1) {
+  margin-right: 44px;
+}
+.insurance-page-text-section__img:nth-child(2) {
+  margin: -11px 36px 0 0;
+}
+.insurance-page-text-section__img:nth-child(3) {
+  margin-right: 0;
+}
+@media (max-width: 1250px) {
+  .insurance-page-text-section__right {
+    margin: -30px 46px 0 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .insurance-page-text-section__right {
+    margin: -20px 24px 0 30px;
+  }
+  .insurance-page-text-section__img:nth-child(1) {
+    margin-right: 22px;
+  }
+  .insurance-page-text-section__img:nth-child(2) {
+    margin: -11px 26px 0 0;
+    z-index: 4;
+  }
+}
+@media (max-width: 900px) {
+  .insurance-page-text-section__img:nth-child(3) {
+    margin-top: -80px;
+  }
+}
+@media (max-width: 800px) {
+  .insurance-page-text-section__grid {
+    flex-direction: column;
+  }
+  .insurance-page-text-section__left {
+    margin-bottom: 20px;
+  }
+  .insurance-page-text-section__right {
+    margin: 0 50px 0 auto;
+    width: 36.2%;
+  }
+  .insurance-page-text-section__img-list {
+    position: relative;
+  }
+  .insurance-page-text-section__img:nth-child(1) {
+    margin-top: -80px;
+    margin: -80px 0 0 0;
+  }
+  .insurance-page-text-section__img:nth-child(2) {
+    margin-left: -50px;
+  }
+  .insurance-page-text-section__img:nth-child(3) {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 600px) {
+  .insurance-page-text-section__right {
+    margin: 0;
+    width: unset;
+  }
+  .insurance-page-text-section__right .elem-with-yellow-square {
+    margin: 7px 0 7px 0;
+    width: 48%;
+  }
+  .insurance-page-text-section__right img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+  .insurance-page-text-section__img-list {
+    justify-content: space-between;
+    margin: 0;
+  }
+  .insurance-page-text-section__img {
+    margin: 7px 0 7px 0 !important;
+    width: 48%;
+  }
+  .insurance-page-text-section__img img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+  .insurance-page-text-section__img:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: -144px;
+  }
+  .insurance-page-text-section__img:nth-child(1) img {
+    object-position: right;
+  }
+}
+@media (max-width: 400px) {
+  .insurance-page-text-section__right img {
+    height: 100px;
+  }
+  .insurance-page-text-section__img img {
+    height: 100px;
+  }
+  .insurance-page-text-section__img:nth-child(1) {
+    top: -114px;
+  }
+}
+@media (max-width: 1050px) {
+  .insurance-page-form-section {
+    margin-top: -20px;
+    padding-bottom: 26px;
+  }
+}
+@media (max-width: 950px) {
+  .insurance-page-form-section {
+    margin-top: 0;
+  }
+  .insurance-page-form-section .box-list .box-list__item:nth-child(3) {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,477 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Оформляем визу в любые страны'
+
+block content
+    .index-page-firstscreen-section.text_color_white
+        .container(data-aos="fade-up")
+            .index-page-firstscreen-section-grid
+                .index-page-firstscreen-section__left
+                    .title.title_h1.index-page-firstscreen-section__title
+                        .title__text Оформляем более <span class="text_color_primary">5000</span> виз ежегодно в СНГ и Европе
+                        .title__subtitle <span class="dash"></span> <span class="text_color_primary">98,1%</span> одобрения на получение визы
+
+                    .index-page-firstscreen-section__btn.btn(data-popbox-target="popbox-callback") Узнать подробнее
+
+                    .index-page-firstscreen-section-features
+                        .index-page-firstscreen-section-feature.index-page-firstscreen-section-features__item(data-aos="fade-up")
+                            .index-page-firstscreen-section-feature__title 6+
+                            .index-page-firstscreen-section-feature__subtitle международных <br>представительств
+
+                        .index-page-firstscreen-section-feature.index-page-firstscreen-section-features__item(data-aos="fade-up" data-aos-delay="50")
+                            .index-page-firstscreen-section-feature__title 50+
+                            .index-page-firstscreen-section-feature__subtitle турагенств <br>доверяет нам
+
+                        .index-page-firstscreen-section-feature.index-page-firstscreen-section-features__item(data-aos="fade-up" data-aos-delay="100")
+                            .index-page-firstscreen-section-feature__title 5144
+                            .index-page-firstscreen-section-feature__subtitle выданных виз за <br>прошедший год
+
+                        .index-page-firstscreen-section-feature.index-page-firstscreen-section-features__item(data-aos="fade-up" data-aos-delay="150")
+                            .index-page-firstscreen-section-feature__title 98,1%
+                            .index-page-firstscreen-section-feature__subtitle одобрения на <br>получение визы
+
+
+
+                .index-page-firstscreen-section__right.index-page-firstscreen-section-countries-card
+                    .index-page-firstscreen-section-countries-card__title Выберите направление:
+                    .index-page-firstscreen-section-countries
+                        a.index-page-firstscreen-section-country.index-page-firstscreen-section-countries__item.country(href="")
+                            .country__icon.index-page-firstscreen-section-country__icon(style="background-image: url('img/flag-usa.svg')")
+                            .country__text.index-page-firstscreen-section-country__text США
+
+                        a.index-page-firstscreen-section-country.index-page-firstscreen-section-countries__item.country(href="")
+                            .country__icon.index-page-firstscreen-section-country__icon(style="background-image: url('img/flag-uk.svg')")
+                            .country__text.index-page-firstscreen-section-country__text Англия
+
+                        a.index-page-firstscreen-section-country.index-page-firstscreen-section-countries__item.country(href="")
+                            .country__icon.index-page-firstscreen-section-country__icon(style="background-image: url('img/flag-eu.svg')")
+                            .country__text.index-page-firstscreen-section-country__text Европа
+
+                        a.index-page-firstscreen-section-country.index-page-firstscreen-section-countries__item.country(href="")
+                            .country__icon.index-page-firstscreen-section-country__icon(style="background-image: url('img/flag-china.svg')")
+                            .country__text.index-page-firstscreen-section-country__text Азия
+
+                        a.index-page-firstscreen-section-country.index-page-firstscreen-section-countries__item.country(href="")
+                            .country__icon.index-page-firstscreen-section-country__icon(style="background-image: url('img/flag-australia.svg')")
+                            .country__text.index-page-firstscreen-section-country__text Австралия
+
+                        a.index-page-firstscreen-section-country.index-page-firstscreen-section-countries__item.country(href="")
+                            .country__icon.index-page-firstscreen-section-country__icon(style="background-image: url('img/icon-dots.svg')")
+                            .country__text.index-page-firstscreen-section-country__text Больше направлений
+
+
+
+
+    .index-page-popular-destinations-section.section-padding_large
+        .container
+            .title.title_h2
+                .title__text Популярные направления
+                .title__divider
+
+            .index-page-popular-destinations-section-slider.slider.slider_type_1
+                .slider-list(data-js="slider-index-page-popular-destinations")
+                    .index-page-popular-destinations-section-slider__item.slider-list__item
+                        .index-page-popular-destinations-section-slider__content
+                            img.index-page-popular-destinations-section__img(src="img/picture-popular-destinations-2.jpg")
+                            .index-page-popular-destinations-section-text
+                                .index-page-popular-destinations-section-text__title Рим
+
+                                .index-page-popular-destinations-section-text__hidden-part
+
+                                    .index-page-popular-destinations-section-text__name-n-value-list
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Цена от
+                                            .index-page-popular-destinations-section-text__value 7000 <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Срок выдачи от
+                                            .index-page-popular-destinations-section-text__value 5 дней
+
+                                    .index-page-popular-destinations-section-text__btn.btn(data-popbox-target="popbox-callback") Оставить заявку
+
+                                .index-page-popular-destinations-section-text__bottom
+                                    .index-page-popular-destinations-section-text__country Европа
+                                    .index-page-popular-destinations-section-text__hidden-part.index-page-popular-destinations-section-text__cases Выдано <span>910</span> виз
+
+                    .index-page-popular-destinations-section-slider__item.slider-list__item
+                        .index-page-popular-destinations-section-slider__content
+                            img.index-page-popular-destinations-section__img(src="img/picture-popular-destinations-1.jpg")
+                            .index-page-popular-destinations-section-text
+                                .index-page-popular-destinations-section-text__title Нью-Йорк
+
+                                .index-page-popular-destinations-section-text__hidden-part
+
+                                    .index-page-popular-destinations-section-text__name-n-value-list
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Цена от
+                                            .index-page-popular-destinations-section-text__value 7000 <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Срок выдачи от
+                                            .index-page-popular-destinations-section-text__value 5 дней
+
+                                    .index-page-popular-destinations-section-text__btn.btn(data-popbox-target="popbox-callback") Оставить заявку
+
+                                .index-page-popular-destinations-section-text__bottom
+                                    .index-page-popular-destinations-section-text__country Америка
+                                    .index-page-popular-destinations-section-text__hidden-part.index-page-popular-destinations-section-text__cases Выдано <span>910</span> виз
+
+                    .index-page-popular-destinations-section-slider__item.slider-list__item
+                        .index-page-popular-destinations-section-slider__content
+                            img.index-page-popular-destinations-section__img(src="img/picture-popular-destinations-2.jpg")
+                            .index-page-popular-destinations-section-text
+                                .index-page-popular-destinations-section-text__title Мюнхен
+
+                                .index-page-popular-destinations-section-text__hidden-part
+
+                                    .index-page-popular-destinations-section-text__name-n-value-list
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Цена от
+                                            .index-page-popular-destinations-section-text__value 7000 <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Срок выдачи от
+                                            .index-page-popular-destinations-section-text__value 5 дней
+
+                                    .index-page-popular-destinations-section-text__btn.btn(data-popbox-target="popbox-callback") Оставить заявку
+
+                                .index-page-popular-destinations-section-text__bottom
+                                    .index-page-popular-destinations-section-text__country Европа
+                                    .index-page-popular-destinations-section-text__hidden-part.index-page-popular-destinations-section-text__cases Выдано <span>910</span> виз
+
+                    .index-page-popular-destinations-section-slider__item.slider-list__item
+                        .index-page-popular-destinations-section-slider__content
+                            img.index-page-popular-destinations-section__img(src="img/picture-popular-destinations-1.jpg")
+                            .index-page-popular-destinations-section-text
+                                .index-page-popular-destinations-section-text__title Рим
+
+                                .index-page-popular-destinations-section-text__hidden-part
+
+                                    .index-page-popular-destinations-section-text__name-n-value-list
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Цена от
+                                            .index-page-popular-destinations-section-text__value 7000 <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Срок выдачи от
+                                            .index-page-popular-destinations-section-text__value 5 дней
+
+                                    .index-page-popular-destinations-section-text__btn.btn(data-popbox-target="popbox-callback") Оставить заявку
+
+                                .index-page-popular-destinations-section-text__bottom
+                                    .index-page-popular-destinations-section-text__country Европа
+                                    .index-page-popular-destinations-section-text__hidden-part.index-page-popular-destinations-section-text__cases Выдано <span>910</span> виз
+
+                    .index-page-popular-destinations-section-slider__item.slider-list__item
+                        .index-page-popular-destinations-section-slider__content
+                            img.index-page-popular-destinations-section__img(src="img/picture-popular-destinations-1.jpg")
+                            .index-page-popular-destinations-section-text
+                                .index-page-popular-destinations-section-text__title Рим
+
+                                .index-page-popular-destinations-section-text__hidden-part
+
+                                    .index-page-popular-destinations-section-text__name-n-value-list
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Цена от
+                                            .index-page-popular-destinations-section-text__value 7000 <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Срок выдачи от
+                                            .index-page-popular-destinations-section-text__value 5 дней
+
+                                    .index-page-popular-destinations-section-text__btn.btn(data-popbox-target="popbox-callback") Оставить заявку
+
+                                .index-page-popular-destinations-section-text__bottom
+                                    .index-page-popular-destinations-section-text__country Европа
+                                    .index-page-popular-destinations-section-text__hidden-part.index-page-popular-destinations-section-text__cases Выдано <span>910</span> виз
+
+                    .index-page-popular-destinations-section-slider__item.slider-list__item
+                        .index-page-popular-destinations-section-slider__content
+                            img.index-page-popular-destinations-section__img(src="img/picture-popular-destinations-1.jpg")
+                            .index-page-popular-destinations-section-text
+                                .index-page-popular-destinations-section-text__title Рим
+
+                                .index-page-popular-destinations-section-text__hidden-part
+
+                                    .index-page-popular-destinations-section-text__name-n-value-list
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Цена от
+                                            .index-page-popular-destinations-section-text__value 7000 <span class="index-page-popular-destinations-section-text__rouble rouble">п</span>
+                                        .index-page-popular-destinations-section-text__name-n-value
+                                            .index-page-popular-destinations-section-text__name Срок выдачи от
+                                            .index-page-popular-destinations-section-text__value 5 дней
+
+                                    .index-page-popular-destinations-section-text__btn.btn(data-popbox-target="popbox-callback") Оставить заявку
+
+                                .index-page-popular-destinations-section-text__bottom
+                                    .index-page-popular-destinations-section-text__country Европа
+                                    .index-page-popular-destinations-section-text__hidden-part.index-page-popular-destinations-section-text__cases Выдано <span>910</span> виз
+
+
+
+    .index-page-features-section.bg_grey.section-padding_small
+        .container
+            .title.title_h2(data-aos="fade-up")
+                .title__text Оформи визу у нас
+                .title__divider
+
+            .slider
+                .box-list.box-list_3(data-js="slider-type-8" data-slider-wrap-children-class="slider-list__item")
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:95px;" src="img/icon-chat-2.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Личный менеджер
+                        .box__text Поддержка 24/7, консультирование<br>по всем вопросам
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:88px;" src="img/icon-safety.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Безопасность
+                        .box__text Ваши данные под надежной<br>защитой
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:95px;" src="img/icon-placemark-2.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Без вашего присутствия
+                        .box__text Экономьте ваше время<br>и деньги
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="150")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:82px;;" src="img/icon-thumb-up.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Работа на результат
+                        .box__text Команда профессионалов<br>выполнит все на 100%
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="200")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:78px;" src="img/icon-speed.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Скорость
+                        .box__text Оформление визы<br>от 1 рабочего дня
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="250")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:82px;" src="img/icon-wallet.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Без оплаченной брони
+                        .box__text Нам не нужны оплаченные брони,<br>вы не рискуете своими деньгами
+
+
+    .index-page-staff-section
+        .index-page-staff-section__container.container
+            .index-page-staff-section__title.title.title_h2(data-aos="fade-up" data-aos-delay="100")
+                .title__text Наша команда
+                .title__divider
+
+            .index-page-staff-section-slider.slider
+                .slider-list.index-page-staff-section-slider-list(data-js="slider-type-2")
+                    .slider-list__item.index-page-staff-section-slider-list__item
+                        .index-page-staff-section__grid(data-aos="fade-up" data-aos-delay="100" data-aos-offset="250")
+                            .index-page-staff-section__left
+                                .index-page-staff-section__quote.quote “EasyVisa Agency” – международная филиальная сеть визовых центров. Каждый день мы развиваемся и растем для вас. Посмотри на мир, он куда удивительнее снов.)
+                                .index-page-staff-section__name-n-job
+                                    .index-page-staff-section__name.quote-name Илья Блажиевский
+                                    .index-page-staff-section__job.quote-job основатель компании
+
+                            .index-page-staff-section__right.elem-with-yellow-square
+                                img.index-page-staff-section__img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-1.png")
+                                .elem-with-yellow-square__yellow-square.yellow-square.index-page-staff-section__yellow-square
+
+                    .slider-list__item.index-page-staff-section-slider-list__item
+                        .index-page-staff-section__grid
+                            .index-page-staff-section__left
+                                .index-page-staff-section__quote.quote Мы уделяем большое внимание тому, чтобы        каждый наш клиент получил сервис самого высокого качества. Только профессионалы своего дела находятся в нашей команде. “EasyVisa Agency” это больше, чем просто путешествия!
+                                .index-page-staff-section__name-n-job
+                                    .index-page-staff-section__name.quote-name Максим Горохов
+                                    .index-page-staff-section__job.quote-job генеральный директор
+
+                            .index-page-staff-section__right.elem-with-yellow-square
+                                img.index-page-staff-section__img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-2.png")
+                                .elem-with-yellow-square__yellow-square.yellow-square.index-page-staff-section__yellow-square
+
+
+    .index-page-services-section.bg_grey.section-padding_small
+        .container
+            .title.title_h2(data-aos="fade-up")
+                .title__text Услуги EasyVisa Agency
+                .title__divider
+
+            .index-page-services-section__slider.slider.slider_type_3
+                .slider-list.slider-type-3-list(data-js="slider-type-3")
+                    .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up")
+                        .slider-type-3-item__grid
+                            .slider-type-3-item__title-n-subtitle
+                                .slider-type-3-item__title Авиабилеты
+                                .slider-type-3-item__subtitle Подбор выгодных авиабилетов
+                            a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                            img.slider-type-3-item__img(src="img/picture-slider-services-1.png")
+                    .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up" data-aos-delay="50")
+                        .slider-type-3-item__grid
+                            .slider-type-3-item__title-n-subtitle
+                                .slider-type-3-item__title Страхование
+                                .slider-type-3-item__subtitle(style="max-width: 290px;") Страховка для вылета  за границу по выгодным тарифам
+                            a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                            img.slider-type-3-item__img(src="img/picture-slider-services-2.png")
+                    .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up" data-aos-delay="100")
+                        .slider-type-3-item__grid
+                            .slider-type-3-item__title-n-subtitle
+                                .slider-type-3-item__title Загранпаспорт
+                                .slider-type-3-item__subtitle Оформление паспорта <br>на 5 и 10 лет
+                            a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                            img.slider-type-3-item__img(src="img/picture-slider-services-3.png")
+
+                    .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up" data-aos-delay="150")
+                        .slider-type-3-item__grid
+                            .slider-type-3-item__title-n-subtitle
+                                .slider-type-3-item__title Работа за рубежом
+                                .slider-type-3-item__subtitle(style="max-width: 200px") Работа в США, Европе, Турции, Южной Корее
+                            a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                            img.slider-type-3-item__img(src="img/picture-slider-services-4.png")
+
+
+
+
+    .index-page-courses-section.section-padding_large
+        .container
+            .title.title_h2(data-aos="fade-up")
+                .title__text Курсы английского языка
+                .title__divider
+
+            .slider
+                .box-list.box-list_4.index-page-courses-section__first-box-list(data-js="slider-type-8" data-slider-wrap-children-class="slider-list__item")
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:81px;" src="img/icon-price.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Доступная цена
+                        .box__text Стоимость обучения<br>от 990 руб.
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:81px;" src="img/icon-chat-1.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Практика
+                        .box__text До 80% разговорной <br>практики
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:95px;" src="img/icon-chat-2.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Личный менеджер
+                        .box__text(style="max-width: 270px;") Персональный менеджер для контроля учебного процесса
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="150")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:79px;" src="img/icon-teacher.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Опытные учителя
+                        .box__text(style="max-width: 270px;") Сертифицированные преподаватели (TEFL, TESOL, TKT)
+
+            .box-list.box-list_3.index-page-courses-section__second-box-list
+                .box-list__item.box.box_type_1(data-aos="fade-up")
+                    .box__title Индивидуальные занятия
+                    .box__text С преподавателями-носителями языка. Получайте ценнейший опыт общения с носителями языка на 20 или 40-минутных индивидуальных занятиях.
+                .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                    .box__title Групповые занятия
+                    .box__text Практикуйтесь в разговорном английском на групповых занятиях с 4-5 студентами одного уровня. Занятия начинаются каждые 24 часа в сутки через каждые 30 минут.
+                .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                    .box__title Самостоятельное обучение
+                    .box__text Интерактивные уроки для самостоятельной практики и закрепления материала доступны на нашей онлайн платформе. Занимайтесь в любое время в любом месте.
+
+            .index-page-courses-section__btn.btn(style="max-width: 278px" data-popbox-target="popbox-callback") Оставить заявку
+
+
+    .index-page-usa-section.text_color_white
+        .container
+            .index-page-usa-section-grid
+                .index-page-usa-section-grid__left(data-aos="fade-up")
+                    .title.title_h2
+                        .title__text Америка +
+                        .title__divider
+                        .title__subtitle Твое будущее в США
+
+                    .index-page-usa-section__btn.btn(data-popbox-target="popbox-callback") Получить консультацию
+
+                .index-page-usa-section-grid__right
+                    .feature-card-list
+                        .feature-card.feature-card-list__item(data-aos="fade-up")
+                            .feature-card__title Light
+                            .feature-card__divider
+                            ul.feature-card__features.feature-card-features
+                                li.feature-card-features__item Виза под ключ
+                                li.feature-card-features__item Личный менеджер
+                                li.feature-card-features__item Поддержка 24/7
+                                li.feature-card-features__item Оплата от 10$/час
+                                li.feature-card-features__item Жилье
+                            .feature-card__bottom(data-popbox-target="popbox-callback") Узнать стоимость
+
+                        .feature-card.feature-card-list__item(data-aos="fade-up" data-aos-delay="50")
+                            .feature-card__title EXTRA
+                            .feature-card__divider
+                            ul.feature-card__features.feature-card-features
+                                li.feature-card-features__item Виза под ключ
+                                li.feature-card-features__item Личный менеджер
+                                li.feature-card-features__item Поддержка 24/7
+                                li.feature-card-features__item Оплата от 13$/час
+                                li.feature-card-features__item Жилье
+                                li.feature-card-features__item Страховка в случае отказа
+                            .feature-card__bottom(data-popbox-target="popbox-callback") Узнать стоимость
+
+
+
+    .index-page-feedback-section.bg_grey.section-padding_small
+        .container
+            .title.title_h2(data-aos="fade-up")
+                .title__text Отзывы наших клиентов
+                .title__divider
+
+            .index-page-feedback-section__slider.slider.slider_type_1
+                .slider-list(data-js="slider-type-1")
+                    a.slider-list__item(href='img/picture-feedback-1.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="" data-aos="fade-up")
+                        img(src='img/picture-feedback-1.jpg' alt='Image description')
+
+                    a.slider-list__item(href='img/picture-feedback-2.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="" data-aos="fade-up" data-aos-delay="50")
+                        img(src='img/picture-feedback-2.jpg' alt='Image description')
+
+                    a.slider-list__item(href='img/picture-feedback-3.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="" data-aos="fade-up" data-aos-delay="100")
+                        img(src='img/picture-feedback-3.jpg' alt='Image description')
+
+                    a.slider-list__item(href='img/picture-feedback-4.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="" data-aos="fade-up" data-aos-delay="150")
+                        img(src='img/picture-feedback-4.jpg' alt='Image description')
+
+                    a.slider-list__item(href='img/picture-feedback-4.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="469" title="" data-aos="fade-up" data-aos-delay="200")
+                        img(src='img/picture-feedback-4.jpg' alt='Image description')
+
+
+
+
+
+    .index-page-payment-section.section-padding_large
+        .container
+            .title.title_h2(data-aos="fade-up")
+                .title__text Мы принимаем
+                .title__divider
+
+            .box-list.index-page-payment-section-box-list
+                .box-list__item.box.index-page-payment-section__box.index-page-payment-section-box-list__item(data-aos="fade-up")
+                    img(src="img/logo-payment-1.jpg")
+                .box-list__item.box.index-page-payment-section__box.index-page-payment-section-box-list__item(data-aos="fade-up" data-aos-delay="50")
+                    img(src="img/logo-payment-2.jpg")
+                .box-list__item.box.index-page-payment-section__box.index-page-payment-section-box-list__item(data-aos="fade-up" data-aos-delay="100")
+                    img(src="img/logo-payment-3.jpg")
+                .box-list__item.box.index-page-payment-section__box.index-page-payment-section-box-list__item(data-aos="fade-up" data-aos-delay="150")
+                    img(src="img/logo-payment-4.jpg")
+                .box-list__item.box.index-page-payment-section__box.index-page-payment-section-box-list__item(data-aos="fade-up" data-aos-delay="200")
+                    img(src="img/logo-payment-5.jpg")
+
+
+    .index-page-callback-section.text_color_white.bg_img(style="background-image: url('img/bg-index-page-callback-update.jpg')")
+        .container(data-aos="fade-up")
+            .title.title_h2.index-page-callback-section__title
+                .title__text Остались вопросы?
+                .title__divider
+                .title__subtitle Оставьте свой номер и наш менеджер перезвонит вам в течение часа и ответит на все волнующие вас вопросы
+
+            form.form.form_row.index-page-callback-section__form
+                input.input.index-page-callback-section__input.form__elem(placeholder="Введите номер телефона" name="phone")
+                button.btn.index-page-callback-section__btn.form__elem  Перезвоните мне
+

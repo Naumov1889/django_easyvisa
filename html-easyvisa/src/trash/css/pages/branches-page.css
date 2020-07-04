@@ -1,0 +1,50 @@
+.branch {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(28,28,28,0.87);
+}
+.branch__legend {
+  font-size: 19px;
+  color: #dfdfdf;
+}
+.branch__city {
+  font-size: 37px;
+}
+.branch__city-divider {
+  width: 77px;
+  height: 3px;
+}
+.branch__address {
+  font-family: "Proxima Nova Semibold";
+  font-size: 22px;
+}
+.branch__btn {
+  margin-top: 28px;
+}
+.branch-instagram {
+  display: flex;
+  align-items: center;
+  color: #ffea00;
+  font-family: "Proxima Nova Semibold";
+  font-size: 22px;
+  line-height: 29px;
+}
+.branch-instagram:hover .branch-instagram__text:before {
+  display: none;
+}
+.branch-instagram__text {
+  position: relative;
+}
+.branch-instagram__text:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffea00;
+}
+.branch-instagram__icon {
+  margin: 1px 12px 0 0;
+}

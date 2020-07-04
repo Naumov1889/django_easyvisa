@@ -1,0 +1,104 @@
+.header-first {
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+}
+.header-first__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+}
+.header-first__separator {
+  width: 1px;
+  height: 100%;
+  background-color: #f3f3f3;
+}
+.header-first__franchise-card.franchise-card {
+  padding-left: 0;
+}
+.header-first-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header-first-nav__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 23px;
+  color: #676666;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.header-first-nav__item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #ffea00;
+  opacity: 0;
+  transition: 0.3s;
+}
+.header-first-nav__item:hover {
+  color: #484747;
+  text-shadow: #484747 0.5px 0 0;
+}
+.header-first-nav__item:hover:before {
+  height: 2px;
+  opacity: 1;
+}
+.header-first-contact-us {
+  display: flex;
+  align-items: center;
+}
+.header-first-contact-us__text {
+  margin-right: 18px;
+  color: #868686;
+  font-size: 15px;
+  font-family: "Proxima Nova Light";
+}
+.header-first-location-select {
+  display: flex;
+  align-items: center;
+}
+.header-first-location-select__icon-placemark {
+  margin-right: 10px;
+}
+@media (max-width: 1350px) {
+  .header-first-nav__item {
+    padding: 0 16px;
+  }
+  .header-first-contact-us__text {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1250px) {
+  .header-first-nav__item {
+    font-size: 13px;
+  }
+  .header-first-nav__item.franchise-card .franchise-card__text {
+    font-size: 13px;
+  }
+  .header-first-nav__item.franchise-card .franchise-card__img {
+    margin-left: 10px;
+    width: 58px;
+  }
+  .header-first-contact-us__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1150px) {
+  .header-first-contact-us__text {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .header-first {
+    display: none;
+  }
+}

@@ -1,0 +1,66 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div>
+        <div class="container">
+            <div class="crumbs" data-aos="fade-up">
+                <div class="crumbs__item"><a class="crumbs__link" href="">Главная</a>
+                    <div class="crumbs__icon dash_small"></div>
+                </div>
+                <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Отзывы</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-page">
+        <div class="container" data-aos="fade-up">
+            <div class="title title_h1">
+                <div class="title__text">Отзывы</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="feedback-page-leave-feedback">
+                <div class="feedback-page-leave-feedback__text">Посодействуйте развитию нашей компании! Мы очень ценим
+                    Вашу инициативу и рады каждому отзыву и предложению, ведь они помогают нам стать лучше.
+                </div>
+                <div class="btn feedback-page-leave-feedback__btn" data-popbox-target="popbox-feedback">Оставить отзыв
+                </div>
+            </div>
+            <div class="video-slider slider slider_type_1 section-padding_medium">
+                <div class="slider-list" data-js="slider-type-4">
+
+                    {% for video in feedback_videos %}
+                        <a class="slider-list__item video-slider__item"
+                           href="https://www.youtube.com/embed/{{ video.youtube_id }}" data-js="photoswipe-item"
+                           data-photoswipe-group-id="1" width="1000" height="563"
+                           {% if video.note %}title="{{ video.note }}"{% endif %}>
+                            <div class="video-slider__content"><img src="{{ video.thumbnail.url }}"
+                                                                    {% if video.note %}alt="{{ video.note }}"{% endif %}>
+                                <div class="video-slider__btn">
+                                    <div class="icon icon_play-arrow"></div>
+                                </div>
+                                <div class="video-slider__overlay"></div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="feedback-page-waterfall-section bg_grey">
+            <div class="container feedback-page-waterfall-section__container section-padding_medium">
+                <div class="feedback-waterfall-wrapper">
+                    <div class="feedback-waterfall" data-js="waterfall">
+
+                        {% for photo in feedback_photos %}
+                            <a class="feedback-waterfall__item" data-aos="fade-up" href="{{ photo.photo.url }}"
+                               data-js="photoswipe-item" data-photoswipe-group-id="0" width="{{ photo.photo.width }}"
+                               height="{{ photo.photo.height }}" {% if photo.note %}title="{{ photo.note }}"{% endif %}><img
+                                    src="{{ photo.thumbnail_feedback_page.url }}"
+                                    {% if photo.note %}alt="{{ photo.note }}"{% endif %}></a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

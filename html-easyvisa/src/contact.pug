@@ -1,0 +1,73 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Контакты'
+
+block content
+    div
+        .container
+            .crumbs(data-aos="fade-up")
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") Контакты
+
+    .map-n-contact-page
+        .container
+            .title.title_h1(data-aos="fade-up")
+                .title__text Контакты «EasyVisa Agency» Пенза
+                .title__divider
+
+    .map-n-contact(data-js="map-n-contact")
+        .btn.map-n-contact__map-toggler(data-js="map-n-contact__map-toggler") Показать карту
+        .map-n-contact__map-overlay(data-js="map-n-contact__map-overlay")
+        .map-n-contact__map#map-n-contact__map-container(data-placemark="placemark.png")
+        .container.map-n-contact__container.section-padding_medium
+            .map-n-contact__box(data-js="map-n-contact__box" data-aos="fade-up")
+                .contact-name-n-value
+                    .contact-name-n-value__name Ваш город:
+                    .select_type_2
+                        select(name="" data-js="select-type-2")
+                            option(value="Казань" data-placeholder) Cанкт-Петербург
+                            option(value="Москва") Казань
+                            option(value="Санкт-Петербург") Уфа
+                            option(value="Уфа") Краснодар
+                            option(value="Стамбул") Пенза
+                            option(value="Стамбул") Новосибирск
+                            option(value="Стамбул") Ростов-на-Дону
+
+
+                .contact-name-n-value
+                    .contact-name-n-value__name Адрес:
+                    .contact-name-n-value__value Проспект Большой В.О. д. 9/6,<br>ЛИТЕР А, пом.3-Н, офис 117
+                .contact-name-n-value
+                    .contact-name-n-value__name Режим работы:
+                    .contact-name-n-value__value ПН-ПТ с 9:00 до 20:00<br>СБ-ВС выходной
+                .contact-name-n-value
+                    .contact-name-n-value__name Телефоны:
+                    div
+                        a.contact-name-n-value__value.contact-name-n-value__value_phone(href="") +7 (911) 187-55-17
+                        a.contact-name-n-value__value.contact-name-n-value__value_phone(href="") +7 (911) 757-64-32
+                .contact-name-n-value
+                    .contact-name-n-value__name E-mail:
+                    a.contact-name-n-value__value(href="") easyvisa.inc@gmail.com
+
+                .contact-name-n-value
+                    .contact-name-n-value__name Социальные сети:
+                    .map-n-contact__social.social
+                        a.social__item(href="")
+                            .icon.icon_whatsapp
+                        a.social__item(href="")
+                            .icon.icon_instagram
+                        a.social__item(href="")
+                            .icon.icon_vk
+
+                .btn.btn_1.map-n-contact__btn(data-popbox-target="popbox-callback") Задать вопрос
+
+    .map-n-contact-page-callback-section.text_color_white.section-padding_medium.bg_img(style="background-image: url('img/bg-map-n-contact-page-callback.jpg')")
+        .container.map-n-contact-page-callback-section__container(data-aos="fade-up")
+            .map-n-contact-page-callback-section__subtitle В вашем городе еще нет филиала EasyVisa?
+            .title.title_h1.map-n-contact-page-callback-section__title
+                .title__text Станьте первым!
+            button.btn.map-n-contact-page-callback-section__btn(data-popbox-target="popbox-callback") Получить уникальное предложение

@@ -1,0 +1,139 @@
+@require "blocks/variables-n-mixins.styl"
+
+.header-first {
+  position: relative;
+  z-index 3
+  background-color: #ffffff;
+
+  &__container {
+    display: flex;
+    justify-content space-between
+    align-items center
+    height: 48px;
+  }
+
+  &__separator {
+    width: 1px
+    height: 100%
+    background-color: #f3f3f3;
+  }
+
+  &__franchise-card.franchise-card {
+    padding-left: 0
+  }
+}
+
+.header-first-nav {
+  display: flex;
+  justify-content center
+  align-items center
+  height: 100%
+
+  &__item {
+    position: relative
+    display: flex;
+    align-items center
+    height: 100%
+    padding 0 23px
+    color: #676666;
+    font-size: 15px;
+    transition .3s
+
+    &:before {
+      content: ''
+      position: absolute;
+      left 0
+      bottom: 0
+      width: 100%
+      height: 0
+      background-color: #ffea00;
+      opacity 0
+      transition .3s
+    }
+
+    &:hover {
+      color: darken(#676666, 30%)
+      text-shadow: darken(#676666, 30%) 0.5px 0 0;
+
+      &:before {
+        height: 2px
+        opacity 1
+      }
+    }
+  }
+}
+
+.header-first-contact-us {
+  display: flex;
+  align-items center
+
+  &__text {
+    margin-right: 18px;
+    color: #868686;
+    font-size: 15px;
+    font-family: "Proxima Nova Light";
+  }
+}
+
+
+.header-first-location-select {
+  display: flex;
+  align-items center
+
+  &__icon-placemark {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .header-first-nav {
+    &__item {
+      padding: 0 16px;
+    }
+  }
+
+  .header-first-contact-us {
+    &__text {
+      margin-right: 10px
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .header-first-nav {
+    &__item {
+      font-size: 13px
+
+      &.franchise-card {
+        .franchise-card__text {
+          font-size: 13px
+        }
+
+        .franchise-card__img {
+          margin-left: 10px
+          width: 58px
+        }
+      }
+    }
+  }
+
+  .header-first-contact-us {
+    &__text {
+      font-size: 14px
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .header-first-contact-us {
+    &__text {
+      display: none
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .header-first {
+    display: none
+  }
+}

@@ -1,0 +1,124 @@
+.about-page-history-section {
+  position: relative;
+
+  &__grid {
+    display: flex;
+    justify-content space-between
+  }
+
+  &__right {
+    margin-left: 20px;
+    width: 380px
+  }
+
+  &__elem-with-yellow-square.elem-with-yellow-square {
+    position: absolute;
+    bottom 0
+    width: 380px
+    font-size: 0
+    line-height: 0
+    transform translateX(40px)
+  }
+
+  &__yellow-square.yellow-square {
+    top: 154px;
+    right: 16px;
+    width: 204px;
+    height: 204px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .about-page-history-section {
+    &__right {
+      width: 360px
+    }
+
+    &__elem-with-yellow-square.elem-with-yellow-square {
+      width: 360px
+      transform translateX(10px)
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .about-page-history-section {
+    &__right {
+      width: 330px
+    }
+
+    &__elem-with-yellow-square.elem-with-yellow-square {
+      width: 330px
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-page-history-section {
+    &__container {
+      overflow hidden
+    }
+
+    &__yellow-square.yellow-square {
+      top 140px
+      right 0
+      width: 150px;
+      height: 150px;
+    }
+
+    &__elem-with-yellow-square.elem-with-yellow-square {
+      transform translateX(0)
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .about-page-history-section {
+    &__right {
+      width: 300px
+    }
+
+    &__elem-with-yellow-square.elem-with-yellow-square {
+      width: 300px
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .about-page-history-section {
+    position: static;
+    padding-bottom: 0
+
+    &__container {
+      overflow visible
+    }
+
+    &__grid {
+      position: relative
+    }
+
+    &__left {
+      position: absolute !important;
+      z-index 2
+      top 176px
+      width: 100%
+    }
+
+    &__right {
+      margin-left: 0
+      width: 100%
+      height: 360px
+    }
+
+    &__elem-with-yellow-square.elem-with-yellow-square {
+      position: static;
+      margin: 0 auto
+
+      img {
+        height: 360px
+        object-fit cover
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.fl_focused .fl__label {
+  font-family: "Proxima Nova Reg";
+  opacity: 0.9;
+}
+.fl__label {
+  left: 28px;
+  font-family: "Proxima Nova Semibold";
+  font-size: 17px;
+  color: #4e4e4e;
+  cursor: auto;
+  user-select: auto;
+  opacity: 1;
+}
+.fl__input.input {
+  padding-top: 22px;
+}
+@media (max-width: 1050px) {
+  .fl_focused .fl__label {
+    top: 11px;
+  }
+  .fl__label {
+    left: 20px;
+    font-size: 16px;
+  }
+  .fl__input.input {
+    padding-top: 21px;
+  }
+}
+@media (max-width: 600px) {
+  .fl_focused .fl__label {
+    top: 9px;
+  }
+  .fl__label {
+    left: 17px;
+    font-size: 15px;
+  }
+  .fl__input.input {
+    padding-top: 19px;
+  }
+}

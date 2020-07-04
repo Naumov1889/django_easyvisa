@@ -1,0 +1,100 @@
+.foreign-passport-page-text-section-3 {
+  &__grid {
+    display: flex;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction column
+    margin-left: 48px
+  }
+
+  &__right-elem {
+    margin-bottom: 32px
+  }
+}
+
+@media (max-width: 1050px) {
+  .foreign-passport-page-text-section-3 {
+    &__grid {
+      flex-direction column
+    }
+
+    &__right {
+      margin: 30px -10px 0 -10px
+      flex-direction row
+      justify-content center
+    }
+
+    &__right-elem {
+      margin: 0 10px 0 10px
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .foreign-passport-page-text-section-3 {
+    &__right {
+      margin: 20px -8px 0 -8px
+    }
+
+    &__right-elem {
+      margin: 0 8px 0 8px
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .foreign-passport-page-text-section-3 {
+    &__right {
+      margin: 0
+      flex-direction column
+    }
+
+    &__right-elem {
+      margin: 20px 0 0 0
+    }
+  }
+}
+
+.foreign-passport-page-features-section {
+  &__hidden-box {
+    max-height 260px
+    transition padding .4s, margin-bottom .4s, max-height .4s, opacity .2s
+  }
+
+  &__box {
+    &_hidden {
+      padding 0 !important
+      margin-bottom: 0 !important
+      max-height: 0 !important;
+      opacity 0
+      overflow hidden
+    }
+
+    &_with-btn {
+      padding 17px 17px 20px 17px !important
+    }
+  }
+
+
+  &__btn {
+    margin-top: 18px
+    width: 114px;
+    height: 37px;
+
+    &_active {
+      .icon {
+        transform rotate(180deg)
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .foreign-passport-page-features-section {
+    &__btn {
+      margin-top: 10px
+    }
+  }
+}

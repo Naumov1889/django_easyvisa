@@ -1,0 +1,29 @@
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 36px 0 6px 0;
+}
+.crumbs__item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+.crumbs__link {
+  font-family: "Proxima Nova Light";
+  font-size: 16px;
+  color: #383838;
+  text-decoration: underline;
+}
+.crumbs__link:hover {
+  text-decoration: none;
+}
+.crumbs__link_current {
+  pointer-events: none;
+  cursor: default;
+  color: #575757;
+  text-decoration: none;
+}
+.crumbs__icon {
+  margin: 0 12px;
+}

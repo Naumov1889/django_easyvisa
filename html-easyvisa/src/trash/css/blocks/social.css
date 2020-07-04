@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 29px;
+  height: 29px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 8px 13px rgba(43,43,43,0.1);
+  transition: 0.3s;
+}
+.social__item:hover {
+  transform: translate3d(0, 1px, 0);
+}
+@media (max-width: 1250px) {
+  .social__item {
+    margin: 3px;
+    width: 26px;
+    height: 26px;
+  }
+  .social__item .icon {
+    transform: scale(0.85);
+  }
+}

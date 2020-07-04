@@ -1,0 +1,190 @@
+.visa-page-anchor-list {
+  display: flex;
+  flex-wrap wrap
+  margin: 46px -29px 0 -29px
+
+  &__item {
+    margin: 10px 29px 0 29px
+    font-family: "Proxima Nova Semibold";
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .visa-page-anchor-list {
+    margin: 38px -22px 0 -22px
+
+    &__item {
+      margin: 10px 22px 0 22px
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .visa-page-anchor-list {
+    margin: 18px -17px 0 -17px
+
+    &__item {
+      margin: 10px 17px 0 17px
+      font-family: "Proxima Nova Reg";
+      font-size: 16px;
+    }
+  }
+}
+
+
+.visa-page-features-section {
+  &__box-title.box__title {
+    font-size: 55px;
+    line-height: unset
+  }
+
+  &__box-text.box__text {
+    font-size: 19px !important;
+  }
+}
+
+@media (max-width: 1350px) {
+  .visa-page-features-section {
+    &__box-title.box__title {
+      font-size: 45px;
+    }
+
+    &__box-text.box__text {
+      font-size: 17px !important;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .visa-page-features-section {
+    &__box {
+      padding: 17px 14px 17px 14px
+    }
+
+    &__box-title.box__title {
+      font-size: 30px !important;
+    }
+
+    &__yellow-square.yellow-square {
+      top: -6px;
+      right: -12px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+
+.visa-page {
+  &__picture-list {
+    padding: 60px 0 70px 0
+  }
+}
+
+.visa-page-picture-list {
+  display: flex;
+  align-items flex-start
+  justify-content center
+
+  &__item {
+    &:first-child {
+      margin: 14px -30px 0 0;
+      width: 560px
+      height: 376px
+      transform rotate(-3.55deg) !important
+    }
+
+    &:last-child {
+      width: 620px
+      height: 407px
+      transform rotate(2.9deg) !important
+    }
+
+    img {
+      width: 100%
+      height: 100%
+      object-fit cover
+      object-position center
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .visa-page-picture-list {
+    &__item {
+      &:first-child {
+        margin: 10px -30px 0 0;
+        width: 500px
+        height: 336px
+      }
+
+      &:last-child {
+        width: 540px
+        height: 355px
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .visa-page {
+    &__picture-list {
+      padding: 36px 0 30px 0
+    }
+  }
+
+  .visa-page-picture-list {
+    &__item {
+      &:first-child {
+        width: 360px
+        height: 242px
+      }
+
+      &:last-child {
+        width: 400px
+        height: 263px
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .visa-page {
+    &__picture-list {
+      padding: 26px 0 06px 0
+    }
+  }
+
+  .visa-page-picture-list {
+    &__item {
+      &:first-child {
+        width: 240px
+        height: 161px
+      }
+
+      &:last-child {
+        width: 280px
+        height: 184px
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .visa-page-picture-list {
+    &__item {
+      &:first-child {
+        margin-right: -10px
+        width: 190px
+        height: 127px
+      }
+
+      &:last-child {
+        width: 220px
+        height: 144px
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.datepicker__month-day--today {
+  background-color: #303030;
+}
+.datepicker__month-day--selected {
+  background-color: #ffea00;
+  color: #191919;
+}
+.datepicker__month-day--first-day-selected,
+.datepicker__month-day--last-day-selected {
+  background-color: #ebd700;
+  color: #121212;
+  text-shadow: #121212 0.5px 0 0;
+}
+.datepicker__month-day--hovering {
+  background-color: #fff159;
+  color: #191919;
+}
+.datepicker__close-button {
+  background-color: #ffea00;
+  color: #000;
+}
+.datepicker__close-button:hover {
+  background-color: #ebd700;
+  color: #121212;
+  text-shadow: #121212 0.5px 0 0;
+}
+.datepicker__month-button:hover {
+  background-color: #ebd700;
+  color: #121212;
+}
+.datepicker-container {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.datepicker-container .datepicker-arrow {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  width: 10px;
+  height: 10px;
+  background: url("../../img/icon-arrow-3.svg") no-repeat center;
+  -webkit-background-size: 8px 8px;
+  background-size: 8px 8px;
+}
+.datepicker-container_opened .datepicker-arrow {
+  transform: translateY(-50%) rotate(270deg);
+}
+.datepicker-container_opened input {
+  box-shadow: inset -1px 2px 10px rgba(0,0,0,0.2);
+}
+.datepicker-container input {
+  padding-right: 44px;
+  cursor: pointer;
+}
+.datepicker-container .datepicker {
+  top: 76px;
+}
+@media (max-width: 1050px) {
+  .datepicker-container .datepicker-arrow {
+    right: 20px;
+  }
+  .datepicker-container input {
+    padding-right: 36px;
+  }
+  .datepicker-container .datepicker {
+    top: 72px;
+  }
+}
+@media (max-width: 950px) {
+  .datepicker-container .datepicker {
+    right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .datepicker-container .datepicker {
+    right: auto;
+    left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .datepicker-container .datepicker-arrow {
+    right: 17px;
+  }
+  .datepicker-container .datepicker {
+    top: 66px;
+  }
+}
+@media (max-width: 550px) {
+  .datepicker-container .datepicker {
+    left: -17px;
+    right: -17px;
+    width: auto;
+  }
+}

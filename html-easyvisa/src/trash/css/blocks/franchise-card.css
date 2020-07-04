@@ -1,0 +1,28 @@
+.franchise-card {
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.franchise-card:hover .franchise-card__text {
+  color: #3e3d3d;
+  text-shadow: #3e3d3d 0.5px 0 0;
+}
+.franchise-card:hover .franchise-card__img {
+  filter: brightness(0) invert(0);
+}
+.franchise-card__text {
+  color: #676666;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.franchise-card__img {
+  transition: 0.3s;
+  margin-left: 16px;
+  width: 63px;
+  height: 22px;
+  background: url("../../img/icon-franchise-card.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

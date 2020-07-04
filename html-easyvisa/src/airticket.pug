@@ -1,0 +1,175 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Авиабилеты'
+
+block content
+    .airticket-page
+        .airticket-page__top-title-section.bg_img.section-padding_medium.text_color_white(style="background-image: url('img/bg-airticket-1-updated.jpg')")
+            .container(data-aos="fade-up")
+                .crumbs
+                    .crumbs__item
+                        a.crumbs__link(href="") Главная
+                        .crumbs__icon.dash_small
+                    .crumbs__item
+                        a.crumbs__link.crumbs__link_current(href="") Авиабилеты
+
+                .title.title_h1
+                    .title__text Авиабилеты
+                    .title__divider
+                    .title__subtitle Доверьте поиск авиабилетов нашей команде
+
+                form.form.form_row.airticket-form
+                    .fl.form__elem
+                        label.fl__label(for="city_departure") Город вылета
+                        input.fl__input.input(name="city_departure" id="city_departure")
+                        .swap-places(data-js="swap-places")
+                            .swap-places__arrow.--top
+                            .swap-places__arrow.--bottom
+
+                    .fl.form__elem
+                        label.fl__label(for="city_arrival") Город прибытия
+                        input.fl__input.input(name="city_arrival" id="city_arrival")
+
+                    .datepicker-container.form__elem(data-js="datepicker-container")
+                        input.input(readonly="readonly" name="date" data-js="datepicker" placeholder="Дата поездки (с и до)")
+                        .datepicker-arrow(data-js="datepicker-arrow")
+
+                    .select_type_4.form__elem
+                        select(name="" data-js="select-type-1")
+                            option(value="1 пассажир") 1 пассажир
+                            option(value="2 пассажира") 2 пассажира
+                            option(value="3 пассажира") 3 пассажира
+                            option(value="больше") больше 3
+
+                    input.input.form__elem(placeholder="Ваше Имя" name="name")
+                    input.input.form__elem(placeholder="Ваш Телефон" name="phone")
+                    button.btn.form__elem Оставить заявку
+
+        .airticket-text-section-1.text-section.section-padding_large
+            .container
+                .airticket-text-section-1__grid
+                    .airticket-text-section-1__left(data-aos="fade-up")
+                        .title.title_h2
+                            .title__text Бронирование авиабилетов
+                            .title__divider
+
+                        p Благодаря онлайн-сервисам можно легко найти билет на самолет. Мы стараемся экономить ваше время и бюджет. На нашем сайте вы можете воспользоваться услугой онлайн-бронирования билетов на самолет по одной из самых выгодных цен на рынке. Так же вы можете оставить заявку и менеджер подберет вам подходящие авиабилеты для вашего лучшего путешествия.
+                        p &nbsp;
+                        p “EasyVisa Agency“ поможет вам в поиске авиабилетов по всему миру. Мы сравниваем все доступные варианты перелётов по вашему запросу, а потом направляем вас для покупки на официальные сайты авиакомпаний и агентств.<br>Стоимость авиабилета, которую вы видите— финальная. Мы убрали все скрытые услуги и галочки.
+                        p &nbsp;
+                        h3 Бронь билетов самостоятельно
+                        p Для того чтобы сделать бронь на необходимый перелет, зайдите на сайт “EasyVisa Agency”. Здесь необходимо указать следующие данные:
+                        ul
+                            li город вылета;
+                            li город прибытия;
+                            li дату прилета и вылета обратно;
+                            li количество человек;
+                        p После ввода этой информации вы получите обширный список предложений. Кроме того, за автоматическим онлайн-сервисом постоянно следят наши менеджеры, которые помогут найти вам недорогой билет в нужный регион.
+                        p &nbsp;
+
+                    .airticket-text-section-1__right
+                        .box-list.box-list_3
+                            .box-list__item.box.box_type_1(data-aos="fade-up")
+                                .box__icon-wrapper.elem-with-yellow-square
+                                    img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:71px;" src="img/icon-plane.svg")
+                                    .elem-with-yellow-square__yellow-square.yellow-square
+                                .box__title Летите куда хотите
+                                .box__text Выбирайте из миллионов рейсов
+
+                            .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                                .box__icon-wrapper.elem-with-yellow-square
+                                    img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:71px;" src="img/icon-wallet.svg")
+                                    .elem-with-yellow-square__yellow-square.yellow-square
+                                .box__title Легко и беззаботно
+                                .box__text Вы точно знаете, за что платите.
+
+                            .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                                .box__icon-wrapper.elem-with-yellow-square
+                                    img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:72px;" src="img/icon-thumb-up.svg")
+                                    .elem-with-yellow-square__yellow-square.yellow-square
+                                .box__title Как и когда угодно
+                                .box__text Только выгодные предложения
+
+
+                .airticket-quote-card.box(data-aos="fade-up")
+                    .airticket-quote-card__left
+                        .elem-with-yellow-square
+                            img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-2.png")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                    .airticket-quote-card__right
+                        .quote.airticket-quote-card__quote Мы поможем вам подобрать перелет при сложных маршрутах с оптимизацией цены, времени перелета и времени пересадок в аэропортах. Доверьте своё путешествие команде профессионалов!
+                        .airticket-quote-card__name-n-job.quote-name-n-job
+                            .airticket-quote-section__name.quote-name Максим Горохов
+                            .airticket-quote-section__job.quote-job генеральный директор “EasyVisa Agency”
+
+
+
+
+        .airticket-text-section-2.text-section.section-padding_medium.bg_grey
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Туризм без хлопот
+                    .title__divider
+
+                .airticket-text-section-2__grid
+                    .airticket-text-section-2__left
+                        .airticket-text-section-2__text(data-aos="fade-up")
+                            p Туризм — это всегда свобода выбора. А процесс планирования и бронирования путешествия должен вызывать радость, а не ужас. Мы знаем, что вам нужны лучшие цены и широкий выбор. Только так можно найти подходящий вариант. Поэтому мы постоянно прилагаем максимум усилий, чтобы наши приложение и сайт работали быстро и просто.
+                            p &nbsp;
+                            p Выбирайте, куда и когда поехать, и получайте лучшие по цене предложения от тысяч туристических агентств — все в нашей системе. Кроме того, мы всегда готовы помочь в поисках путешествия, удовлетворяющего ваши желания, независимо от стиля жизни и финансовых возможностей.
+
+                        .airticket-text-section-2__elem-with-yellow-square-list-1
+                            a.elem-with-yellow-square.elem-with-yellow-square_borderlike(data-aos="fade-up" href='img/picture-airticket-2.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title="")
+                                img.elem-with-yellow-square__not-yellow-square(src="img/picture-airticket-2.jpg")
+                                .yellow-square.elem-with-yellow-square__yellow-square
+
+                            a.elem-with-yellow-square.elem-with-yellow-square_borderlike(data-aos="fade-up" href='img/picture-airticket-3.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title="")
+                                img.elem-with-yellow-square__not-yellow-square(src="img/picture-airticket-3.jpg")
+                                .yellow-square.elem-with-yellow-square__yellow-square
+
+
+
+                    .airticket-text-section-2__right
+                        .airticket-text-section-2__elem-with-yellow-square-list-2(data-aos="fade-up")
+                            a.elem-with-yellow-square.elem-with-yellow-square_borderlike(href='img/picture-airticket-1.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title="")
+                                img.elem-with-yellow-square__not-yellow-square(src="img/picture-airticket-1.jpg")
+                                .yellow-square.elem-with-yellow-square__yellow-square
+
+                            a.elem-with-yellow-square.elem-with-yellow-square_borderlike(data-aos="fade-up" href='img/picture-airticket-4.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="400" height="280" title="")
+                                img.elem-with-yellow-square__not-yellow-square(src="img/picture-airticket-4.jpg")
+                                .yellow-square.elem-with-yellow-square__yellow-square
+
+
+
+        .text_color_white.section-padding_medium.bg_img.bg_center(style="background-image: url('img/bg-airticket-2.jpg')")
+            .container(data-aos="fade-up")
+                .title.title_h2
+                    .title__text Нужен авиабилет?
+                    .title__divider
+                    .title__subtitle Вы можете оставить заявку, менеджер свяжется с вами для уточнения деталей!
+
+                form.form.form_row.form_row_4
+                    input.input.form__elem(placeholder="Ваше Имя" name="name")
+                    input.input.form__elem(placeholder="Ваш Телефон" name="phone")
+                    input.input.form__elem(placeholder="Ваш E-mail" name="email")
+                    button.btn.form__elem Перезвоните мне
+
+
+
+
+        .airticket-text-section.text-section.section-padding_large
+            .container
+                .title.title_h2(style="max-width: 691px" data-aos="fade-up")
+                    .title__text Лучший сервис для поиска авиабилетов на сайте компании “EasyVisa Agency”
+                    .title__divider
+                div(data-aos="fade-up")
+                    p Уже более трёх лет наша компания работает в сфере туризма и визового сопровождения путешественников из стран СНГ. Наша задача решить все ваши вопросы и позаботиться о всех нюансах, будь то получение визы, бронирование номера в отеле или билета на самолет.
+                    p &nbsp;
+                    p Сервис для поиска рейсов и выгодных предложений от авиаперевозчиков – это лишь один из аспектов сотрудничества с нами, но мы постарались реализовать функционал максимально удобно. А кроме этого, вы всегда можете рассчитывать, что за автоматической системой стоят живые люди – опытные специалисты, которые всегда готовы прийти на помощь.
+                    p &nbsp;
+
+                a.elem-with-yellow-square.elem-with-yellow-square_borderlike(href='img/picture-airticket-5.jpg' data-js="photoswipe-item" data-photoswipe-group-id="1" width="1240" height="420" title="" data-aos="fade-up")
+                    img.elem-with-yellow-square__not-yellow-square(src="img/picture-airticket-5.jpg")
+                    .yellow-square.elem-with-yellow-square__yellow-square
+

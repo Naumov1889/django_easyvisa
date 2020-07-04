@@ -1,0 +1,139 @@
+.doc-list {
+  padding: 0 30px 0 30px;
+  height: 482px;
+  overflow-y: auto;
+}
+.doc-list__item {
+  margin-bottom: 25px;
+}
+.doc__counter-n-title {
+  display: flex;
+  align-items: center;
+}
+.doc__counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1px;
+  margin-right: 10px;
+  width: 23px;
+  height: 23px;
+  color: #454545;
+  font-family: "Proxima Nova Semibold";
+  background-color: #ffea00;
+  border-radius: 50%;
+}
+.doc__title {
+  padding-top: 2px;
+  font-family: "Proxima Nova Semibold";
+  color: #454545;
+  font-size: 22px;
+}
+.doc__text {
+  margin-top: 8px;
+  color: #595959;
+  font-size: 18px;
+  line-height: 22.19px;
+}
+.doc__text a {
+  text-decoration: underline;
+}
+.doc__text a:hover {
+  text-decoration: none;
+}
+.visa-page-doc-section__grid {
+  display: flex;
+}
+.visa-page-doc-section__left {
+  border-radius: 0 5px 5px 5px;
+}
+.visa-page-doc-section__left .title {
+  padding: 20px 30px 0 30px;
+}
+.visa-page-doc-section__right {
+  padding: 20px 24px 22px 24px;
+  margin-left: 20px;
+  min-width: 345px;
+}
+.visa-page-doc-section__right .form {
+  display: block;
+  margin-bottom: 0;
+  font-size: 0;
+}
+.visa-page-doc-section__right .form__elem {
+  width: 100%;
+}
+.visa-page-doc-section__right .form textarea {
+  height: 170px;
+}
+@media (max-width: 1050px) {
+  .visa-page-doc-section__left .title {
+    padding: 20px 20px 0 20px;
+  }
+  .visa-page-doc-section__right {
+    margin-left: 15px;
+    padding: 20px 20px 22px 20px;
+    min-width: 300px;
+  }
+  .visa-page-doc-section__right .form textarea {
+    height: 140px;
+  }
+  .doc-list {
+    padding: 0 20px 0 20px;
+    height: 430px;
+  }
+  .doc-list__item {
+    margin-bottom: 26px;
+  }
+  .doc__counter {
+    padding-top: 0;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    font-size: 15px;
+  }
+  .doc__title {
+    padding-top: 2px;
+    font-size: 20px;
+  }
+  .doc__text {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: unset;
+  }
+}
+@media (max-width: 850px) {
+  .visa-page-doc-section__grid {
+    flex-direction: column;
+  }
+  .visa-page-doc-section__right {
+    margin: 22px 0 0 0;
+    min-width: unset;
+  }
+  .doc-list {
+    height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .visa-page-doc-section__left .title {
+    padding: 17px 17px 0 17px;
+  }
+  .visa-page-doc-section__right {
+    padding: 17px 17px 20px 17px;
+  }
+  .doc-list {
+    padding: 0 17px 0 17px;
+    height: 230px;
+  }
+  .doc-list__item {
+    margin-bottom: 18px;
+  }
+  .doc__title {
+    font-size: 19px;
+  }
+  .doc__text {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: unset;
+  }
+}

@@ -1,0 +1,227 @@
+.franchise-page-quote-section {
+  padding-top: 120px
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction column
+    align-items center
+  }
+
+  &__text {
+    position: relative;
+    z-index 2
+    max-width 552px
+  }
+
+  &__quote.quote {
+    padding: 18px 45px 18px 45px;
+    font-size: 25px !important
+    line-height: 32px !important
+    font-family: "Proxima Nova Semibold" !important
+  }
+
+  &__quote-name-n-job-list {
+    display: flex;
+    justify-content space-between
+    margin: 80px 0 44px 0
+  }
+
+  &__quote-name-n-job {
+    padding: 5px 8px 5px 8px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  &__quote-name-n-job_1 {
+    text-align: left
+
+  }
+
+  &__quote-name-n-job_2 {
+    text-align: right
+  }
+
+  &__photo.elem-with-yellow-square {
+    position: absolute;
+    z-index 1
+    bottom 0
+    font-size: 0
+    line-height: 0
+
+    .elem-with-yellow-square__yellow-square {
+      top: 160px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__photo_1.elem-with-yellow-square {
+    left -100px
+
+    .elem-with-yellow-square__yellow-square {
+      right auto
+      left 0
+    }
+  }
+
+  &__photo_2.elem-with-yellow-square {
+    right -100px
+
+    .elem-with-yellow-square__yellow-square {
+      right 27px
+    }
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .franchise-page-quote-section {
+    padding-top: 90px;
+
+    &__quote.quote {
+      padding: 18px 45px 18px 45px;
+      font-size: 18px !important
+      line-height: unset !important
+    }
+
+    &__quote-name-n-job-list {
+      margin: 60px 0 30px 0
+    }
+
+    &__photo.elem-with-yellow-square {
+      img {
+        height: 370px
+      }
+
+      .elem-with-yellow-square__yellow-square {
+        top: 130px;
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .franchise-page-quote-section {
+    &__quote-name-n-job-list {
+      margin: 17px 0 17px 0
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .franchise-page-quote-section {
+    &__quote.quote {
+      font-family: "Proxima Nova Reg" !important
+      font-size: 15px !important
+    }
+
+    &__quote-name-n-job {
+      box-shadow: 0 12px 32px rgba(43, 43, 43, 0.07);
+
+      .quote-name {
+        font-size: 14px !important;
+      }
+
+      .quote-job {
+        font-size: 12px !important;
+      }
+    }
+
+    &__photo.elem-with-yellow-square {
+      img {
+        height: 320px
+      }
+
+      .elem-with-yellow-square__yellow-square {
+        top: 100px;
+      }
+    }
+
+    &__photo_1.elem-with-yellow-square {
+      left -90px
+    }
+
+    &__photo_2.elem-with-yellow-square {
+      right -90px
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .franchise-page-quote-section {
+    padding-top: 80px
+
+    &__quote.quote {
+      margin 40px -6px 0 -6px
+      font-size: 14px !important
+    }
+
+    &__quote-name-n-job-list {
+      margin: 6px -6px 6px -6px
+    }
+
+    &__photo.elem-with-yellow-square {
+      img {
+        height: 264px
+      }
+
+      .elem-with-yellow-square__yellow-square {
+        top: 86px;
+      }
+    }
+
+    &__photo_1.elem-with-yellow-square {
+      left -76px
+    }
+
+    &__photo_2.elem-with-yellow-square {
+      right -80px
+
+      .elem-with-yellow-square__yellow-square {
+        right -30px
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .franchise-page-quote-section {
+    padding-top: 80px
+
+    &__quote.quote {
+      margin 40px -6px 0 -6px
+      font-size: 14px !important
+    }
+
+    &__quote-name-n-job-list {
+      margin: -6px -2px -8px -2px
+    }
+
+    &__quote-name-n-job {
+      padding-top: 8px
+    }
+
+    &__photo.elem-with-yellow-square {
+      img {
+        height: 250px
+      }
+    }
+
+    &__photo_1.elem-with-yellow-square {
+      left -68px
+    }
+
+    &__photo_2.elem-with-yellow-square {
+      right -74px
+
+      img {
+        width: 200px
+        object-fit cover
+        object-position right
+      }
+    }
+  }
+}

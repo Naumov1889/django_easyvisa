@@ -1,0 +1,107 @@
+.quote {
+  position: relative;
+  max-width: 700px;
+  padding: 18px 30px 18px 30px
+  font-size: 21px;
+  line-height: 27px;
+  font-family: "Proxima Nova Semibold";
+  color: #525252;
+
+  &:before {
+    content: ''
+    position: absolute;
+    left: -6px
+    bottom: -6px;
+    width: 25px;
+    height: 25px;
+    background: url("../../img/icon-quote.svg") no-repeat
+  }
+
+  &:after {
+    content: ''
+    position: absolute;
+    right: -3px
+    top: -3px
+    width: 25px;
+    height: 25px;
+    background: url("../../img/icon-quote.svg") no-repeat
+    transform rotate(180deg)
+  }
+}
+
+.quote-name {
+  font-family: "Proxima Nova Semibold";
+  color: #3c3c3c;
+  font-size: 19px;
+}
+
+.quote-job {
+  font-size: 18px;
+  color: #676767;
+}
+
+
+@media (max-width: 1250px) {
+  .quote {
+    padding: 18px 20px 18px 20px
+    font-size: 17px !important;
+    line-height: 21px !important
+
+    &:before {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:after {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .quote-name {
+    font-size: 18px !important;
+  }
+
+  .quote-job {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .quote {
+    max-width: 466px;
+    padding: 18px 20px 18px 20px !important
+    font-size: 16px !important;
+  }
+
+  .quote-name {
+    font-size: 17px !important;
+  }
+
+  .quote-job {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .quote {
+    max-width: 392px;
+    padding: 13px 17px 12px 17px !important;
+    font-family: "Proxima Nova Reg";
+    font-size: 14px !important;
+    line-height: 19px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .quote {
+    max-width: unset
+    font-size: 13px !important;
+
+    &:before,
+    &:after {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+}

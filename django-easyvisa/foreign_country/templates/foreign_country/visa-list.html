@@ -1,0 +1,796 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    <title>EASYVISA AGENCY — Визы</title>
+{% endblock %}
+
+
+{% block content %}
+    {% load static %}
+    <div>
+        <div class="container" data-aos="fade-up">
+            <div class="crumbs">
+                <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+                    <div class="crumbs__icon dash_small"></div>
+                </div>
+                <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Визы</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="visa-list-page">
+        <div class="container">
+            <div class="title title_h1" data-aos="fade-up">
+                <div class="title__text">Визы</div>
+                <div class="title__divider"></div>
+            </div>
+            <div class="country-card-list">
+                <div class="country-card country-card-list__item" data-show-more="show-more" data-show-more-height="118"
+                     data-show-more-when="750" data-aos="fade-up" id="europe">
+                    <div class="country-card__title country">
+                        <div class="country__icon" style="background-image: url({% static 'img/flag-eu.svg' %})"></div>
+                        <div class="country__text">Европа</div>
+                    </div>
+                    <div class="country-list show-more__content" data-show-more-content="show-more__content">
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'0:6' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'6:12' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'12:18' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'18:24' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'24:29' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="show-more__btn" data-js="show-more__btn"></div>
+                    <div class="show-more__shadow" data-js="show-more__shadow"></div>
+                </div>
+                <div class="country-card country-card-list__item" data-aos="fade-up" id="uk">
+                    <div class="country-card__title country">
+                        <div class="country__icon" style="background-image: url({% static 'img/flag-uk.svg' %})"></div>
+                        <div class="country__text">Великобритания</div>
+                    </div>
+                    <div class="country-list">
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'29:30' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'30:31' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card country-card-list__item" data-aos="fade-up" id="australia">
+                    <div class="country-card__title country">
+                        <div class="country__icon"
+                             style="background-image: url({% static 'img/flag-australia.svg' %})"></div>
+                        <div class="country__text">Австралия</div>
+                    </div>
+                    <div class="country-list">
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'31:32' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'32:33' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card country-card-list__item" data-aos="fade-up" id="usa">
+                    <div class="country-card__title country">
+                        <div class="country__icon" style="background-image: url({% static 'img/flag-usa.svg' %})"></div>
+                        <div class="country__text">Америка</div>
+                    </div>
+                    <div class="country-list">
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'33:34' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'34:35' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'35:36' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="country-card country-card-list__item" data-show-more="show-more" data-show-more-height="118"
+                     data-show-more-when="750" data-aos="fade-up" id="asia">
+                    <div class="country-card__title country">
+                        <div class="country__icon"
+                             style="background-image: url({% static 'img/flag-china.svg' %})"></div>
+                        <div class="country__text">Азия</div>
+                    </div>
+                    <div class="country-list show-more__content" data-show-more-content="show-more__content">
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'36:39' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'39:42' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'42:45' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'45:47' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                        <div class="country-list__column">
+                            {% for visa in visas|slice:'47:49' %}
+                                <a class="country country-list__item" href="{% url 'visa:visa_detail' visa.slug %}">
+                                    <div class="country__icon" style="background-image: url({{ visa.icon.url }})"></div>
+                                    <div class="country__text">{{ visa.title }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="show-more__btn" data-js="show-more__btn"></div>
+                    <div class="show-more__shadow" data-js="show-more__shadow"></div>
+                </div>
+            </div>
+
+            <div class="visa-list-page__visa-list-section">
+                <div class="title title_h2" data-aos="fade-up">
+                    <div class="title__text">Визы в Европу</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="show-more" data-show-more="show-more" data-show-more-height="150" data-show-more-when="750"
+                     data-aos="fade-up">
+                    <div class="visa-title-list show-more__content" data-js="visa-container"
+                         data-show-more-content="show-more__content">
+                        <div class="visa-title-list__column" data-js="visa-title-list-column">
+                            {% for visa in visas|slice:'0:10' %}
+                                <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                    <div class="visa-title" data-js="visa-title">
+                                        <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                        <div class="visa-title__icon"></div>
+                                    </div>
+                                    <div class="visa-card" data-js="visa-card">
+                                        <div class="visa-card__grid">
+                                            <div class="visa-card__grid-item">
+                                                <div class="visa-card__name-n-value-list">
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок пребывания</div>
+                                                        <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок получения визы</div>
+                                                        <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Стоимость оформления</div>
+                                                        <div class="visa-card__value">{{ visa.price }} <span
+                                                                class="rouble">п</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item">
+                                                <div class="btn visa-card__btn"
+                                                     data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                     data-popbox-target="popbox-callback">Заказать визу в один клик
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                                 href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                                информация об условиях оформления визы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="visa-title-list__column" data-js="visa-title-list-column">
+                            {% for visa in visas|slice:'10:20' %}
+                                <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                    <div class="visa-title" data-js="visa-title">
+                                        <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                        <div class="visa-title__icon"></div>
+                                    </div>
+                                    <div class="visa-card" data-js="visa-card">
+                                        <div class="visa-card__grid">
+                                            <div class="visa-card__grid-item">
+                                                <div class="visa-card__name-n-value-list">
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок пребывания</div>
+                                                        <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок получения визы</div>
+                                                        <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Стоимость оформления</div>
+                                                        <div class="visa-card__value">{{ visa.price }} <span
+                                                                class="rouble">п</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item">
+                                                <div class="btn visa-card__btn"
+                                                     data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                     data-popbox-target="popbox-callback">Заказать визу в один клик
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                                 href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                                информация об условиях оформления визы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="visa-title-list__column" data-js="visa-title-list-column">
+                            {% for visa in visas|slice:'20:29' %}
+                                <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                    <div class="visa-title" data-js="visa-title">
+                                        <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                        <div class="visa-title__icon"></div>
+                                    </div>
+                                    <div class="visa-card" data-js="visa-card">
+                                        <div class="visa-card__grid">
+                                            <div class="visa-card__grid-item">
+                                                <div class="visa-card__name-n-value-list">
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок пребывания</div>
+                                                        <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок получения визы</div>
+                                                        <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Стоимость оформления</div>
+                                                        <div class="visa-card__value">{{ visa.price }} <span
+                                                                class="rouble">п</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item">
+                                                <div class="btn visa-card__btn"
+                                                     data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                     data-popbox-target="popbox-callback">Заказать визу в один клик
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                                 href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                                информация об условиях оформления визы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="show-more__btn" data-js="show-more__btn"></div>
+                    <div class="show-more__shadow" data-js="show-more__shadow"></div>
+                </div>
+
+                <div class="title title_h2" data-aos="fade-up">
+                    <div class="title__text">Визы в Великобританию</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="visa-title-list" data-js="visa-container" data-aos="fade-up">
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'29:30' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'30:31' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="title title_h2" data-aos="fade-up">
+                    <div class="title__text">Визы в Австралию</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="visa-title-list" data-js="visa-container" data-aos="fade-up">
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'31:32' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'32:33' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="title title_h2" data-aos="fade-up">
+                    <div class="title__text">Визы в Америку</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="visa-title-list" data-js="visa-container" data-aos="fade-up">
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'33:34' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'34:35' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="visa-title-list__column" data-js="visa-title-list-column">
+                        {% for visa in visas|slice:'35:36' %}
+                            <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                <div class="visa-title" data-js="visa-title">
+                                    <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                    <div class="visa-title__icon"></div>
+                                </div>
+                                <div class="visa-card" data-js="visa-card">
+                                    <div class="visa-card__grid">
+                                        <div class="visa-card__grid-item">
+                                            <div class="visa-card__name-n-value-list">
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок пребывания</div>
+                                                    <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Срок получения визы</div>
+                                                    <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                </div>
+                                                <div class="visa-card__name-n-value">
+                                                    <div class="visa-card__name">Стоимость оформления</div>
+                                                    <div class="visa-card__value">{{ visa.price }} <span
+                                                            class="rouble">п</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item">
+                                            <div class="btn visa-card__btn"
+                                                 data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                 data-popbox-target="popbox-callback">Заказать визу в один клик
+                                            </div>
+                                        </div>
+                                        <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                             href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                            информация об условиях оформления визы</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="title title_h2" data-aos="fade-up">
+                    <div class="title__text">Визы в Азию</div>
+                    <div class="title__divider"></div>
+                </div>
+                <div class="show-more" data-show-more="show-more" data-show-more-height="150" data-show-more-when="750"
+                     data-aos="fade-up">
+                    <div class="visa-title-list show-more__content" data-js="visa-container"
+                         data-show-more-content="show-more__content">
+                        <div class="visa-title-list__column" data-js="visa-title-list-column">
+                            {% for visa in visas|slice:'36:41' %}
+                                <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                    <div class="visa-title" data-js="visa-title">
+                                        <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                        <div class="visa-title__icon"></div>
+                                    </div>
+                                    <div class="visa-card" data-js="visa-card">
+                                        <div class="visa-card__grid">
+                                            <div class="visa-card__grid-item">
+                                                <div class="visa-card__name-n-value-list">
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок пребывания</div>
+                                                        <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок получения визы</div>
+                                                        <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Стоимость оформления</div>
+                                                        <div class="visa-card__value">{{ visa.price }} <span
+                                                                class="rouble">п</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item">
+                                                <div class="btn visa-card__btn"
+                                                     data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                     data-popbox-target="popbox-callback">Заказать визу в один клик
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                                 href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                                информация об условиях оформления визы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="visa-title-list__column" data-js="visa-title-list-column">
+                            {% for visa in visas|slice:'41:45' %}
+                                <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                    <div class="visa-title" data-js="visa-title">
+                                        <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                        <div class="visa-title__icon"></div>
+                                    </div>
+                                    <div class="visa-card" data-js="visa-card">
+                                        <div class="visa-card__grid">
+                                            <div class="visa-card__grid-item">
+                                                <div class="visa-card__name-n-value-list">
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок пребывания</div>
+                                                        <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок получения визы</div>
+                                                        <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Стоимость оформления</div>
+                                                        <div class="visa-card__value">{{ visa.price }} <span
+                                                                class="rouble">п</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item">
+                                                <div class="btn visa-card__btn"
+                                                     data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                     data-popbox-target="popbox-callback">Заказать визу в один клик
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                                 href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                                информация об условиях оформления визы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="visa-title-list__column" data-js="visa-title-list-column">
+                            {% for visa in visas|slice:'45:49' %}
+                                <div class="visa-title-list__item" data-js="visa-title-list-item">
+                                    <div class="visa-title" data-js="visa-title">
+                                        <div class="visa-title__text">Виза в {{ visa.title_2 }}</div>
+                                        <div class="visa-title__icon"></div>
+                                    </div>
+                                    <div class="visa-card" data-js="visa-card">
+                                        <div class="visa-card__grid">
+                                            <div class="visa-card__grid-item">
+                                                <div class="visa-card__name-n-value-list">
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок пребывания</div>
+                                                        <div class="visa-card__value">{{ visa.duration_validity }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Срок получения визы</div>
+                                                        <div class="visa-card__value">{{ visa.duration_registration }}</div>
+                                                    </div>
+                                                    <div class="visa-card__name-n-value">
+                                                        <div class="visa-card__name">Стоимость оформления</div>
+                                                        <div class="visa-card__value">{{ visa.price }} <span
+                                                                class="rouble">п</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item">
+                                                <div class="btn visa-card__btn"
+                                                     data-form-note-filler="Виза в {{ visa.title_2 }}"
+                                                     data-popbox-target="popbox-callback">Заказать визу в один клик
+                                                </div>
+                                            </div>
+                                            <div class="visa-card__grid-item"><a class="visa-card__link"
+                                                                                 href="{% url 'visa:visa_detail' visa.slug %}">Подробная
+                                                информация об условиях оформления визы</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="show-more__btn" data-js="show-more__btn"></div>
+                    <div class="show-more__shadow" data-js="show-more__shadow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

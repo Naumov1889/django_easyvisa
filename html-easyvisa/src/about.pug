@@ -1,0 +1,165 @@
+extends pug-components/layout
+
+block append title
+    -page = 'О компании'
+
+block content
+    div
+        .container(data-aos="fade-up")
+            .crumbs
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") О компании
+
+    .about-page
+        .container
+            .title.title_h1(data-aos="fade-up")
+                .title__text О компании
+                .title__divider
+
+            .about-page-features-section
+                .box-list.box-list_3
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:101px;" src="img/icon-building.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title.about-page-features-section__box-title 7
+                        .box__text визовых центров, <br>открытых в России и в СНГ
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:93px;" src="img/icon-people.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title.about-page-features-section__box-title 45
+                        .box__text(style="max-width: 264px") опытных штатных сотрудников по всей стране
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:99px;" src="img/icon-tickets.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title.about-page-features-section__box-title 5000
+                        .box__text(style="max-width: 302px") клиентов и оформленных виз в год по всей сети
+
+
+    .about-page-video-section.section-padding_large(data-aos="fade-up")
+        .container
+            .video-n-thumb.text_color_white.text_position_center(data-js="video-n-thumb" data-video-id="djV11Xbc914")
+                .video-n-thumb__thumb(data-js="video-n-thumb__thumb")
+                    .video-n-thumb__elem-with-yellow-square.elem-with-yellow-square.elem-with-yellow-square_borderlike
+                        .elem-with-yellow-square__not-yellow-square
+                            .video-n-thumb__overlay
+                            .video-n-thumb__text-n-btn
+                                .video-n-thumb__text.title.title_h2
+                                    .title__text Посмотрите видео <br>о нашей работе
+                                    .title__divider
+                                .video-n-thumb__btn
+                                    .icon.icon_play-arrow
+                            img.video-n-thumb__img(src="img/picture-about-page-video-thumb.jpg")
+                        .yellow-square.elem-with-yellow-square__yellow-square
+
+                .video-n-thumb__video
+                    .video-n-thumb__video-container#video-n-thumb__video-container(data-js="video-n-thumb__video-container")
+
+
+    .about-page-history-section.bg_grey.section-padding_small
+        .about-page-history-section__container.container
+            .title.title_h2(data-aos="fade-up")
+                .title__text История компании
+                .title__divider
+
+            .about-page-history-section__grid
+                .slider.slider_type_5.about-page-history-section__left
+                    .slider-list.slider-type-5-list(data-js="slider-type-5")
+                        .slider-list__item.slider-type-5-list__item.slider-type-5-item(data-aos="fade-up")
+                            .slider-type-5-item__grid
+                                .slider-type-5-item__counter-n-year
+                                    .slider-type-5-item__counter 1
+                                    .slider-type-5-item__year 2017
+                                .slider-type-5-item__title-n-subtitle
+                                    .slider-type-5-item__title Открытие агенства
+                                    .slider-type-5-item__subtitle Свой путь мы начали с открытия небольшого агенства, которое занималось только визами в США, в котором мы сами работали в качестве менеджеров.
+
+
+                        .slider-list__item.slider-type-5-list__item.slider-type-5-item(data-aos="fade-up")
+                            .slider-type-5-item__grid
+                                .slider-type-5-item__counter-n-year
+                                    .slider-type-5-item__counter 2
+                                    .slider-type-5-item__year 2018
+                                .slider-type-5-item__title-n-subtitle
+                                    .slider-type-5-item__title Расширение агенства
+                                    .slider-type-5-item__subtitle Уже через год у нас работало 3 сотрудника и в городе Санкт- Петербург мы стали одним из лидирующих агентств по качеству  предоставляемых услуг.
+
+                        .slider-list__item.slider-type-5-list__item.slider-type-5-item(data-aos="fade-up")
+                            .slider-type-5-item__grid
+                                .slider-type-5-item__counter-n-year
+                                    .slider-type-5-item__counter 3
+                                    .slider-type-5-item__year 2019
+                                .slider-type-5-item__title-n-subtitle
+                                    .slider-type-5-item__title Открытие агенства
+                                    .slider-type-5-item__subtitle Свой путь мы начали с открытия небольшого агенства, которое занималось только визами в США, в котором мы сами работали в качестве менеджеров.
+
+
+                        .slider-list__item.slider-type-5-list__item.slider-type-5-item(data-aos="fade-up")
+                            .slider-type-5-item__grid
+                                .slider-type-5-item__counter-n-year
+                                    .slider-type-5-item__counter 4
+                                    .slider-type-5-item__year 2020
+                                .slider-type-5-item__title-n-subtitle
+                                    .slider-type-5-item__title Открытие агенства
+                                    .slider-type-5-item__subtitle Свой путь мы начали с открытия не большого агенства, которое занималось только визами в США, в котором мы сами работали в качестве менеджеров.
+
+
+
+                .about-page-history-section__right
+                    .elem-with-yellow-square.about-page-history-section__elem-with-yellow-square
+                        img.about-page-history-section__img.elem-with-yellow-square__not-yellow-square(src="img/picture-staff-1.png" data-aos="fade-up")
+                        .elem-with-yellow-square__yellow-square.yellow-square.about-page-history-section__yellow-square
+
+
+    .about-page-requisite-section.section-padding_large
+        .container
+            .title.title_h2(data-aos="fade-up")
+                .title__text Реквизиты
+                .title__divider
+
+            .box-list.about-page-requisite-section__box-list
+                .box-list__item.requisite-box.about-page-requisite-section__first-box(data-aos="fade-up")
+                    .requisite-box__title ООО «ИЗИВИЗА»
+                    .requisite-box__grid
+                        .requisite-box__left
+                            .requisite-box__item.requisite
+                                .requisite__title ИНН
+                                .requisite__subtitle 7801671395
+
+                            .requisite-box__item.requisite
+                                .requisite__title КПП
+                                .requisite__subtitle 780101001
+
+                            .requisite-box__item.requisite
+                                .requisite__title БИК
+                                .requisite__subtitle 044030786
+
+                            .requisite-box__item.requisite
+                                .requisite__title Юридический адрес
+                                .requisite__subtitle(style="max-width: 360px") 199004, г. Санкт-Петербуг, Проспект большой В.О.д.9/6 Литер А, пом. 3-Н, офис 117
+
+
+
+
+                        .requisite-box__right
+                            .requisite-box__item.requisite
+                                .requisite__title Расчетный счет
+                                .requisite__subtitle 40702810532230003270 <br>ФИЛИАЛ «САНКТ-ПЕТЕРБУРГСКИЙ» АО «АЛЬФА-БАНК»
+
+                            .requisite-box__item.requisite
+                                .requisite__title Корреспондентный счет
+                                .requisite__subtitle(style="max-width: 440px") 30101810600000000786 <br>СЕВЕРО-ЗАПАДНОЕ ГУ БАНКА РОССИИ
+
+                .box-list__item.box.box_type_1.about-page-requisite-section__second-box.about-page-requisite-section-second-box(data-aos="fade-up")
+                    .box__icon-wrapper.elem-with-yellow-square
+                        img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:86px;" src="img/icon-services-list.svg")
+                        .elem-with-yellow-square__yellow-square.yellow-square
+                    a.about-page-requisite-section-second-box__link.text_underline_hoverable(href="") Скачать реквизиты
+

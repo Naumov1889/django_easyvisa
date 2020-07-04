@@ -1,0 +1,41 @@
+.checkbox {
+  padding-left: 28px;
+  color: #4f4f4f;
+  font-size: 15px;
+  font-family: "Proxima Nova Light";
+}
+.checkbox__checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+.checkbox__checkmark:before,
+.checkbox__checkmark:after {
+  border-color: #2e1200;
+}
+.checkbox__checkmark:after {
+  display: block;
+  top: 4px;
+  left: 8px;
+  width: 3px;
+  height: 7px;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg) scale(0.7);
+  opacity: 0;
+  transition: ease-in-out 0.1s;
+}
+.checkbox__input:checked ~ .checkbox__checkmark {
+  background-color: #ffea00;
+}
+.checkbox .checkbox__input:checked ~ .checkbox__checkmark {
+  background-color: #ffea00;
+}
+.checkbox .checkbox__input:checked ~ .checkbox__checkmark:after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .checkbox {
+    font-size: 14px;
+  }
+}

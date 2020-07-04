@@ -1,0 +1,158 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Загранпаспорт'
+
+block content
+    .foreign-passport-page
+        .bg_img.section-padding_medium.text_color_white(style="background-image: url('img/bg-foreign-passport-1.jpg')")
+            .container(data-aos="fade-up")
+                .crumbs
+                    .crumbs__item
+                        a.crumbs__link(href="") Главная
+                        .crumbs__icon.dash_small
+                    .crumbs__item
+                        a.crumbs__link.crumbs__link_current(href="") Загранпаспорт
+
+                .title.title_h1
+                    .title__text Загранпаспорт
+                    .title__divider
+                    .title__subtitle Оставьте заявку, наш менеджер свяжется с Вами для уточнения деталей
+
+                form.form.form_row.form_row_4
+                    input.input.form__elem(placeholder="Ваше Имя" name="name")
+                    input.input.form__elem(placeholder="Ваш Телефон" name="phone")
+                    input.input.form__elem(placeholder="Ваш E-mail" name="email")
+                    button.btn.form__elem Оставить заявку
+
+
+        .text-section.section-padding_large
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Как подать заявление на загранпаспорт
+                    .title__divider
+
+                div(data-aos="fade-up")
+                    p С помощью “EasyVisa Agency” вы можете подать заявление на заграничный паспорт старого и нового поколения. Заняться получением загранпаспорта лучше задолго до начала поездки, так как нужно учитывать срок его оформления:
+                    p &nbsp;
+                    h3 Срок оформления загранпаспорта
+                    ul
+                        li 1 месяц при подаче документов по месту жительства (как указано в паспорте);
+                        li 3 месяца при подаче документов по месту пребывания (не по месту жительства)
+
+        .foreign-passport-page-features-section.section-padding_small.bg_grey
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Пакет необходимых документов
+                    .title__divider
+
+                .box-list.box-list_3
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:84px;" src="img/icon-services-list.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Заявления
+                        .box__text 2 заявления о выдаче <br>загранпаспорта.
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:103px;" src="img/icon-photos.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title 4 фотографии
+                        .box__text 3,5х4,5 в овале на матовой бумаге (на биометрический паспорт - 2 любые фото).
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:89px;" src="img/icon-passport-1.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Внутренний паспорт
+                        .box__text Копии страниц с отметками, <br>а также 18, 19 и 20 страниц.
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:86px;" src="img/icon-passport-2.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Загранпаспорт (если имеется)
+                        .box__text Копия 1-й страницы действующего загранпаспорта.
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:85px;" src="img/icon-passport-3.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Трудовая книжка
+                        .box__text Копия трудовой книжки.
+
+                    .box-list__item.box.box_type_1.foreign-passport-page-features-section__box_with-btn(data-aos="fade-up" data-aos-delay="100")
+                        .box__title В особых случаях
+                        .btn.foreign-passport-page-features-section__btn(data-js="foreign-passport-page-features-section__btn")
+                            .icon.icon_arrow_1
+
+                    .box-list__item.box-list__item_100.box.box_type_1.foreign-passport-page-features-section__hidden-box.foreign-passport-page-features-section__box_hidden(data-js="foreign-passport-page-features-section__hidden-box" style="width: 100% !important;")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:89px;" src="img/icon-passport-1.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Для мужчин от 18 до 27 лет
+                        .box__text(style="max-width: 300px") Оригинал и копия военного билета с отметками о действующей отсрочке.
+
+
+
+        .text-section.section-padding_large
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Оформление загранпаспорта
+                    .title__divider
+
+                div(data-aos="fade-up")
+                    h3 Получить старый загранпаспорт
+                    p Загранпаспорт старого поколения выдается на 5 лет на взрослых и детей с их рождения. Перечень документов, необходимых для оформления паспорта на себя и ребенка, вы найдете в подробном описании услуги Получение загранпаспорта старого образца.
+                    p &nbsp;
+                div(data-aos="fade-up")
+                    h3 Заявление на новый загранпаспорт
+                    p Загранпаспорт нового поколения или биометрический загранпаспорт выдается на 10 лет на взрослых и детей с их рождения. В загранпаспорт нового поколения вписываются биометрические показатели владельца — сканируется отпечаток пальца. Биометрические показатели указываются в паспортах для взрослых и детей старше 12-ти лет. Детям младше 12-ти лет паспорт нового поколения выдаётся без сканирования.
+                    p &nbsp;
+
+                a.btn(style="max-width: 320px" data-aos="fade-up" data-popbox-target="popbox-callback") Оформить загранпаспорт
+
+
+        #callback.text_color_white.section-padding_medium.bg_img.bg_center(style="background-image: url('img/bg-foreign-passport-2.jpg')")
+            .container(data-aos="fade-up")
+                .title.title_h2
+                    .title__text Нужен загранпаспорт?
+                    .title__divider
+                    .title__subtitle Вы можете оставить заявку, менеджер свяжется с вами для уточнения деталей!
+
+                form.form.form_row.form_row_4
+                    input.input.form__elem(placeholder="Ваше Имя" name="name")
+                    input.input.form__elem(placeholder="Ваш Телефон" name="phone")
+                    input.input.form__elem(placeholder="Ваш Город" name="city")
+                    button.btn.form__elem Перезвоните мне
+
+
+        .foreign-passport-page-text-section-3.text-section.section-padding_large
+            .container
+                .foreign-passport-page-text-section-3__grid
+                    .foreign-passport-page-text-section-3__left
+                        .title.title_h2(data-aos="fade-up")
+                            .title__text Процесс подачи заявлений
+                            .title__divider
+
+                        div(data-aos="fade-up")
+                            h3 Если выезжаете за границу
+                            p Проверьте срок действия заграничного паспорта. Для посещения многих стран срок действия должен быть от одного до трех или шести месяцев на момент завершения поездки. Подробнее можно узнать в визовом центре, а также в посольстве или консульстве страны, которую вы планируете посетить.
+                            p &nbsp;
+                            p Перед поездкой проверьте судебную задолженность: из-за неё вас могут задержать в аэропорту и не допустить к вылету. Оплачивать задолженность нужно заранее, чтобы информация об оплате успела дойти до ведомства.
+                            p &nbsp;
+                            h3 После электронной подачи заявления
+                            p В случае успешной электронной подачи заявления, в личный кабинет придет приглашение на посещение ведомства. Мы запишем вас на прием в отделение МВД России или МФЦ. Перечень документов, которые необходимо взять с собой на прием, вам дополнительно сообщат наши менеджеры.
+                            p &nbsp;
+                            h3 При личной подаче заявления
+                            p Если вы все же подали заявление напрямую в ведомство или уже получили новый паспорт, не забудьте внести его данные в ваш профиль, чтобы они всегда были под рукой.
+
+                    .foreign-passport-page-text-section-3__right
+                        a.foreign-passport-page-text-section-3__right-elem.elem-with-yellow-square.elem-with-yellow-square_borderlike(data-aos="fade-up" href='img/picture-foreign-passport-page-1.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="476" height="276" title="")
+                            img.elem-with-yellow-square__not-yellow-square(src="img/picture-foreign-passport-page-1.jpg")
+                            .yellow-square.elem-with-yellow-square__yellow-square
+
+                        a.foreign-passport-page-text-section-3__right-elem.elem-with-yellow-square.elem-with-yellow-square_borderlike(data-aos="fade-up" href='img/picture-foreign-passport-page-2.jpg' data-js="photoswipe-item" data-photoswipe-group-id="0" width="476" height="276" title="")
+                            img.elem-with-yellow-square__not-yellow-square(src="img/picture-foreign-passport-page-2.jpg")
+                            .yellow-square.elem-with-yellow-square__yellow-square

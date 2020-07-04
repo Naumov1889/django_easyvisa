@@ -1,0 +1,271 @@
+@require "../blocks/variables-n-mixins.styl"
+
+.index-page-staff-section {
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    z-index 2
+    top: 96px
+  }
+
+  &__quote {
+    max-width: 628px;
+    box-shadow $large_shadow
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    &:before {
+      left: -8px
+      bottom: -13px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &:after {
+      right: -8px
+      top: -13px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__name-n-job {
+    margin: 52px 0 0 29px
+  }
+
+
+  &__yellow-square.yellow-square {
+    top: 160px;
+    right: 27px;
+    width: 230px;
+    height: 230px;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content space-between
+    margin-top: -10px;
+  }
+
+  &__img {
+    display: block;
+    margin: auto 0 0 0
+    object-fit: contain;
+    object-position: bottom;
+    height: 541px
+  }
+
+  &__left {
+    margin-top: 192px;
+  }
+
+  &__right {
+    display: flex;
+    margin: 0 32px 0 20px
+    font-size: 0
+    line-height: 0
+  }
+}
+
+
+.index-page-staff-section-slider {
+  .tns-controls button {
+    bottom 180px
+
+    &[data-controls="prev"] {
+      right: 496px;
+    }
+
+    &[data-controls="next"] {
+      right: 0
+    }
+  }
+
+  .tns-nav {
+    position: absolute;
+    z-index 2
+    left: 274px
+    bottom: 124px
+  }
+
+  .tns-ovh {
+    overflow visible
+  }
+}
+
+
+@media (max-width: 1250px) {
+  .index-page-staff-section {
+    &__title {
+      top: 100px
+    }
+
+    &__quote {
+      max-width: 496px;
+      padding: 18px 20px 18px 20px
+
+      font-size: 17px;
+      line-height: 21px
+
+      &:before {
+        width: 26px;
+        height: 26px;
+      }
+
+      &:after {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    &__name-n-job {
+      margin: 44px 0 0 20px
+    }
+
+    &__img {
+      height: 460px;
+    }
+
+  }
+
+  .index-page-staff-section-slider {
+    .tns-controls button {
+      bottom 140px
+
+      &[data-controls="prev"] {
+        right: 418px;
+      }
+
+    }
+
+    .tns-nav {
+      left: 240px;
+      bottom: 72px;
+    }
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .index-page-staff-section {
+    &__title {
+      top: 40px
+    }
+
+    &__quote {
+
+      &:before {
+        left: -5px;
+        bottom: -7px;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:after {
+        right: -5px;
+        top: -7px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__name-n-job {
+      margin: 28px 0 0 20px
+    }
+
+    &__yellow-square.yellow-square {
+      top: 106px;
+      right: 17px;
+      width: 142px;
+      height: 142px;
+    }
+
+    &__img {
+      height: 360px;
+    }
+
+    &__left {
+      margin-top: 120px
+    }
+  }
+
+  .index-page-staff-section-slider {
+    .tns-controls button {
+      bottom 120px
+
+      &[data-controls="prev"] {
+        right: 340px;
+      }
+
+    }
+
+    .tns-nav {
+      left: 230px;
+      bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+
+  .index-page-staff-section-slider {
+    .tns-controls button {
+      display: none
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .index-page-staff-section {
+    padding-top 28px
+
+    &__title {
+      position: static;
+    }
+
+    &__name-n-job {
+      margin: 17px 0 0 20px
+    }
+
+    &__grid {
+      position: relative;
+      margin-top: 0
+    }
+
+    &__left {
+      margin-top: 0
+      position: absolute;
+      top: 184px
+      z-index 3
+      left 50%
+      transform translateX(-50%)
+      width: 100%
+    }
+
+    &__name-n-job {
+      margin: -3px auto 0 auto;
+      padding: 5px 8px 5px 8px;
+      width: max-content;
+      border-radius: 5px;
+      background-color: #ffffff
+    }
+
+    &__right {
+      margin 0 auto
+    }
+
+    &__img {
+      height: 360px;
+      object-fit cover
+    }
+  }
+
+  .index-page-staff-section-slider {
+    .tns-nav {
+      display: none
+    }
+  }
+}

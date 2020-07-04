@@ -1,0 +1,237 @@
+.index-page-popular-destinations-section-slider {
+
+  &__item {
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 465px;
+
+    &:before {
+      content ''
+      position: absolute;
+      z-index 2
+      width: 100%
+      height: 100%
+      left 0
+      top 0
+      border-radius: 5px;
+      background-color: rgba(24, 24, 24, 0);
+      transition .6s ease
+    }
+
+    &:hover {
+      &:before {
+        background-color: rgba(24, 24, 24, 0.75);
+      }
+
+      .index-page-popular-destinations-section-text__hidden-part {
+        opacity 1
+        transform translate3d(0, 0, 0)
+      }
+    }
+  }
+}
+
+.index-page-popular-destinations-section {
+  padding-bottom: 46px
+
+  &__img {
+    position: absolute;
+    z-index 1
+    top: 0
+    left 0
+    width: 100%
+    height: 100%
+    object-fit cover
+    border-radius: 5px;
+  }
+}
+
+.index-page-popular-destinations-section-text {
+  position: relative;
+  z-index 3
+
+  display: flex;
+  flex-direction column
+  height: 100%
+
+  padding 36px 30px 32px 30px
+
+  color: #ffffff;
+
+  &__title {
+    position: relative;
+    font-family: "Proxima Nova Semibold";
+    margin-bottom: 6px
+    font-size: 34px;
+    line-height: 36px
+    width: max-content
+
+    &:before {
+      content ''
+      position: absolute;
+      bottom 0
+      width: 100%
+      height: 1px
+      background-color: #ffffff
+    }
+  }
+
+  &__name-n-value {
+    margin-top: 22px
+  }
+
+  &__name {
+    font-size: 19px;
+  }
+
+  &__value {
+    font-family: "Proxima Nova Semibold";
+    font-size: 27px;
+  }
+
+  &__rouble {
+    font-size: 25px;
+  }
+
+  &__btn {
+    margin-top: 34px
+    padding 18px 12px
+    color: #191919;
+    font-size: 16px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content space-between
+    align-items flex-end
+    margin: auto 0 0 0
+  }
+
+  &__country {
+    margin-right: 14px
+    font-size: 21px;
+  }
+
+  &__cases {
+    margin-bottom: 2px
+    font-family: "Proxima Nova Light";
+    text-align: right
+
+    span {
+      font-family: "Proxima Nova Reg";
+    }
+  }
+
+  &__hidden-part {
+    opacity 0
+    transform translate3d(0, 10px, 0)
+    transition .4s ease
+  }
+}
+
+@media (max-width: 1050px) {
+  .index-page-popular-destinations-section-slider {
+    &__content {
+      height: 370px;
+
+      &:before {
+        background-color: rgba(24, 24, 24, 0.75);
+      }
+
+      .index-page-popular-destinations-section-text__hidden-part {
+        opacity 1
+        transform translate3d(0, 0, 0)
+      }
+    }
+
+  }
+
+  .index-page-popular-destinations-section-text {
+    padding: 23px 20px 26px 20px;
+
+    &__title {
+      margin-bottom: 10px
+      font-size: 31px;
+      line-height: 36px
+    }
+
+    &__name-n-value {
+      margin-top: 10px
+    }
+
+    &__name {
+      font-size: 17px;
+    }
+
+    &__value {
+      font-size: 24px;
+    }
+
+    &__rouble {
+      font-size: 22px;
+    }
+
+    &__btn {
+      margin-top: 23px
+      padding 16px 12px
+    }
+
+    &__country {
+      font-size: 19px;
+    }
+
+    &__cases {
+      font-size: 15px
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .index-page-popular-destinations-section-slider {
+    &__content {
+      height: 330px;
+    }
+
+  }
+
+  .index-page-popular-destinations-section {
+    padding-bottom: 34px
+  }
+
+  .index-page-popular-destinations-section-text {
+    padding: 16px 17px 20px 17px;
+
+    &__title {
+      font-size: 26px;
+      line-height: 32px
+    }
+
+    &__name-n-value {
+      margin-top: 10px
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__value {
+      font-size: 22px;
+    }
+
+    &__rouble {
+      font-size: 20px;
+    }
+
+
+    &__country {
+      font-size: 17px;
+    }
+
+    &__cases {
+      font-size: 14px
+    }
+  }
+}

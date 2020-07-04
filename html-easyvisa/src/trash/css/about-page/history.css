@@ -1,0 +1,95 @@
+.about-page-history-section {
+  position: relative;
+}
+.about-page-history-section__grid {
+  display: flex;
+  justify-content: space-between;
+}
+.about-page-history-section__right {
+  margin-left: 20px;
+  width: 380px;
+}
+.about-page-history-section__elem-with-yellow-square.elem-with-yellow-square {
+  position: absolute;
+  bottom: 0;
+  width: 380px;
+  font-size: 0;
+  line-height: 0;
+  transform: translateX(40px);
+}
+.about-page-history-section__yellow-square.yellow-square {
+  top: 154px;
+  right: 16px;
+  width: 204px;
+  height: 204px;
+}
+@media (max-width: 1350px) {
+  .about-page-history-section__right {
+    width: 360px;
+  }
+  .about-page-history-section__elem-with-yellow-square.elem-with-yellow-square {
+    width: 360px;
+    transform: translateX(10px);
+  }
+}
+@media (max-width: 1250px) {
+  .about-page-history-section__right {
+    width: 330px;
+  }
+  .about-page-history-section__elem-with-yellow-square.elem-with-yellow-square {
+    width: 330px;
+  }
+}
+@media (max-width: 1100px) {
+  .about-page-history-section__container {
+    overflow: hidden;
+  }
+  .about-page-history-section__yellow-square.yellow-square {
+    top: 140px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+  }
+  .about-page-history-section__elem-with-yellow-square.elem-with-yellow-square {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 850px) {
+  .about-page-history-section__right {
+    width: 300px;
+  }
+  .about-page-history-section__elem-with-yellow-square.elem-with-yellow-square {
+    width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .about-page-history-section {
+    position: static;
+    padding-bottom: 0;
+  }
+  .about-page-history-section__container {
+    overflow: visible;
+  }
+  .about-page-history-section__grid {
+    position: relative;
+  }
+  .about-page-history-section__left {
+    position: absolute !important;
+    z-index: 2;
+    top: 176px;
+    width: 100%;
+  }
+  .about-page-history-section__right {
+    margin-left: 0;
+    width: 100%;
+    height: 360px;
+  }
+  .about-page-history-section__elem-with-yellow-square.elem-with-yellow-square {
+    position: static;
+    margin: 0 auto;
+  }
+  .about-page-history-section__elem-with-yellow-square.elem-with-yellow-square img {
+    height: 360px;
+    object-fit: cover;
+  }
+}

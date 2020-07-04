@@ -1,0 +1,152 @@
+.visa-card {
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 12px 32px rgba(43,43,43,0.07);
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 22px;
+  padding: 28px 34px 28px 34px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.visa-card__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.visa-card__grid-item:nth-child(1) {
+  width: 64%;
+  margin-right: 10%;
+}
+.visa-card__grid-item:nth-child(2) {
+  width: 26%;
+}
+.visa-card__grid-item:nth-child(3) {
+  margin-top: 34px;
+}
+.visa-card__name-n-value-list {
+  display: flex;
+  justify-content: space-between;
+}
+.visa-card__name-n-value {
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}
+.visa-card__name-n-value:last-child {
+  margin-right: 0;
+}
+.visa-card__name {
+  color: #494949;
+  font-size: 19px;
+}
+.visa-card__value {
+  font-family: "Proxima Nova Semibold";
+  font-size: 27px;
+  color: #303030;
+}
+.visa-card__value .rouble {
+  font-size: 26px;
+}
+.visa-card__btn {
+  max-width: 306px;
+}
+.visa-card__link {
+  color: #727272;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.visa-card__link:hover {
+  text-decoration: none;
+}
+@media (max-width: 1150px) {
+  .visa-card {
+    margin-top: 18px;
+    padding: 18px 20px 22px 20px;
+  }
+  .visa-card__grid-item:nth-child(1) {
+    width: 67%;
+    margin-right: 5%;
+  }
+  .visa-card__grid-item:nth-child(2) {
+    width: 28%;
+  }
+  .visa-card__grid-item:nth-child(3) {
+    margin-top: 20px;
+  }
+  .visa-card__name {
+    font-size: 17px;
+  }
+  .visa-card__value {
+    font-size: 22px;
+  }
+  .visa-card__value .rouble {
+    font-size: 21px;
+  }
+  .visa-card__btn {
+    max-width: 306px;
+  }
+  .visa-card__link {
+    font-size: 17px;
+  }
+}
+@media (max-width: 950px) {
+  .visa-card__grid-item:nth-child(1) {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .visa-card__grid-item:nth-child(2) {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .visa-card__name-n-value-list {
+    flex-wrap: wrap;
+    margin-top: -14px;
+  }
+  .visa-card__name-n-value {
+    margin: 14px 0 0 0;
+    width: 46%;
+  }
+}
+@media (max-width: 600px) {
+  .visa-card {
+    margin-top: 12px;
+    padding: 14px 17px 18px 17px;
+  }
+  .visa-card__grid-item:nth-child(1) {
+    margin-bottom: 16px;
+  }
+  .visa-card__grid-item:nth-child(3) {
+    margin-top: 18px;
+  }
+  .visa-card__name-n-value-list {
+    margin-top: -10px;
+  }
+  .visa-card__name-n-value {
+    margin-top: 10px;
+  }
+  .visa-card__name {
+    font-size: 15px;
+  }
+  .visa-card__value {
+    font-size: 19px;
+  }
+  .visa-card__value .rouble {
+    font-size: 18px;
+  }
+  .visa-card__btn {
+    max-width: 306px;
+  }
+  .visa-card__link {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .visa-card__name-n-value {
+    width: 100%;
+  }
+}

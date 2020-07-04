@@ -1,0 +1,144 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Юридическим лицам'
+
+block content
+    div
+        .container(data-aos="fade-up")
+            .crumbs
+                .crumbs__item
+                    a.crumbs__link(href="") Главная
+                    .crumbs__icon.dash_small
+                .crumbs__item
+                    a.crumbs__link.crumbs__link_current(href="") Юридическим лицам
+
+    .legal-entity-page
+        .container
+            .title.title_h1(data-aos="fade-up")
+                .title__text Юридическим лицам
+                .title__divider
+                .title__subtitle(style="max-width: 964px") Специальные условия для туристических агентств, туроператоров, частных коммерческих организаций, корпораций и госучреждений
+
+
+        .legal-entity-page-features-1-section.section-padding_small
+            .container
+                .box-list.box-list_arbitrary-width
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:80px;" src="img/icon-services-list.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Полный спектр <br>услуг
+                        .box__text(style="max-width:248px;") Все услуги по одному договору – визы, билеты, гостиницы, трансферы, мероприятия
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:75px;;" src="img/icon-briefcase.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Специальный <br>отдел
+                        .box__text(style="max-width:242px;") Уже давно у нас сгруппирован полноценный отдел по работе c юридическими лицами
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:83px;" src="img/icon-graph.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Финансовая <br>отчетность
+                        .box__text(style="max-width:190px;") Предоставим полную финансовую отчётность и прозрачные цены
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="150")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:87px;" src="img/icon-person.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Персональный <br>менеджер
+                        .box__text(style="max-width: 230px;") Наше твердое правило: один клиент – один закрепленный за ним менеджер
+
+        .legal-entity-page-callback-section.text_color_white.section-padding_medium.bg_img.bg_center(style="background-image: url('img/bg-legal-entity-page-callback.jpg')")
+            .container(data-aos="fade-up")
+                .title.title_h2.legal-entity-callback-section__title
+                    .title__text С нами уже более 220 юридических лиц
+                    .title__divider
+                    .title__subtitle(style="max-width: 478px") Заполните форму ниже и узнайте подробнее обо всех преимуществах партнерства с EasyVisa
+
+                form.form.form_row.form_row_4
+                    input.input.legal-entity-callback-section__input.form__elem(placeholder="Ваше Имя" name="name")
+                    input.input.legal-entity-callback-section__input.form__elem(placeholder="Ваш Телефон" name="phone")
+                    input.input.legal-entity-callback-section__input.form__elem(placeholder="Ваш E-mail" name="email")
+                    button.btn.legal-entity-callback-section__btn.form__elem Получить презентацию
+
+        .section-padding_large
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text Наши услуги для юридических лиц
+                    .title__divider
+
+                .slider.slider_type_3
+                    .slider-list.slider-type-3-list(data-js="slider-type-3")
+                        .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up")
+                            .slider-type-3-item__grid
+                                .slider-type-3-item__title-n-subtitle
+                                    .slider-type-3-item__title Авиабилеты по низким ценам
+                                    .slider-type-3-item__subtitle Выкуп билетов как на регулярных, так и на чартерных рейсах
+                                a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                                img.slider-type-3-item__img(src="img/picture-slider-services-1.png")
+                        .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up" data-aos-delay="50")
+                            .slider-type-3-item__grid
+                                .slider-type-3-item__title-n-subtitle
+                                    .slider-type-3-item__title Оформление виз
+                                    .slider-type-3-item__subtitle(style="max-width: 290px;") Визы в шенген и не только от 1 рабочего дня
+                                a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                                img.slider-type-3-item__img(src="img/picture-slider-services-5.png")
+                        .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up" data-aos-delay="100")
+                            .slider-type-3-item__grid
+                                .slider-type-3-item__title-n-subtitle
+                                    .slider-type-3-item__title Загранпаспорт
+                                    .slider-type-3-item__subtitle Оформление паспорта <br>на 5 и 10 лет
+                                a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                                img.slider-type-3-item__img(src="img/picture-slider-services-3.png")
+                        .slider-list__item.slider-type-3-list__item.slider-type-3-item(data-aos="fade-up" data-aos-delay="150")
+                            .slider-type-3-item__grid
+                                .slider-type-3-item__title-n-subtitle
+                                    .slider-type-3-item__title Разрешение на въезд в РФ
+                                    .slider-type-3-item__subtitle(style="max-width: 220px") Деловые, туристические, рабочие приглашения для ваших партнеров
+                                a.slider-type-3-item__link(href="") Подробнее <span class="icon icon_arrow"></span>
+                                img.slider-type-3-item__img(src="img/picture-slider-services-6.png")
+
+
+
+
+        .legal-entity-page-features-2-section.bg_grey.section-padding_small
+            .container
+                .title.title_h2(data-aos="fade-up")
+                    .title__text С нами выгодно и надежно
+                    .title__divider
+
+                .box-list.box-list_arbitrary-width
+                    .box-list__item.box.box_type_1(data-aos="fade-up")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:88px;" src="img/icon-safety.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Безопасность
+                        .box__text Ваши данные под надежной <br>защитой
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="50")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:82px;;" src="img/icon-thumb-up.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Работа на результат
+                        .box__text Команда профессионалов <br>выполнит все на 100%
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="100")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:78px;" src="img/icon-speed.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Скорость
+                        .box__text Оформление визы <br>от 1 рабочего дня
+
+                    .box-list__item.box.box_type_1(data-aos="fade-up" data-aos-delay="150")
+                        .box__icon-wrapper.elem-with-yellow-square
+                            img.box__icon.elem-with-yellow-square__not-yellow-square(style="width:82px;" src="img/icon-wallet.svg")
+                            .elem-with-yellow-square__yellow-square.yellow-square
+                        .box__title Без оплаченной брони
+                        .box__text(style="max-width: 270px;") Нам не нужны оплаченные брони, вы не рискуете своими деньгами
+
+
+

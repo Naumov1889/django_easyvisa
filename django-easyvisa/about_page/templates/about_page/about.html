@@ -1,0 +1,151 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — О компании</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div>
+        <div class="container" data-aos="fade-up">
+          <div class="crumbs">
+            <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+              <div class="crumbs__icon dash_small"></div>
+            </div>
+            <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">О компании</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-page">
+        <div class="container">
+          <div class="title title_h1" data-aos="fade-up">
+            <div class="title__text">О компании</div>
+            <div class="title__divider"></div>
+          </div>
+          <div class="about-page-features-section">
+            <div class="box-list box-list_3">
+                {% for feature in features %}
+              <div class="box-list__item box box_type_1" data-aos="fade-up">
+                <div class="box__icon-wrapper elem-with-yellow-square">
+                    <img class="box__icon elem-with-yellow-square__not-yellow-square" src="{{ feature.icon.url }}">
+                  <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                </div>
+                <div class="box__title about-page-features-section__box-title">{{ feature.title }}</div>
+                <div class="box__text">{{ feature.description|safe }}</div>
+              </div>
+                {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-page-video-section section-padding_large" data-aos="fade-up">
+        <div class="container">
+          <div class="video-n-thumb text_color_white text_position_center" data-js="video-n-thumb" data-video-id="{{ video.youtube_id }}">
+            <div class="video-n-thumb__thumb" data-js="video-n-thumb__thumb">
+              <div class="video-n-thumb__elem-with-yellow-square elem-with-yellow-square elem-with-yellow-square_borderlike">
+                <div class="elem-with-yellow-square__not-yellow-square">
+                  <div class="video-n-thumb__overlay"></div>
+                  <div class="video-n-thumb__text-n-btn">
+                    <div class="video-n-thumb__text title title_h2">
+                      <div class="title__text">Посмотрите видео <br>о нашей работе</div>
+                      <div class="title__divider"></div>
+                    </div>
+                    <div class="video-n-thumb__btn">
+                      <div class="icon icon_play-arrow"></div>
+                    </div>
+                  </div><img class="video-n-thumb__img" src="{% static 'img/picture-about-page-video-thumb.jpg' %}">
+                </div>
+                <div class="yellow-square elem-with-yellow-square__yellow-square"></div>
+              </div>
+            </div>
+            <div class="video-n-thumb__video">
+              <div class="video-n-thumb__video-container" id="video-n-thumb__video-container" data-js="video-n-thumb__video-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-page-history-section bg_grey section-padding_small">
+        <div class="about-page-history-section__container container">
+          <div class="title title_h2" data-aos="fade-up">
+            <div class="title__text">История компании</div>
+            <div class="title__divider"></div>
+          </div>
+          <div class="about-page-history-section__grid">
+            <div class="slider slider_type_5 about-page-history-section__left">
+              <div class="slider-list slider-type-5-list" data-js="slider-type-5">
+
+                  {% for history in histories %}
+                <div class="slider-list__item slider-type-5-list__item slider-type-5-item" data-aos="fade-up">
+                  <div class="slider-type-5-item__grid">
+                    <div class="slider-type-5-item__counter-n-year">
+                      <div class="slider-type-5-item__counter">{{ forloop.counter }}</div>
+                      <div class="slider-type-5-item__year">{{ history.year }}</div>
+                    </div>
+                    <div class="slider-type-5-item__title-n-subtitle">
+                      <div class="slider-type-5-item__title">{{ history.title }}</div>
+                      <div class="slider-type-5-item__subtitle">{{ history.description }}</div>
+                    </div>
+                  </div>
+                </div>
+                  {% endfor %}
+
+              </div>
+            </div>
+            <div class="about-page-history-section__right">
+              <div class="elem-with-yellow-square about-page-history-section__elem-with-yellow-square"><img class="about-page-history-section__img elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-staff-1.png' %}" data-aos="fade-up">
+                <div class="elem-with-yellow-square__yellow-square yellow-square about-page-history-section__yellow-square"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-page-requisite-section section-padding_large">
+        <div class="container">
+          <div class="title title_h2" data-aos="fade-up">
+            <div class="title__text">Реквизиты</div>
+            <div class="title__divider"></div>
+          </div>
+          <div class="box-list about-page-requisite-section__box-list">
+            <div class="box-list__item requisite-box about-page-requisite-section__first-box" data-aos="fade-up">
+              <div class="requisite-box__title">ООО «ИЗИВИЗА»</div>
+              <div class="requisite-box__grid">
+                <div class="requisite-box__left">
+                  <div class="requisite-box__item requisite">
+                    <div class="requisite__title">ИНН</div>
+                    <div class="requisite__subtitle">{{ requisites.requisite_1 }}</div>
+                  </div>
+                  <div class="requisite-box__item requisite">
+                    <div class="requisite__title">КПП</div>
+                    <div class="requisite__subtitle">{{ requisites.requisite_2 }}</div>
+                  </div>
+                  <div class="requisite-box__item requisite">
+                    <div class="requisite__title">БИК</div>
+                    <div class="requisite__subtitle">{{ requisites.requisite_3 }}</div>
+                  </div>
+                  <div class="requisite-box__item requisite">
+                    <div class="requisite__title">Юридический адрес</div>
+                    <div class="requisite__subtitle" style="max-width: 360px">{{ requisites.requisite_4|safe }}</div>
+                  </div>
+                </div>
+                <div class="requisite-box__right">
+                  <div class="requisite-box__item requisite">
+                    <div class="requisite__title">Расчетный счет</div>
+                    <div class="requisite__subtitle">{{ requisites.requisite_5|safe }}</div>
+                  </div>
+                  <div class="requisite-box__item requisite">
+                    <div class="requisite__title">Корреспондентный счет</div>
+                    <div class="requisite__subtitle" style="max-width: 440px">{{ requisites.requisite_6|safe }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-list__item box box_type_1 about-page-requisite-section__second-box about-page-requisite-section-second-box" data-aos="fade-up">
+              <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:86px;" src="{% static 'img/icon-services-list.svg' %}">
+                <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+              </div><a class="about-page-requisite-section-second-box__link text_underline_hoverable" target="_blank" href="{{ requisites.requisite_file.url }}">Скачать реквизиты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

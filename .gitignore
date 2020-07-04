@@ -1,0 +1,5 @@
+/django-easyvisa/.env
+/django-easyvisa/db.sqlite3
+/.idea/
+/html-easyvisa/package-lock.json
+/html-easyvisa/dist/

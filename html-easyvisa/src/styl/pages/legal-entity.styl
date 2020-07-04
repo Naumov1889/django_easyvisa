@@ -1,0 +1,62 @@
+@require "../blocks/variables-n-mixins.styl"
+
+.legal-entity-page-features-1-section {
+  padding-top: 10px
+
+  .box_type_1 {
+    padding-left: 0
+    padding-right 0
+    padding-top 10px
+    background: transparent
+    box-shadow none
+
+    .box__title {
+      font-size: 26px
+    }
+  }
+}
+
+.legal-entity-page-features-2-section {
+  .box_type_1 {
+    align-items flex-start
+    text-align left
+    padding-left: 0
+    padding-right 0
+    padding-top 10px
+    background: transparent
+    box-shadow none
+
+    .box__title {
+      font-size: 23px
+    }
+  }
+}
+
+.legal-entity-page-callback-section {
+  display: flex;
+  align-items center
+  min-height: 350px;
+  //bg-image("../../img/bg-index-page-callback.jpg")
+}
+
+@media (max-width: 1050px) {
+  .legal-entity-page-features-1-section {
+    padding-top: 0
+  }
+}
+
+@media (max-width: 600px) {
+  .legal-entity-page-features-1-section,
+  .legal-entity-page-features-2-section {
+    .box_type_1 {
+      padding-bottom 0
+    }
+  }
+
+  .legal-entity-page-features-2-section {
+    .box_type_1 {
+      align-items center
+      text-align center
+    }
+  }
+}

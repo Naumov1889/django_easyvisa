@@ -1,0 +1,710 @@
+@require "variables-n-mixins.styl"
+
+.select_type_1 {
+  .edd-root {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    user-select: none;
+  }
+
+  .edd-head {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #4b4b4b;
+    font-size: 15px;
+    transition .3s
+
+    &:hover {
+      color: darken(#4b4b4b, 30%)
+      text-shadow: darken(#4b4b4b, 30%) 0.5px 0 0;
+    }
+  }
+
+  .edd-root-open .edd-head {
+    color: darken(#4b4b4b, 30%)
+    text-shadow: darken(#4b4b4b, 30%) 0.5px 0 0;
+  }
+
+  .edd-value {
+
+  }
+
+  .edd-arrow {
+    position: relative;
+    margin-left: 12px
+    width: 19px;
+    height: 19px;
+    box-shadow: $small_shadow;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    &:before {
+      content ''
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("../../img/icon-arrow.svg") no-repeat center
+      background-size: 9px 9px;
+    }
+  }
+
+  .edd-root-open .edd-arrow {
+    &:before {
+      transform: rotate(180deg) translateX(-1px)
+    }
+  }
+
+  .edd-select {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    visibility hidden
+  }
+
+  .edd-root-native .edd-select {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility visible
+  }
+
+  .edd-body {
+    opacity: 0;
+    position: absolute;
+    left: auto;
+    right: 0;
+    pointer-events: none;
+    z-index: 999;
+    margin-top: 14px;
+    width: 250px
+
+    box-shadow: $large_shadow;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  .edd-root-open .edd-body {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+    transition: opacity 200ms, transform 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .edd-root-open-above .edd-body {
+    bottom: 100%;
+  }
+
+  .edd-root-open-below .edd-body {
+    top: 100%;
+  }
+
+  .edd-items-list {
+    padding: 14px 0
+    max-height: 194px !important;
+    transition: max-height 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y auto
+  }
+
+
+  .edd-option {
+    position: relative;
+    padding: 7px 25px
+    color: #353535;
+    font-size: 16px;
+    cursor: pointer;
+    transition .3s
+  }
+
+  .edd-option-selected {
+    //display: none
+  }
+
+  .edd-option-focused:not(.edd-option-disabled) {
+    color: darken(#353535, 30%)
+    text-shadow: darken(#353535, 30%) 0.5px 0 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .select_type_1 {
+    .edd-head {
+      font-size: 14px
+    }
+
+    .edd-arrow {
+      width: 18px
+      height: 18px
+
+      &:before {
+        background-size: 8px 8px;
+      }
+    }
+
+    .edd-root-open .edd-arrow {
+      &:before {
+        transform rotate(180deg) translateX(0px)
+      }
+    }
+
+    .edd-body {
+      width: 210px
+    }
+
+    .edd-items-list {
+      padding: 10px 0
+    }
+
+    .edd-option {
+      padding: 6px 17px
+      font-size: 15px;
+      transition .3s
+    }
+  }
+}
+
+
+.select_type_2 {
+  width: max-content;
+
+  .edd-root {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    user-select: none;
+  }
+
+  .edd-head {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #2f2f2f;
+    font-family: "Proxima Nova Semibold"
+    font-size: 28px;
+    transition .3s
+
+    &:hover {
+      color: darken(#2f2f2f, 30%)
+      text-shadow: darken(#2f2f2f, 30%) 0.5px 0 0;
+
+      .edd-value:before {
+        display: none
+      }
+    }
+  }
+
+  .edd-root-open .edd-head {
+    color: darken(#2f2f2f, 30%)
+    text-shadow: darken(#2f2f2f, 30%) 0.5px 0 0;
+
+    .edd-value:before {
+      display: none
+    }
+  }
+
+  .edd-value {
+    position: relative;
+    padding-bottom 3px
+
+    &:before {
+      content ''
+      position: absolute;
+      width: 100%
+      left 0
+      bottom 0
+      height: 1px
+      border-bottom: 1px dashed #666666;
+    }
+  }
+
+  .edd-arrow {
+    position: relative;
+    margin-left: 12px
+    width: 19px;
+    height: 19px;
+
+    &:before {
+      content ''
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("../../img/icon-arrow-3.svg") no-repeat center
+      transform rotate(90deg)
+      background-size: 10px 10px;
+    }
+  }
+
+  .edd-root-open .edd-arrow {
+    &:before {
+      transform: rotate(270deg)
+    }
+  }
+
+  .edd-select {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    visibility hidden
+  }
+
+  .edd-root-native .edd-select {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility visible
+  }
+
+  .edd-body {
+    opacity: 0;
+    position: absolute;
+    left: 0
+    pointer-events: none;
+    z-index: 999;
+    margin-top: 14px;
+    width: 250px
+
+    box-shadow: $large_shadow;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  .edd-root-open .edd-body {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+    transition: opacity 200ms, transform 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .edd-root-open-above .edd-body {
+    bottom: 100%;
+  }
+
+  .edd-root-open-below .edd-body {
+    top: 100%;
+  }
+
+  .edd-items-list {
+    padding: 14px 0
+    max-height: 194px !important;
+    transition: max-height 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y auto
+  }
+
+
+  .edd-option {
+    position: relative;
+    padding: 7px 25px
+    color: #353535;
+    font-size: 16px;
+    cursor: pointer;
+    transition .3s
+  }
+
+  .edd-option-selected {
+    //display: none
+  }
+
+  .edd-option-focused:not(.edd-option-disabled) {
+    color: darken(#353535, 30%)
+    text-shadow: darken(#353535, 30%) 0.5px 0 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .select_type_2 {
+
+    .edd-head {
+      font-size: 24px;
+    }
+
+    .edd-arrow {
+      width: 10px;
+      height: 10px;
+
+      &:before {
+        background-size: 8px 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .select_type_2 {
+
+    .edd-head {
+      font-size: 22px;
+    }
+  }
+}
+
+
+.select_type_3 {
+  width: max-content;
+
+  .edd-root {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    user-select: none;
+  }
+
+  .edd-head {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #1c1c1c;
+    font-family: "Proxima Nova Semibold"
+    font-size: 0
+    transition .3s
+
+    padding 12px 30px 12px 30px
+    border-radius: 5px 5px 0 0;
+    background-color: #ffea00;
+
+    &:before {
+      content 'Частные лица'
+      font-size: 18px
+    }
+
+    &:hover {
+      color: darken(#2f2f2f, 30%)
+      text-shadow: darken(#2f2f2f, 30%) 0.5px 0 0;
+
+      .edd-value:before {
+        display: none
+      }
+    }
+  }
+
+  .edd-root-open .edd-head {
+    color: darken(#2f2f2f, 30%)
+    text-shadow: darken(#2f2f2f, 30%) 0.5px 0 0;
+
+    .edd-value:before {
+      display: none
+    }
+  }
+
+  .edd-arrow {
+    position: relative;
+    margin-left: 16px
+    width: 19px;
+    height: 19px;
+
+    &:before {
+      content ''
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("../../img/icon-arrow.svg") no-repeat center
+      background-size: 12px 12px;
+    }
+  }
+
+  .edd-root-open .edd-arrow {
+    &:before {
+      transform: rotate(180deg)
+    }
+  }
+
+  .edd-select {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    visibility hidden
+  }
+
+  .edd-root-native .edd-select {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility visible
+  }
+
+  .edd-body {
+    opacity: 0;
+    position: absolute;
+    left: 0
+    pointer-events: none;
+    z-index: 999;
+    width: 290px
+
+    box-shadow: $large_shadow;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  .edd-root-open .edd-body {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+    transition: opacity 200ms, transform 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .edd-root-open-above .edd-body {
+    bottom: 100%;
+  }
+
+  .edd-root-open-below .edd-body {
+    top: 100%;
+  }
+
+  .edd-items-list {
+    padding: 14px 0
+    max-height: 496px !important;
+    transition: max-height 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y auto
+  }
+
+
+  .edd-option {
+    position: relative;
+    padding: 10px 30px
+    color: #4e4e4e;
+    font-size: 18px;
+    cursor: pointer;
+    transition .3s
+    text-decoration: underline
+
+  }
+
+  .edd-option-selected {
+    //display: none
+  }
+
+  .edd-option-focused:not(.edd-option-disabled) {
+    color: darken(#4e4e4e, 30%)
+    text-shadow: darken(#4e4e4e, 30%) 0.5px 0 0;
+    text-decoration: none
+  }
+}
+
+@media (max-width: 1050px) {
+  .select_type_3 {
+
+    .edd-head {
+      padding: 12px 20px 12px 20px;
+
+      &:before {
+        font-size: 17px
+      }
+    }
+
+    .edd-arrow {
+      margin-left: 9px;
+    }
+
+    .edd-items-list {
+      padding 12px 0
+    }
+
+    .edd-option {
+      padding: 10px 20px
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .select_type_3 {
+
+    .edd-head {
+
+    }
+  }
+}
+
+.select_type_4 {
+  width: max-content;
+
+  .edd-root {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    user-select: none;
+  }
+
+  .edd-head {
+    position: relative;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content space-between
+    cursor: pointer;
+    font-family: "Proxima Nova Semibold";
+
+    font-size: 17px;
+    transition .3s
+
+    padding 12px 28px 12px 28px
+
+    box-shadow: inset -1px 2px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    color #2f2f2f
+
+
+    &:hover {
+      box-shadow: inset -1px 2px 10px rgba(0, 0, 0, 0.2);
+      color: darken(#2f2f2f, 30%)
+
+      .edd-value:before {
+        display: none
+      }
+    }
+  }
+
+  .edd-value[aria-placeholder] {
+    color: #4e4e4e;
+    white-space nowrap
+  }
+
+  .edd-root-open .edd-head {
+    box-shadow: inset -1px 2px 10px rgba(0, 0, 0, 0.2);
+    color: darken(#2f2f2f, 30%)
+
+    .edd-value:before {
+      display: none
+    }
+  }
+
+  .edd-arrow {
+    position: relative;
+    margin-left: 16px
+    width: 10px;
+    height: 10px;
+
+    &:before {
+      content ''
+      position: absolute;
+      left 0
+      width: 100%;
+      height: 100%;
+      background: url("../../img/icon-arrow-3.svg") no-repeat center
+      background-size: 8px 8px;
+      transform: rotate(90deg)
+    }
+  }
+
+  .edd-root-open .edd-arrow {
+    &:before {
+      transform: rotate(270deg)
+    }
+  }
+
+  .edd-select {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    visibility hidden
+  }
+
+  .edd-root-native .edd-select {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility visible
+  }
+
+  .edd-body {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+
+    pointer-events: none;
+    z-index: 999;
+    margin-top: 14px;
+    width: 100%
+
+    box-shadow: $large_shadow;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  .edd-root-open .edd-body {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+    transition: opacity 200ms, transform 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .edd-root-open-above .edd-body {
+    bottom: 100%;
+  }
+
+  .edd-root-open-below .edd-body {
+    top: 100%;
+  }
+
+  .edd-items-list {
+    padding: 14px 0
+    max-height: 194px !important;
+    transition: max-height 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow-y auto
+  }
+
+
+  .edd-option {
+    position: relative;
+    padding: 7px 25px
+    color: #353535;
+    font-size: 16px;
+    cursor: pointer;
+    transition .3s
+    text-align left
+  }
+
+  .edd-option-selected {
+    //display: none
+  }
+
+  .edd-option-focused:not(.edd-option-disabled) {
+    color: darken(#353535, 30%)
+    text-shadow: darken(#353535, 30%) 0.5px 0 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .select_type_4 {
+    .edd-head {
+      height: 58px;
+      font-size: 16px;
+      padding 5px 20px 5px 20px
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .select_type_4 {
+
+
+    .edd-head {
+      height: 52px;
+      font-size: 15px;
+      padding 5px 17px 5px 17px
+    }
+  }
+}

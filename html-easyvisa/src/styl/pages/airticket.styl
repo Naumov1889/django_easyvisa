@@ -1,0 +1,266 @@
+.airticket-page {
+  &__top-title-section {
+    background-position bottom
+    &:before {
+      background-color: rgba(24, 24, 24, 0.81);
+    }
+  }
+}
+
+.airticket-text-section-1 {
+  &__grid {
+    display: flex;
+    justify-content space-between
+  }
+
+  &__left {
+    margin-right: 36px
+    max-width 836px
+  }
+
+  .box-list {
+    flex-direction column
+
+    .box {
+      margin-bottom: 17px
+      width: 100%
+      min-width: 315px;
+    }
+  }
+}
+
+.airticket-text-section-2 {
+  &__grid {
+    display: flex;
+  }
+
+  &__left {
+
+  }
+
+  &__text {
+    max-width: 824px;
+  }
+
+  .elem-with-yellow-square {
+    margin: 17px
+  }
+
+  &__elem-with-yellow-square-list-1 {
+    display: flex;
+    margin: 40px 0 0 -17px
+  }
+
+  &__elem-with-yellow-square-list-2 {
+    display: flex;
+    flex-direction column
+    margin: -82px -17px 0 0
+  }
+}
+
+.airticket-quote-card {
+  margin-top: 90px
+  padding 0
+  display: flex;
+  justify-content space-between
+  flex-direction row
+  text-align left
+
+  &__left {
+    width: 476px
+
+    img {
+      width: 100%
+      height: 370px
+      object-fit cover
+      object-position top
+      transform: scaleX(-1);
+    }
+
+    .elem-with-yellow-square {
+      margin: -56px 0 0 0
+      font-size: 0
+      line-height: 0
+
+      &__yellow-square {
+        top 56px
+        right: auto;
+        left 0
+        width: 162px;
+        height: 164px;
+        border-radius 5px 5px 5px 0
+      }
+    }
+  }
+
+  &__right {
+    padding: 10px 38px 10px 0;
+  }
+
+  &__quote {
+    margin-left: -30px;
+    max-width 752px
+    font-size: 26px;
+    line-height: 33px;
+  }
+
+  &__name-n-job {
+    margin-top: 14px
+  }
+}
+
+@media (max-width: 1350px) {
+  .airticket-text-section-2 {
+    &__grid {
+      flex-direction column
+    }
+
+    &__text {
+      max-width: unset
+    }
+
+    &__elem-with-yellow-square-list-1 {
+      justify-content center
+      margin: 40px -17px 0 -17px
+    }
+
+    &__elem-with-yellow-square-list-2 {
+      flex-direction row
+      justify-content center
+      margin: 0 -17px 0 -17px
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .airticket-quote-card {
+    &__left {
+      min-width: 304px
+
+      img {
+        width: 100%
+        height: 320px
+        object-fit contain
+        object-position bottom
+      }
+    }
+
+    &__right {
+      padding-left: 38px
+    }
+
+    &__quote {
+      margin-left: -20px
+      max-width: 730px;
+      font-size: 19px !important
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .airticket-text-section-1 {
+    &__grid {
+      display: flex;
+      flex-direction column
+    }
+
+    &__left {
+      margin-right: 0
+      max-width unset
+    }
+
+    .box-list {
+      flex-direction row
+
+      .box {
+        min-width: unset
+      }
+    }
+  }
+
+  .airticket-text-section-2 {
+    &__elem-with-yellow-square-list-1 {
+      margin-top 20px
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .airticket-quote-card {
+    position: relative;
+
+    &__left {
+      min-width unset
+      width: max-content;
+      margin 0 auto
+
+      img {
+        width: 100%
+        min-height: 360px
+      }
+
+      .elem-with-yellow-square__yellow-square {
+        top: 86px
+        left 74px
+        border-radius 5px
+        width: 122px;
+        height: 122px;
+      }
+    }
+
+    &__right {
+      position: absolute;
+      z-index: 3;
+      padding: 12px 17px 14px 17px
+      background: #ffffff;
+      bottom 0
+      border-radius: 5px;
+    }
+
+    &__quote {
+      margin-left: 0
+      padding 0 !important
+      font-size: 17px !important
+
+      &:before,
+      &:after {
+        display: none
+      }
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .airticket-quote-card {
+    padding-bottom: 60px;
+  }
+
+  .airticket-text-section-2 {
+
+    .elem-with-yellow-square {
+      margin: 8px
+    }
+
+    &__elem-with-yellow-square-list-1 {
+      justify-content center
+      margin: 20px -8px 0 -8px
+    }
+
+    &__elem-with-yellow-square-list-2 {
+      flex-direction row
+      justify-content center
+      margin: 0 -8px 0 -8px
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .airticket-quote-card {
+    padding-bottom: 120px;
+
+    .elem-with-yellow-square__yellow-square {
+      left 20px
+    }
+  }
+}

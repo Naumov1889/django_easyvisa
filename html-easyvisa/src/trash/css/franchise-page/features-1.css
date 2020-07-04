@@ -1,0 +1,51 @@
+.franchise-page-features-1-section .box-list {
+  margin-top: -14px;
+}
+.franchise-page-features-1-section .box_type_1.box-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 64px;
+}
+.franchise-page-features-1-section .box_type_1.box-list__item .box__icon-wrapper {
+  transform: scale(1) !important;
+}
+.franchise-page-features-1-section .box_type_1.box-list__item .box__icon-wrapper .elem-with-yellow-square__yellow-square {
+  top: -15px;
+  right: -26px;
+}
+.franchise-page-features-1-section .box_type_1.box-list__item .box__title {
+  font-size: 80px !important;
+  line-height: 64px !important;
+}
+@media (max-width: 1050px) {
+  .franchise-page-features-1-section .box_type_1.box-list__item {
+    padding-top: 22px;
+  }
+  .franchise-page-features-1-section .box_type_1.box-list__item .box__icon-wrapper .elem-with-yellow-square__yellow-square {
+    top: -12px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+  }
+  .franchise-page-features-1-section .box_type_1.box-list__item .box__title {
+    font-size: 46px !important;
+    line-height: 50px !important;
+  }
+}
+@media (max-width: 600px) {
+  .franchise-page-features-1-section .box_type_1.box-list__item {
+    padding-top: 15px;
+  }
+  .franchise-page-features-1-section .box_type_1.box-list__item .box__icon-wrapper .elem-with-yellow-square__yellow-square {
+    top: -5px;
+    right: -14px;
+    width: 32px;
+    height: 32px;
+  }
+  .franchise-page-features-1-section .box_type_1.box-list__item .box__title {
+    font-size: 38px !important;
+    line-height: 42px !important;
+  }
+}

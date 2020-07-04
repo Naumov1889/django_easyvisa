@@ -1,0 +1,114 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+<title>EASYVISA AGENCY — Страхование</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+      <div>
+        <div class="container" data-aos="fade-up">
+          <div class="crumbs">
+            <div class="crumbs__item"><a class="crumbs__link" href="{% url 'index_page:home' %}">Главная</a>
+              <div class="crumbs__icon dash_small"></div>
+            </div>
+            <div class="crumbs__item"><a class="crumbs__link crumbs__link_current" href="">Страхование</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="insurance-page">
+        <div class="container">
+          <div class="title title_h1" data-aos="fade-up">
+            <div class="title__text">Страхование</div>
+            <div class="title__divider"></div>
+            <div class="title__subtitle">Оставьте заявку, наш менеджер свяжется с Вами для уточнения деталей</div>
+          </div>
+        </div>
+        <div class="insurance-page-form-section">
+          <div class="container">
+            <form data-js="form" data-form-note="Страхование">
+              <div class="box-list box-list_3 box-list_has-counter">
+                <div class="box-list__item box box_type_2" data-aos="fade-up">
+                  <div class="box__counter">1</div>
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:71px;" src="{% static 'img/icon-plane.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__title">Куда Вы поедете?</div>
+                  <div class="select_type_4">
+                    <select name="destination" data-js="select-type-4">
+                      <option value="" data-placeholder>Выберите направление</option>
+                        {% for country in countries %}
+                      <option value="{{ country }}">{{ country }}</option>
+                        {% endfor %}
+                    </select>
+                  </div>
+                </div>
+                <div class="box-list__item box box_type_2" data-aos="fade-up">
+                  <div class="box__counter">2</div>
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:68px;" src="{% static 'img/icon-calendar.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__title">Укажите дату поездки</div>
+                  <div class="datepicker-container" data-js="datepicker-container">
+                    <input class="input input_grey" readonly="readonly" name="date" data-js="datepicker" placeholder="Дата поездки (с и до)">
+                    <div class="datepicker-arrow" data-js="datepicker-arrow"></div>
+                  </div>
+                </div>
+                <div class="box-list__item box box_type_2" data-aos="fade-up">
+                  <div class="box__counter">3</div>
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:79px;" src="{% static 'img/icon-person-2.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__title">Укажите свой возраст</div>
+                  <div class="select_type_4">
+                    <select name="how_old" data-js="select-type-4">
+                      <option value="" data-placeholder>Ваш возраст</option>
+                      <option value="16-21">16-21</option>
+                      <option value="22-35">22-35</option>
+                      <option value="36-60">36-60</option>
+                      <option value="61-75">61-75</option>
+                      <option value="77-90">76-90</option>
+                      <option value="90+">90+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="box-list__item box-list__item_100 box box_type_2" data-aos="fade-up">
+                  <div class="box__counter">4</div>
+                  <div class="box__icon-wrapper elem-with-yellow-square"><img class="box__icon elem-with-yellow-square__not-yellow-square" style="width:65px;" src="{% static 'img/icon-phone-2.svg' %}">
+                    <div class="elem-with-yellow-square__yellow-square yellow-square"></div>
+                  </div>
+                  <div class="box__title">Оставьте свои контактные данные</div>
+                  <div class="form form_row form_row_4 form_100">
+                    <input class="input input_grey form__elem" placeholder="Ваше Имя" name="name">
+                    <input class="input input_grey form__elem" placeholder="Ваш Телефон" name="phone">
+                    <input class="input input_grey form__elem" placeholder="Ваш E-mail" type="email" name="email">
+                    <button class="btn form__elem">Оставить заявку</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="insurance-page-text-section section-padding_large">
+          <div class="container">
+            <div class="title title_h2" data-aos="fade-up">
+              <div class="title__text">Всегда входит в базовый вариант страхования</div>
+              <div class="title__divider"></div>
+            </div>
+            <div class="insurance-page-text-section__grid">
+              <div class="insurance-page-text-section__left" data-aos="fade-up">
+                <p>Медицинское страхование — возмещаются расходы на медицинские услуги (по амбулаторному и стационарному лечению), а также оплачиваются необходимые, прописанные врачом после осмотра лекарства.</p>
+                <p>&nbsp;</p>
+                <p>Если во время поездки путешественнику понадобится срочная медицинская помощь, нужно просто позвонить в сервисный центр. В любой ситуации, в любое время суток там можно получить подробную консультацию — как действовать в сложившихся обстоятельствах и к кому конкретно нужно обратиться.</p>
+              </div>
+              <div class="insurance-page-text-section__right"><a class="elem-with-yellow-square elem-with-yellow-square_borderlike" href="{% static 'img/picture-insurance-page-3.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="325" height="298" title="" data-aos="fade-up"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-insurance-page-3.jpg' %}">
+                  <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a></div>
+            </div>
+            <div class="insurance-page-text-section__img-list"><a class="elem-with-yellow-square elem-with-yellow-square_borderlike insurance-page-text-section__img" href="{% static 'img/picture-insurance-page-1.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="631" height="298" title="" data-aos="fade-up"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-insurance-page-1.jpg' %}">
+                <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a><a class="elem-with-yellow-square elem-with-yellow-square_borderlike insurance-page-text-section__img" href="{% static 'img/picture-insurance-page-2.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="237" height="240" title="" data-aos="fade-up"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-insurance-page-2.jpg' %}">
+                <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a><a class="elem-with-yellow-square elem-with-yellow-square_borderlike insurance-page-text-section__img" href="{% static 'img/picture-insurance-page-4.jpg' %}" data-js="photoswipe-item" data-photoswipe-group-id="0" width="295" height="298" title="" data-aos="fade-up"><img class="elem-with-yellow-square__not-yellow-square" src="{% static 'img/picture-insurance-page-4.jpg' %}">
+                <div class="yellow-square elem-with-yellow-square__yellow-square"></div></a></div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

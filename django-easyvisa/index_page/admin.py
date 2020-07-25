@@ -1,6 +1,10 @@
 from adminsortable2.admin import SortableAdminMixin, SortableInlineAdminMixin
 from django.contrib import admin
-from index_page.models import PopularDestination, Staff, EnglishCoursePrice, Copyright
+from index_page.models import (PopularDestination,
+                               Staff,
+                               EnglishCoursePrice,
+                               Copyright,
+                               FirstScreenStatistic)
 
 
 @admin.register(PopularDestination)
@@ -34,6 +38,20 @@ class StaffAdmin(SortableAdminMixin, admin.ModelAdmin):
 
     image_tag.short_description = 'Превью'
     image_tag.allow_tags = True
+
+
+@admin.register(FirstScreenStatistic)
+class FirstScreenStatisticAdmin(admin.ModelAdmin):
+    list_display = ('id', 'stat_1', 'stat_2', 'stat_3', 'stat_4',)
+    list_editable = ('stat_1', 'stat_2', 'stat_3', 'stat_4',)
+
+    def has_add_permission(self, request):
+        if self.model.objects.count() >= 1:
+            return False
+        return super().has_add_permission(request)
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(EnglishCoursePrice)

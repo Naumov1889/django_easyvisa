@@ -55,6 +55,9 @@ if (Boolean(document.querySelector('#map-n-contact__map-container'))) {
         map_n_contact__map.controls.remove('rulerControl');
     });
 }
+
+let popbox = new Popbox();
+
 (function () {
     AOS.init({once: true});
     document.addEventListener("load", AOS.refresh());
@@ -66,10 +69,52 @@ if (Boolean(document.querySelector('#map-n-contact__map-container'))) {
             waterfall('[data-js=waterfall]');
         });
     }
+
     let branch_selects = document.querySelectorAll('[data-js=select-type-1]');
     let branch_select_value = branch_selects[0].value;
-    branch_selects.forEach(select => {
-        easydropdown(select, {
+
+    let first_branch_select = easydropdown(branch_selects[0], {
+        callbacks: {
+            onSelect: value => {
+                if (value !== branch_select_value) {
+                    branch_select_value = value;
+                    getAjax(`/branch/get_branch/${value}/`, function (data) {
+                        let branch = JSON.parse(data);
+                        update_branch(branch);
+                    }, function (data) {
+                        document.querySelector("[data-popbox-id=popbox-result] .title__text").innerHTML = 'Ошибка! Пожалуйста, перезагрузите страницу и попробуйте отправить запрос снова.';
+                        popbox.open("popbox-result")
+                    });
+                    branch_selects.forEach(select => {
+                        select.value = value
+                    });
+                }
+            }
+        }
+    })
+
+    let first_branch_select_mob = easydropdown(branch_selects[1], {
+        callbacks: {
+            onSelect: value => {
+                if (value !== branch_select_value) {
+                    branch_select_value = value;
+                    getAjax(`/branch/get_branch/${value}/`, function (data) {
+                        let branch = JSON.parse(data);
+                        update_branch(branch);
+                    }, function (data) {
+                        document.querySelector("[data-popbox-id=popbox-result] .title__text").innerHTML = 'Ошибка! Пожалуйста, перезагрузите страницу и попробуйте отправить запрос снова.';
+                        popbox.open("popbox-result")
+                    });
+                    branch_selects.forEach(select => {
+                        select.value = value
+                    });
+                }
+            }
+        }
+    })
+
+    if (Boolean(branch_selects[2])) {
+        let second_branch_select = easydropdown(branch_selects[2], {
             callbacks: {
                 onSelect: value => {
                     if (value !== branch_select_value) {
@@ -88,7 +133,33 @@ if (Boolean(document.querySelector('#map-n-contact__map-container'))) {
                 }
             }
         })
-    });
+    }
+
+    let mob_branch_select;
+    if (Boolean(document.querySelector('[data-js=select-mob-branch-city]'))) {
+        mob_branch_select = easydropdown(document.querySelector('[data-js=select-mob-branch-city]'), {
+            behavior: {
+                useNativeUiOnMobile: false
+            },
+            callbacks: {
+                onOptionClick: value => {
+                    popbox.clear()
+                    branch_select_value = value;
+                    getAjax(`/branch/get_branch/${value}/`, function (data) {
+                        let branch = JSON.parse(data);
+                        update_branch(branch);
+                    }, function (data) {
+                        document.querySelector("[data-popbox-id=popbox-result] .title__text").innerHTML = 'Ошибка! Пожалуйста, перезагрузите страницу и попробуйте отправить запрос снова.';
+                        popbox.open("popbox-result")
+                    });
+                    branch_selects.forEach(select => {
+                        select.value = value
+                    });
+                }
+            }
+        })
+    }
+
 
     function update_branch(branch) {
         update_branch_phones(branch);
@@ -559,8 +630,36 @@ if (Boolean(document.querySelector('#map-n-contact__map-container'))) {
             datepicker_input_container.classList.remove("datepicker-container_opened");
         }, false);
     }
+
+    if (Boolean(document.querySelector('[data-popbox-id=popbox-first-select-branch]'))) {
+        popbox.open('popbox-first-select-branch');
+
+        document.querySelector('[data-js=btn-open-city-select]').addEventListener("click", () => {
+            popbox.close('popbox-first-select-branch');
+
+            if (window.innerWidth > 1050) {
+                setTimeout(() => {
+                    popbox.open('popbox-mob-select-branch');
+                    mob_branch_select.open();
+                })
+            } else {
+                setTimeout(() => {
+                    popbox.open('popbox-mob-select-branch');
+                    mob_branch_select.open();
+                })
+            }
+        });
+
+        document.querySelector("[data-js=first-select-branch-yes]").addEventListener("click", () => {
+            postAjax('/change_is_branch_selected/', {
+                csrfmiddlewaretoken: csrftoken,
+            }, function (data) {
+            }, function (data) {
+            });
+        })
+    }
 }());
-let popbox = new Popbox();
+
 (function () {
     document.querySelectorAll("[data-form-note-filler]").forEach(btn => {
         btn.addEventListener("click", () => {

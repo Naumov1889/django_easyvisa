@@ -13,34 +13,16 @@ from branch.models import Branch
 from branch.serializers import BranchSerializer
 
 
-# def city(request):
-#     client_ip, is_routable = get_client_ip(request)
-#     print(client_ip)
-#
-#     if client_ip is not None and is_routable:
-#         reader = geoip2.database.Reader(os.path.join(settings.BASE_DIR, 'GeoLite2-City.mmdb'))
-#
-#         response = reader.city(client_ip)
-#         client_city = response.city.names['ru']
-#         reader.close()
-#
-#         return HttpResponse(client_city)
-#
-#     return HttpResponse("Can't get ip")
-
-
 def branch(request):
     # only - qs, values - dict.
     branches = Branch.objects.all()
     if not request.session.get('current_branch'):
         # client_ip, is_routable = get_client_ip(request)
-        # print(client_ip)
+        # if client_ip is not None and is_routable:
 
         reader = geoip2.database.Reader(os.path.join(settings.BASE_DIR, 'GeoLite2-City.mmdb'))
 
-        # response = reader.city("145.255.9.175")  # Уфа BA
-        # response = reader.city("178.219.186.12")  # Балашиха МО
-        response = reader.city("176.235.178.181")  # Стамбул 34
+        response = reader.city("145.255.9.175")  # Уфа BA
         client_city = response.city.names['ru']
         client_subdivisions = response.subdivisions.most_specific.iso_code
         reader.close()

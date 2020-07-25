@@ -31,7 +31,7 @@
             <div class="contact-name-n-value">
               <div class="contact-name-n-value__name">Ваш город:</div>
               <div class="select_type_2">
-                <select name="" data-js="select-type-1">
+                <select data-js="select-type-1">
                     {% for branch in branches_city_n_slug %}
                       <option value="{{ branch.slug }}"
                                   {% if branch.slug == current_branch.slug %}selected{% endif %}>

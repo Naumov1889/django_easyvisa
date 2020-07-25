@@ -68,7 +68,7 @@
           <div class="header-first__location-select header-first-location-select">
             <div class="header-first-location-select__icon-placemark icon icon_placemark"></div>
             <div class="select_type_1">
-              <select name="" data-js="select-type-1">
+              <select data-js="select-type-1">
                   {% for branch in branches_city_n_slug %}
                       <option value="{{ branch.slug }}"
                                   {% if branch.slug == request.session.current_branch.slug %}selected{% endif %}>
@@ -277,6 +277,38 @@
         </div>
       </div>
     </div>
+
+    {% if not request.session.is_branch_selected %}
+    <div class="popbox popbox-first-select-branch" data-popbox-id="popbox-first-select-branch">
+      <div class="popbox_container">
+        <div class="popbox__box">
+            <div class="popbox-first-select-branch__title">
+              Ваш город: <b>{{ request.session.current_branch.city }}</b>
+            </div>
+            <div class="popbox-first-select-branch__row">
+                <div class="btn popbox-first-select-branch__btn" data-popbox-close="popbox-first-select-branch" data-js="first-select-branch-yes">Да</div>
+                <div class="btn btn_1 popbox-first-select-branch__btn" data-js="btn-open-city-select">Нет</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="popbox popbox-mob-select-branch" data-popbox-id="popbox-mob-select-branch">
+      <div class="popbox_container">
+        <div class="popbox__box">
+          <div class="select_type_1 select-mob-branch-city">
+            <select data-js="select-mob-branch-city">
+              {% for branch in branches_city_n_slug %}
+                  <option value="{{ branch.slug }}" {% if branch.slug == request.session.current_branch.slug %}selected{% endif %}>
+                          {{ branch.city }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
     <div class="popbox popbox-map" data-popbox-id="popbox-map">
       <div class="popbox_container" style="box-shadow:0 12px 32px rgba(43, 43, 43, 0.07)">
         <button class="popbox__cross" data-popbox-close="popbox-map"><i class="icon icon_cross"></i></button>

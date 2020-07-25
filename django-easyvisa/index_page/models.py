@@ -11,6 +11,20 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 
+class FirstScreenStatistic(models.Model):
+    stat_1 = models.CharField(max_length=200, verbose_name="Международных представительств")
+    stat_2 = models.CharField(max_length=200, verbose_name="турагенств доверяет нам")
+    stat_3 = models.CharField(max_length=200, verbose_name="Выданных виз за прошедший год")
+    stat_4 = models.CharField(max_length=200, verbose_name="Одобрения на получение визы")
+
+    class Meta(object):
+        verbose_name = "Статистика"
+        verbose_name_plural = "Статистика"
+
+    def __str__(self):
+        return "Статистика"
+
+
 class PopularDestination(models.Model):
     city = models.CharField(max_length=200, verbose_name="Город")
     country = models.CharField(max_length=200, verbose_name="Страна")

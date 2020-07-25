@@ -16,9 +16,16 @@ def get_branch(request, slug):
     serializer_data["phone"] = [x.strip() for x in serializer_data["phone"].split(',')]
     serializer_data["coordinates"] = [x.strip() for x in serializer_data["coordinates"].split(',')]
     request.session['current_branch'] = serializer_data
+    request.session['is_branch_selected'] = True
 
     return Response(serializer_data)
 
+
+@api_view(['POST'])
+def change_is_branch_selected(request):
+    request.session['is_branch_selected'] = True
+
+    return Response()
 
 def contact_page(request, slug):
     current_branch = Branch.objects.get(slug=slug)

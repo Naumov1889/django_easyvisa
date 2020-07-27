@@ -70,6 +70,29 @@ let popbox = new Popbox();
         });
     }
 
+
+    if (window.innerWidth > 1050) {
+        /* Sticky header functionality */
+        const header = document.querySelector("[data-js=header-second]");
+        const sticky = header.offsetTop;
+
+        window.onscroll = function () {
+            stick_header()
+        };
+
+        stick_header();
+
+        function stick_header() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("header-second_sticky");
+                document.querySelector('body').style.paddingTop = "71px";
+            } else {
+                header.classList.remove("header-second_sticky");
+                document.querySelector('body').style.paddingTop = "0";
+            }
+        }
+    }
+
     let branch_selects = document.querySelectorAll('[data-js=select-type-1]');
     let branch_select_value = branch_selects[0].value;
 

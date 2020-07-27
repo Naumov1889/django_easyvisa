@@ -491,7 +491,7 @@ iframe {
     }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1051px) {
     .header-mob-topbar, .header-mob-menu {
         display: none;
     }
@@ -700,6 +700,13 @@ iframe {
     box-shadow: 0 0 35px rgba(29, 29, 29, 0.1);
     background-color: #fff;
     border-top: 1px solid #f3f3f3;
+}
+
+.header-second_sticky {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    width: 100%;
 }
 
 .header-second__container {
@@ -3395,22 +3402,26 @@ textarea.input {
 .popbox-first-select-branch {
     padding-top: 48px;
 }
+
 .popbox-first-select-branch .popbox_container {
     margin-right: 0;
     padding: 15px;
     max-width: unset;
     width: max-content;
 }
+
 .popbox-first-select-branch__row {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
+
 .popbox-first-select-branch__btn.btn {
     padding: 0;
     width: 74px;
     height: 36px;
 }
+
 .popbox-first-select-branch__btn:first-child {
     margin-right: 10px;
 }
@@ -3418,6 +3429,7 @@ textarea.input {
 .popbox-mob-select-branch {
     padding-top: 24px;
 }
+
 .popbox-mob-select-branch .popbox_container {
     margin-right: 0;
     width: 0;
@@ -7737,10 +7749,11 @@ li:before {
         top: 0;
         margin-top: 0;
     }
-   .index-page-staff-section-slider .tns-nav button,
-   .index-page-staff-section-slider .tns-nav button:before {
-       width: 28px;
-   }
+
+    .index-page-staff-section-slider .tns-nav button,
+    .index-page-staff-section-slider .tns-nav button:before {
+        width: 28px;
+    }
 }
 
 .index-page-usa-section {
@@ -9433,6 +9446,7 @@ li:before {
     padding-top: 1px;
     margin-right: 10px;
     width: 23px;
+    min-width: 23px;
     height: 23px;
     color: #454545;
     font-family: "Proxima Nova Semibold";
@@ -9530,6 +9544,7 @@ li:before {
         padding-top: 0;
         margin-right: 10px;
         width: 22px;
+        min-width: 22px;
         height: 22px;
         font-size: 15px;
     }

@@ -12,7 +12,7 @@ django-imagekit==4.0.2
 django-ipware==2.1.0
 django-js-asset==1.2.2
 django-nested-inline==0.4.2
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 docopt==0.6.2
 geoip2==3.0.0
 idna==2.9
